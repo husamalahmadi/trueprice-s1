@@ -1,38 +1,69 @@
 // path: src/App.jsx
-// Trueprice.cash — Markets + EV/PE/PS weighted fair value + on-device AI (WebLLM)
-// Clean build: no email/API code. "Contact us" → X profile. Ask AI shows only the final FV.
+// Trueprice.cash — Corporate UI refresh. Same features. Tailwind-only styling.
 
 import React, { useEffect, useMemo, useState, useCallback } from 'react';
 import { CreateMLCEngine } from '@mlc-ai/web-llm';
 
-/* ========================== UI ========================== */
-const Section = ({ title, children }) => (
-  <section className="rounded-2xl border bg-white p-4 mb-4">
-    {title && <div className="text-base font-semibold mb-2">{title}</div>}
-    {children}
+/* ========================== UI Primitives ========================== */
+const Button = ({ children, onClick, variant = 'primary', disabled, as = 'button', href, target, rel, className = '' }) => {
+  const base = 'inline-flex items-center justify-center px-3.5 py-2 rounded-lg text-sm font-medium border transition focus:outline-none focus:ring-2 focus:ring-offset-1';
+  const styles = {
+    primary: 'bg-gray-900 text-white border-gray-900 hover:opacity-90 focus:ring-gray-300',
+    ghost: 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 focus:ring-gray-300',
+    subtle: 'bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200 focus:ring-gray-300',
+    danger: 'bg-white text-red-600 border-red-500 hover:bg-red-50 focus:ring-red-300',
+  };
+  const cls = `${base} ${styles[variant]} ${disabled ? 'opacity-60 cursor-not-allowed' : ''} ${className}`;
+  if (as === 'a') return <a href={href} target={target} rel={rel} className={cls}>{children}</a>;
+  return <button onClick={onClick} disabled={disabled} className={cls}>{children}</button>;
+};
+
+const Card = ({ title, subtitle, actions, children, className = '' }) => (
+  <section className={`rounded-xl border bg-white shadow-sm ${className}`}>
+    {(title || subtitle || actions) && (
+      <header className="px-4 py-3 border-b flex items-center gap-3">
+        <div className="min-w-0">
+          {title && <div className="text-sm font-semibold text-gray-900 truncate">{title}</div>}
+          {subtitle && <div className="text-xs text-gray-500 truncate">{subtitle}</div>}
+        </div>
+        <div className="ml-auto flex items-center gap-2">{actions}</div>
+      </header>
+    )}
+    <div className="p-4">{children}</div>
   </section>
 );
 
-const Button = ({ children, onClick, variant = 'primary', disabled, as = 'button', href, target, rel }) => {
-  const base = 'px-3 py-1.5 rounded-xl text-sm font-medium border transition';
-  const styles = {
-    primary: 'bg-black text-white border-black hover:opacity-90',
-    ghost: 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50',
-    danger: 'bg-white text-red-600 border-red-500 hover:bg-red-50',
+const Badge = ({ children, tone = 'gray' }) => {
+  const tones = {
+    gray: 'bg-gray-100 text-gray-800 border-gray-200',
+    green: 'bg-green-50 text-green-700 border-green-200',
+    amber: 'bg-amber-50 text-amber-700 border-amber-200',
+    red: 'bg-red-50 text-red-700 border-red-200',
+    blue: 'bg-blue-50 text-blue-700 border-blue-200',
   };
-  if (as === 'a') {
-    return (
-      <a href={href} target={target} rel={rel} className={`${base} ${styles[variant]}`}>
-        {children}
-      </a>
-    );
-  }
-  return (
-    <button onClick={onClick} disabled={disabled} className={`${base} ${styles[variant]} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}>
-      {children}
-    </button>
-  );
+  return <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-xs border ${tones[tone]}`}>{children}</span>;
 };
+
+const ShellLayout = ({ headerRight, sidebar, children }) => (
+  <div className="min-h-screen bg-gray-50 text-gray-900">
+    <style>{`
+      @keyframes trueprice-progress { 0% { transform: translateX(-100%); } 50% { transform: translateX(-20%); } 100% { transform: translateX(100%); } }
+    `}</style>
+    <header className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b">
+      <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
+        <div className="text-lg font-bold tracking-tight">
+          <span className="text-gray-900">Trueprice</span><span className="text-gray-400">.cash</span>
+        </div>
+        <div className="ml-auto flex items-center gap-2">{headerRight}</div>
+      </div>
+    </header>
+    <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
+      <aside className="col-span-12 md:col-span-3">{sidebar}</aside>
+      <main className="col-span-12 md:col-span-9">{children}</main>
+    </div>
+    <footer className="max-w-7xl mx-auto px-4 pb-8 text-xs text-gray-500">© Trueprice.cash. All rights reserved.</footer>
+  </div>
+);
 
 /* ========================== Cache ========================== */
 const cacheRead = (k, f) => { try { const s = localStorage.getItem(k); return s ? JSON.parse(s) : f; } catch { return f; } };
@@ -197,40 +228,38 @@ function ccyName(ccy, lang) {
   return ccy;
 }
 
-// Ensures the percent sign stays glued to the number in RTL (Arabic) & LTR
-const AR_PERCENT = '٪'; // Arabic percent sign
+// Ensures percent sign glue in RTL
+const AR_PERCENT = '٪';
 function Pct({ n, lang }) {
   const num = Number.isFinite(n) ? n : 0;
   const symbol = lang === 'ar' ? AR_PERCENT : '%';
-  return <bdi>{num.toFixed(2)}{symbol}</bdi>; // bdi avoids bidi flipping
+  return <bdi>{num.toFixed(2)}{symbol}</bdi>;
 }
 
-// X share link — now includes a concise, localized FV breakdown in the tweet text
+// X share link with localized FV breakdown
 function buildXShare({ ticker, company, lang, url, m, aiFV }) {
   const num = (x) => (Number.isFinite(x) ? x.toFixed(2) : '—');
   const cc = m?.currency || '';
   const diff = (m && Number.isFinite(aiFV) && Number.isFinite(m.weighted) && m.weighted !== 0)
     ? ((aiFV - m.weighted) / m.weighted) * 100
     : null;
-
   const lines = lang === 'ar'
     ? [
-        `📊 ${(company || ticker)} (${ticker})`,
-        `السعر: ${num(m?.price)} ${cc}`,
-        `العادلة (موزونة): ${num(m?.weighted)} ${cc}`,
-        `EV: ${num(m?.fairEV)} • PE: ${num(m?.fairPE)} • PS: ${num(m?.fairPS)}`,
-        (diff != null ? `الذكاء الاصطناعي: ${num(aiFV)} ${cc} (${diff.toFixed(2)}${AR_PERCENT} مقابل التطبيق)` : null),
-        url,
+        `📊 ${(company || ticker)} (${ticker})\n`,
+        `السعر: ${num(m?.price)} ${cc}\n`,
+        `العادلة (موزونة): ${num(m?.weighted)} ${cc}\n`,
+        `EV: ${num(m?.fairEV)} • PE: ${num(m?.fairPE)} • PS: ${num(m?.fairPS)}\n`,
+        (diff != null ? `الذكاء الاصطناعي: ${num(aiFV)} ${cc} (${diff.toFixed(2)}${AR_PERCENT} مقابل التطبيق)\n` : ''),
+        url || '',
       ]
     : [
-        `📊 ${(company || ticker)} (${ticker})`,
-        `Price: ${num(m?.price)} ${cc}`,
-        `Fair (Weighted): ${num(m?.weighted)} ${cc}`,
-        `EV: ${num(m?.fairEV)} • PE: ${num(m?.fairPE)} • PS: ${num(m?.fairPS)}`,
-        (diff != null ? `AI: ${num(aiFV)} ${cc} (${diff.toFixed(2)}% vs app)` : null),
-        url,
+        `📊 ${(company || ticker)} (${ticker})\n`,
+        `Price: ${num(m?.price)} ${cc}\n`,
+        `Fair (Weighted): ${num(m?.weighted)} ${cc}\n`,
+        `EV: ${num(m?.fairEV)} • PE: ${num(m?.fairPE)} • PS: ${num(m?.fairPS)}\n`,
+        (diff != null ? `AI: ${num(aiFV)} ${cc} (${diff.toFixed(2)}% vs app)\n` : ''),
+        url || '',
       ];
-
   const text = lines.filter(Boolean).join('');
   return `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
 }
@@ -243,21 +272,86 @@ const AI_CACHE_KEY = (symbolWithSuffix, sig) => `ai_fv_cache_v1_${MODEL_ID}_${sy
 
 /* ========================== Components ========================== */
 function MarketToggle({ value, onChange }) {
+  const opts = [
+    { id: MARKET.SA, label: '🇸🇦 Saudi (TASI)' },
+    { id: MARKET.US, label: '🇺🇸 U.S. (S&P 500)' },
+  ];
   return (
-    <div className="flex gap-2 mb-3">
-      {[
-        { id: MARKET.SA, label: '🇸🇦 Saudi (TASI)' },
-        { id: MARKET.US, label: '🇺🇸 U.S. (S&P 500)' },
-      ].map((opt) => (
-        <button key={opt.id} onClick={() => onChange(opt.id)} className={`px-3 py-1.5 rounded-xl border text-sm ${value === opt.id ? 'bg-black text-white border-black' : 'bg-white hover:bg-gray-50'}`}>
-          {opt.label}
-        </button>
-      ))}
+    <div className="inline-flex items-center rounded-lg border bg-white shadow-sm overflow-hidden">
+      {opts.map((opt, i) => {
+        const active = value === opt.id;
+        return (
+          <button
+            key={opt.id}
+            onClick={() => onChange(opt.id)}
+            className={`px-3 py-1.5 text-sm font-medium ${active ? 'bg-gray-900 text-white' : 'text-gray-700 hover:bg-gray-50'}`}
+          >
+            {opt.label}
+          </button>
+        );
+      })}
     </div>
   );
 }
 
-function MarketBrowser({ onOpen }) {
+function Sidebar({ market, setMarket, q, setQ, T }) {
+  return (
+    <div className="space-y-4">
+      <Card title={T('السوق', 'Market')}>
+        <MarketToggle value={market} onChange={setMarket} />
+        <div className="mt-4">
+          <label className="text-xs text-gray-600">{T('بحث', 'Search')}</label>
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder={T('ابحث بالرمز أو الشركة…', 'Search by ticker or company…')}
+            className="mt-1 w-full border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-gray-300"
+          />
+        </div>
+      </Card>
+      <Card title={T('تلميحات', 'Tips')}>
+        <ul className="text-xs text-gray-600 space-y-1 list-disc pl-4">
+          <li>{T('الأسعار تُحدّث كل 10 دقائق.', 'Prices refresh every 10 minutes.')}</li>
+          <li>{T('المؤشرات تُخزَّن 30 دقيقة.', 'Metrics cached for 30 minutes.')}</li>
+          <li>{T('الذكاء الاصطناعي يعمل على جهازك.', 'AI runs fully on-device.')}</li>
+        </ul>
+      </Card>
+    </div>
+  );
+}
+
+function IndustryTable({ title, rows, currency, onOpen }) {
+  return (
+    <Card title={title} className="mb-4">
+      <div className="overflow-x-auto">
+        <table className="min-w-full text-sm">
+          <thead className="bg-gray-50 sticky top-0">
+            <tr>
+              <th className="text-left font-medium text-gray-600 py-2 px-2">Ticker</th>
+              <th className="text-left font-medium text-gray-600 py-2 px-2">Company</th>
+              <th className="text-right font-medium text-gray-600 py-2 px-2">Price</th>
+              <th className="text-right font-medium text-gray-600 py-2 px-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((s) => (
+              <tr key={s.ticker} className="border-t">
+                <td className="py-2 px-2 font-mono">{s.ticker}</td>
+                <td className="py-2 px-2">{s.companyName}</td>
+                <td className="py-2 px-2 text-right">{s.price == null ? <span className="text-gray-400">—</span> : `${s.price.toFixed(2)} ${currency}`}</td>
+                <td className="py-2 px-2 text-right">
+                  <Button variant="subtle" onClick={() => onOpen({ ticker: s.ticker, company: s.companyName })}>Open</Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Card>
+  );
+}
+
+function MarketBrowser({ onOpen, T }) {
   const [market, setMarket] = useState(() => localStorage.getItem('mkt') || MARKET.SA);
   useEffect(() => { localStorage.setItem('mkt', market); }, [market]);
   const { grouped, loading, error, currency } = useMarketData(market);
@@ -270,33 +364,39 @@ function MarketBrowser({ onOpen }) {
     }
     return out;
   }, [grouped, q]);
-  const title = market === MARKET.SA ? '🇸🇦 Saudi Stocks (TASI)' : '🇺🇸 U.S. Stocks (S&P 500)';
+
   return (
-    <Section title={title}>
-      <MarketToggle value={market} onChange={setMarket} />
-      <div className="mb-3"><input value={q} onChange={(e) => setQ(e.target.value)} placeholder={`Search ${market === MARKET.SA ? 'TASI' : 'US'} by ticker or company…`} className="w-full border rounded-lg px-3 py-2 text-sm" /></div>
-      {error && <div className="text-sm text-red-600">{error} — Put JSON files under <code>public/data</code>.</div>}
-      {loading && <div className="text-sm text-gray-500">Loading list…</div>}
-      {!loading && !error && Object.keys(filtered).length === 0 && <div className="text-sm text-gray-500">No results.</div>}
-      {!loading && !error && Object.entries(filtered).map(([industry, list]) => (
-        <div key={industry} className="mb-4">
-          <div className="relative border rounded-2xl p-3 bg-white">
-            <div className="absolute -top-3 right-3 bg-black text-white px-2 py-1 text-xs rounded-lg shadow">{industry}</div>
-            <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3">
-              {list.map((s) => (
-                <button key={s.ticker} className="text-left rounded-xl border p-3 hover:shadow transition" onClick={() => onOpen({ ticker: s.ticker, company: s.companyName, market })}>
-                  <div className="flex items-center justify-between">
-                    <div className="font-semibold">{s.ticker}</div>
-                    <div className={`font-medium ${s.price == null ? 'text-gray-500' : 'text-green-600'}`}>{s.price == null ? '—' : `${s.price.toFixed(2)} ${currency}`}</div>
-                  </div>
-                  <div className="text-xs text-gray-600 mt-1">{s.companyName}</div>
-                </button>
-              ))}
-            </div>
-          </div>
+    <>
+      <ShellLayout
+        headerRight={
+          <>
+            <Badge>{market === MARKET.SA ? 'TASI' : 'S&P 500'}</Badge>
+          </>
+        }
+        sidebar={<Sidebar market={market} setMarket={setMarket} q={q} setQ={setQ} T={T} />}
+      >
+        <div className="space-y-4">
+          <Card
+            title={market === MARKET.SA ? '🇸🇦 Saudi Stocks (TASI)' : '🇺🇸 U.S. Stocks (S&P 500)'}
+            subtitle={T('تصفّح حسب الصناعة وافتح السهم للتفاصيل.', 'Browse by industry and open a stock for details.')}
+          >
+            {error && <div className="text-sm text-red-600">{error} — put JSON under <code>public/data</code>.</div>}
+            {loading && <div className="text-sm text-gray-500">Loading…</div>}
+            {!loading && !error && Object.keys(filtered).length === 0 && <div className="text-sm text-gray-500">No results.</div>}
+          </Card>
+
+          {!loading && !error && Object.entries(filtered).map(([industry, list]) => (
+            <IndustryTable
+              key={industry}
+              title={industry}
+              rows={list}
+              currency={currency}
+              onOpen={({ ticker, company }) => onOpen({ ticker, company, market })}
+            />
+          ))}
         </div>
-      ))}
-    </Section>
+      </ShellLayout>
+    </>
   );
 }
 
@@ -345,7 +445,6 @@ function MarketStock({ params, onBack, langApi }) {
   }, [m, pct, T]);
 
   const ccyLabel = useMemo(() => ccyName(currency, lang), [currency, lang]);
-
   const xUrl = useMemo(() => buildXShare({
     ticker, company, lang,
     url: (typeof window !== 'undefined' ? window.location.href : 'https://trueprice.cash'),
@@ -379,7 +478,7 @@ function MarketStock({ params, onBack, langApi }) {
         `PS_per_share=${m.fairPS.toFixed(2)}`,
         `BookValue_per_share=${m.bookValue.toFixed(2)}`,
         `Current_Price=${m.price.toFixed(2)}`,
-        `Return JSON like: {"fv": 123.45, "rationale": "..."}`,
+        `Return JSON like: {"fv": 123.45, "rationale": "..."}`
       ].join('\n');
 
       const resp = await eng.chat.completions.create({
@@ -403,99 +502,154 @@ function MarketStock({ params, onBack, langApi }) {
 
   const showComparison = aiFV != null && m;
   const diffPct = showComparison ? ((aiFV - m.weighted) / (m.weighted || 1)) * 100 : 0;
-  const equalWithin = Math.abs(diffPct) < 0.0001; // treat as equal if ~0%
+  const equalWithin = Math.abs(diffPct) < 0.0001;
   const compColor = equalWithin ? 'text-blue-600' : (aiFV < (m?.weighted || 0) ? 'text-red-600' : 'text-green-600');
 
   return (
-    <Section title="📋 Stock Details">
-      {loading && <div className="text-center font-medium py-6">Loading stock details…</div>}
-      {err && <div className="text-red-600 text-sm">{err}</div>}
-      {!loading && !err && m && (
-        <div className="relative rounded-2xl shadow-sm border p-4 bg-white" aria-busy={aiBusy}>
-          {/* Why: Prevents user interaction while the local AI loads/answers */}
-          {aiBusy && (
-            <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] z-10 pointer-events-auto" aria-hidden="true">
-              <div className="absolute left-0 top-0 h-1 w-full overflow-hidden bg-gray-200" role="progressbar" aria-label="AI is thinking">
-                <div className="h-full w-1/3 bg-gray-800" style={{ animation: 'trueprice-progress 1.2s ease-in-out infinite' }} />
+    <ShellLayout
+      headerRight={
+        <>
+          <Button variant="ghost" onClick={onBack}>{T('الرجوع', 'Back')}</Button>
+          <Button as="a" href={xUrl} target="_blank" rel="noopener noreferrer" variant="ghost">Share on X</Button>
+        </>
+      }
+      sidebar={
+        <Card title={T('نظرة عامة', 'Overview')}>
+          <div className="space-y-2">
+            <div className="text-lg font-semibold">{company}</div>
+            <div className="text-sm text-gray-500">{ticker}</div>
+            <div className="flex items-center gap-2">
+              <Badge tone="blue">{market === MARKET.SA ? 'TASI' : 'S&P 500'}</Badge>
+              {m && <Badge tone={pct >= 0 ? (pct >= 25 ? 'green' : 'blue') : 'red'}>
+                {pct >= 25 ? 'Undervalued' : pct >= 0 ? 'Fair' : 'Overvalued'}
+              </Badge>}
+            </div>
+          </div>
+        </Card>
+      }
+    >
+      <div className="space-y-4">
+        <Card title="📋 Stock Details">
+          {loading && <div className="text-center font-medium py-6">Loading stock details…</div>}
+          {err && <div className="text-red-600 text-sm">{err}</div>}
+          {!loading && !err && m && (
+            <div className="relative" aria-busy={aiBusy}>
+              {aiBusy && (
+                <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] z-10 pointer-events-auto" aria-hidden="true">
+                  <div className="absolute left-0 top-0 h-1 w-full overflow-hidden bg-gray-200" role="progressbar" aria-label="AI is thinking">
+                    <div className="h-full w-1/3 bg-gray-800" style={{ animation: 'trueprice-progress 1.2s ease-in-out infinite' }} />
+                  </div>
+                </div>
+              )}
+
+              <div className="grid lg:grid-cols-2 gap-6">
+                {/* Left: Fair Value */}
+                <div className="space-y-3">
+                  <div className="flex items-end justify-between">
+                    <div>
+                      <div className="text-2xl font-bold">{m.price.toFixed(2)} {m.currency}</div>
+                      <div className="text-xs text-gray-500">{valuationMsg}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm text-gray-500">{T('القيمة العادلة الموزونة', 'Weighted Fair Value')}</div>
+                      <div className={`text-xl font-semibold ${pctColor(((m.weighted - m.price) / (m.price || 1)) * 100)}`}>
+                        {m.weighted.toFixed(2)} {ccyLabel}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="rounded-lg border p-3">
+                      <div className="text-xs text-gray-500">Enterprise Value</div>
+                      <div className="text-lg font-medium">{m.fairEV.toFixed(2)} {ccyLabel}</div>
+                    </div>
+                    <div className="rounded-lg border p-3">
+                      <div className="text-xs text-gray-500">Earnings (PE)</div>
+                      <div className="text-lg font-medium">{m.fairPE.toFixed(2)} {ccyLabel}</div>
+                    </div>
+                    <div className="rounded-lg border p-3">
+                      <div className="text-xs text-gray-500">Sales (P/S)</div>
+                      <div className="text-lg font-medium">{m.fairPS.toFixed(2)} {ccyLabel}</div>
+                    </div>
+                    <div className="rounded-lg border p-3">
+                      <div className="text-xs text-gray-500">{T('القيمة الدفترية', 'Book Value')}</div>
+                      <div className="text-lg font-medium">{m.bookValue.toFixed(2)} {ccyLabel}</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <Button onClick={askAI} disabled={aiBusy || !hasWebGPU}>{T('اسأل الذكاء الاصطناعي', 'Ask AI')}</Button>
+                    {!hasWebGPU && (
+                      <span className="text-xs text-amber-700">
+                        {T('يحتاج متصفحاً يدعم WebGPU (Chrome 121+).', 'Requires a WebGPU browser (e.g., Chrome 121+).')}
+                      </span>
+                    )}
+                    {longWait && aiBusy && (
+                      <span className="text-xs text-gray-500">
+                        {T('التشغيل الأول قد يستغرق دقيقة لتحميل النموذج…', 'First run can take up to a minute while the model loads…')}
+                      </span>
+                    )}
+                  </div>
+
+                  {aiError && <div className="text-sm text-red-600" role="alert">{aiError}</div>}
+
+                  {aiFV != null && (
+                    <div className="rounded-lg border bg-gray-50 p-3">
+                      <div className="text-sm">
+                        <strong>{T('القيمة العادلة حسب الذكاء الاصطناعي:', 'AI fair value:')}</strong> {aiFV.toFixed(2)} {ccyLabel}
+                        {aiCached && <span className="ml-2 text-gray-500 text-xs">{T('(من الذاكرة المؤقتة)', '(from cache)')}</span>}
+                      </div>
+                      {showComparison && (
+                        <div className={`mt-2 text-sm font-semibold ${compColor}`}>
+                          {T('مقارنة مع تقدير التطبيق:', 'Comparison vs app estimate:')} <Pct n={diffPct} lang={lang} />
+                        </div>
+                      )}
+                      {aiRationale && (
+                        <div className="mt-2 text-xs text-gray-700 whitespace-pre-line">
+                          {aiRationale}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  <div className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-3">
+                    ⚠️ <strong>{T('إخلاء المسؤولية:', 'Disclaimer:')}</strong> {T('هذه ليست نصيحة استثمارية.', 'This is not investment advice.')}
+                  </div>
+                </div>
+
+                {/* Right: Indicators */}
+                <div className="space-y-3">
+                  <Card title={T('المؤشرات المالية', 'Financial Indicators')}>
+                    <ul className="space-y-2 text-sm">
+                      <li className={`${bandColor(m.grossMargin, 20, 40)}`}>
+                        {T('هامش الربح الإجمالي:', 'Gross Margin:')} <Pct n={m.grossMargin} lang={lang} />
+                      </li>
+                      <li className={`${bandColor(m.opMargin, 10, 20)}`}>
+                        {T('هامش التشغيل:', 'Operating Margin:')} <Pct n={m.opMargin} lang={lang} />
+                      </li>
+                      <li className={`${bandColor(m.netMargin, 5, 15)}`}>
+                        {T('هامش صافي الربح:', 'Net Margin:')} <Pct n={m.netMargin} lang={lang} />
+                      </li>
+                    </ul>
+                  </Card>
+
+                  <Card title={T('مشاركة', 'Share')}>
+                    <div className="flex items-center gap-2">
+                      <Button as="a" href={xUrl} target="_blank" rel="noopener noreferrer" variant="ghost">Share on X</Button>
+                      <Badge tone={pct >= 0 ? (pct >= 25 ? 'green' : 'blue') : 'red'}>{valuationMsg}</Badge>
+                    </div>
+                  </Card>
+                </div>
               </div>
             </div>
           )}
-
-          <div className="flex items-center justify-between mb-3">
-            <div>
-              <div className="text-xl font-semibold">{company}</div>
-              <div className="text-sm text-gray-500">{ticker}</div>
-            </div>
-            <div className="text-2xl font-bold">{m.price.toFixed(2)} {m.currency}</div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <div className="font-semibold underline">{T('القيمة العادلة', 'Fair Value')}</div>
-              <p>{T('السعر الحالي:', 'Current price:')} <strong>{`${m.price.toFixed(2)} ${ccyLabel}`}</strong></p>
-              <p>{T('القيمة العادلة للسهم بناءً على قيمة المؤسسة هي:', 'The fair value of the stock based on Enterprise Value is:')} {`${m.fairEV.toFixed(2)} ${ccyLabel}`}</p>
-              <p>{T('القيمة العادلة بناءً على الأرباح هي:', 'The fair value based on Earnings is:')} {`${m.fairPE.toFixed(2)} ${ccyLabel}`}</p>
-              <p>{T('القيمة العادلة بناءً على المبيعات (مكرر المبيعات) هي:', 'The fair value based on Sales (Price-to-Sales) is:')} {`${m.fairPS.toFixed(2)} ${ccyLabel}`}</p>
-              <p>{T('القيمة الدفترية للسهم:', 'Book Value per share:')} {`${m.bookValue.toFixed(2)} ${ccyLabel}`}</p>
-              <p>{T('تقديرنا للقيمة العادلة الموزونة هو:', 'Our weighted fair value estimate is:')} <strong className={`${pctColor(((m.weighted - m.price) / (m.price || 1)) * 100)} font-semibold`}>{`${m.weighted.toFixed(2)} ${ccyLabel}`}</strong></p>
-              <div className="mt-2"><span className={`font-semibold ${pctColor(((m.weighted - m.price) / (m.price || 1)) * 100)}`}>{T('التقييم:', 'Valuation:')}</span> <span>{valuationMsg}</span></div>
-
-              <div className="mt-4 flex items-center gap-2">
-                <Button onClick={askAI} disabled={aiBusy || !hasWebGPU}>{T('اسأل الذكاء الاصطناعي', 'Ask AI')}</Button>
-                <Button as="a" href={xUrl} target="_blank" rel="noopener noreferrer" variant="ghost">Share on X</Button>
-                <Button variant="ghost" onClick={onBack}>{T('رجوع', 'Back')}</Button>
-              </div>
-              {!hasWebGPU && (
-                <div className="text-xs text-amber-700 mt-2">
-                  {T('يحتاج هذا إلى متصفح يدعم WebGPU (مثل Chrome 121+).', 'Ask AI requires a WebGPU-capable browser (e.g., Chrome 121+).')}
-                </div>
-              )}
-              {longWait && aiBusy && (
-                <div className="text-xs text-gray-500 mt-2">
-                  {T('قد يستغرق التشغيل الأول دقيقة بسبب تحميل النموذج إلى جهازك…', 'First run can take up to a minute while the on-device model loads…')}
-                </div>
-              )}
-              {aiError && <div className="mt-2 text-sm text-red-600" role="alert">{aiError}</div>}
-
-              {aiFV != null && (
-                <div className="mt-4 border rounded-2xl p-3 bg-gray-50">
-                  <div className="text-sm">
-                    <strong>{T('القيمة العادلة حسب الذكاء الاصطناعي:', 'AI fair value:')}</strong> {aiFV.toFixed(2)} {ccyLabel}
-                    {aiCached && <span className="ml-2 text-gray-500 text-xs">{T('(من الذاكرة المؤقتة)', '(from cache)')}</span>}
-                  </div>
-                  {showComparison && (
-                    <div className={`mt-2 text-sm font-semibold ${compColor}`}>
-                      {T('مقارنة مع تقدير التطبيق:', 'Comparison vs app estimate:')} <Pct n={diffPct} lang={lang} />
-                    </div>
-                  )}
-                  {aiRationale && (
-                    <div className="mt-2 text-xs text-gray-700 whitespace-pre-line">
-                      {aiRationale}
-                    </div>
-                  )}
-                </div>
-              )}
-
-              <hr className="my-3" />
-              <div className="font-semibold underline">{T('المؤشرات المالية', 'Financial Indicators')}</div>
-              <p className={`${bandColor(m.grossMargin, 20, 40)}`}>{T('هامش الربح الإجمالي:', 'Gross Margin:')} <Pct n={m.grossMargin} lang={lang} /></p>
-              <p className={`${bandColor(m.opMargin, 10, 20)}`}>{T('هامش التشغيل:', 'Operating Margin:')} <Pct n={m.opMargin} lang={lang} /></p>
-              <p className={`${bandColor(m.netMargin, 5, 15)}`}>{T('هامش صافي الربح:', 'Net Margin:')} <Pct n={m.netMargin} lang={lang} /></p>
-
-              <div className="mt-4 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-3">
-                ⚠️ <strong>{T('إخلاء المسؤولية:', 'Disclaimer:')}</strong> {T('هذه ليست نصيحة استثمارية.', 'This is not investment advice.')}
-              </div>
-            </div>
-
-            <div />
-          </div>
-        </div>
-      )}
-    </Section>
+        </Card>
+      </div>
+    </ShellLayout>
   );
 }
 
-/* ========================== App */ 
+/* ========================== App ========================== */
 export default function App() {
   const [view, setView] = useState('home');
   const [route, setRoute] = useState({});
@@ -504,44 +658,32 @@ export default function App() {
   useEffect(() => { if (typeof navigator !== 'undefined' && 'gpu' in navigator) { getEngine().catch(() => {}); } }, []);
 
   return (
-    <div dir={langApi.lang === 'ar' ? 'rtl' : 'ltr'} lang={langApi.lang} className="min-h-screen bg-gray-50 text-gray-900">
-      <style>{`
-        @keyframes trueprice-progress { 0% { transform: translateX(-100%); } 50% { transform: translateX(-20%); } 100% { transform: translateX(100%); } }
-      `}</style>
+    <div dir={langApi.lang === 'ar' ? 'rtl' : 'ltr'} lang={langApi.lang}>
+      {view === 'home' && (
+        <MarketBrowser
+          T={langApi.T}
+          onOpen={({ ticker, company, market }) => { setView('market_stock'); setRoute({ ticker, company, market }); }}
+        />
+      )}
+      {view === 'market_stock' && (
+        <MarketStock
+          params={route}
+          langApi={langApi}
+          onBack={() => { setView('home'); setRoute({}); }}
+        />
+      )}
 
-      <header className="sticky top-0 z-10 bg-white/80 backdrop-blur border-b">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
-          <div className="text-lg font-bold cursor-pointer" onClick={() => { setView('home'); setRoute({}); }}>
-            Trueprice<span className="text-gray-400">.cash</span>
-          </div>
-          <div className="ml-auto flex items-center gap-2">
-            <Button variant="ghost" onClick={() => langApi.setLang(langApi.lang === 'ar' ? 'en' : 'ar')}>{langApi.lang === 'ar' ? 'EN' : 'AR'}</Button>
-            <Button as="a" href="https://x.com/dr_sam_78" target="_blank" rel="noopener noreferrer" variant="ghost">Contact us</Button>
-          </div>
+      {/* Global header actions (language + contact) */}
+      <div className="fixed top-3 right-3 z-30">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" onClick={() => langApi.setLang(langApi.lang === 'ar' ? 'en' : 'ar')}>
+            {langApi.lang === 'ar' ? 'EN' : 'AR'}
+          </Button>
+          <Button as="a" href="https://x.com/dr_sam_78" target="_blank" rel="noopener noreferrer" variant="ghost">
+            Contact us
+          </Button>
         </div>
-      </header>
-
-      <main className="max-w-7xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-12">
-            {view === 'home' && (
-              <MarketBrowser onOpen={({ ticker, company, market }) => { setView('market_stock'); setRoute({ ticker, company, market }); }} />
-            )}
-            {view === 'market_stock' && (
-              <MarketStock
-                params={route}
-                langApi={langApi}
-                onBack={() => { setView('home'); setRoute({}); }}
-              />
-            )}
-          </div>
-
-          </div>
-      </main>
-
-      <footer className="max-w-7xl mx-auto px-4 pb-8 text-xs text-gray-500">© Trueprice.cash. All rights reserved.</footer>
+      </div>
     </div>
   );
 }
-
-
