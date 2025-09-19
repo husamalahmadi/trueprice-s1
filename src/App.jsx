@@ -1,7 +1,7 @@
 // path: src/App.jsx
-// Trueprice.cash — Corporate UI refresh. Same features. Tailwind-only styling.
+// Trueprice.cash — Corporate UI refresh (adjusted header behavior + removed market badges)
 
-import React, { useEffect, useMemo, useState, useCallback } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { CreateMLCEngine } from '@mlc-ai/web-llm';
 
 /* ========================== UI Primitives ========================== */
@@ -33,34 +33,51 @@ const Card = ({ title, subtitle, actions, children, className = '' }) => (
   </section>
 );
 
-const Badge = ({ children, tone = 'gray' }) => {
-  const tones = {
-    gray: 'bg-gray-100 text-gray-800 border-gray-200',
-    green: 'bg-green-50 text-green-700 border-green-200',
-    amber: 'bg-amber-50 text-amber-700 border-amber-200',
-    red: 'bg-red-50 text-red-700 border-red-200',
-    blue: 'bg-blue-50 text-blue-700 border-blue-200',
-  };
-  return <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-xs border ${tones[tone]}`}>{children}</span>;
-};
-
-const ShellLayout = ({ headerRight, sidebar, children }) => (
+/* Header swaps brand/actions positions when lang === 'ar' */
+const ShellLayout = ({ lang, onLogoClick, headerActions, sidebar, children }) => (
   <div className="min-h-screen bg-gray-50 text-gray-900">
     <style>{`
       @keyframes trueprice-progress { 0% { transform: translateX(-100%); } 50% { transform: translateX(-20%); } 100% { transform: translateX(100%); } }
     `}</style>
     <header className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b">
       <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
-        <div className="text-lg font-bold tracking-tight">
-          <span className="text-gray-900">Trueprice</span><span className="text-gray-400">.cash</span>
-        </div>
-        <div className="ml-auto flex items-center gap-2">{headerRight}</div>
+        {lang === 'ar' ? (
+          <>
+            {/* Left: actions (Arabic) */}
+            <div className="flex items-center gap-2">{headerActions}</div>
+            <div className="flex-1" />
+            {/* Right: brand (Arabic) */}
+            <div
+              className="text-lg font-bold tracking-tight cursor-pointer"
+              onClick={onLogoClick}
+              title="Trueprice.cash"
+            >
+              <span className="text-gray-900">Trueprice</span><span className="text-gray-400">.cash</span>
+            </div>
+          </>
+        ) : (
+          <>
+            {/* Left: brand (EN) */}
+            <div
+              className="text-lg font-bold tracking-tight cursor-pointer"
+              onClick={onLogoClick}
+              title="Trueprice.cash"
+            >
+              <span className="text-gray-900">Trueprice</span><span className="text-gray-400">.cash</span>
+            </div>
+            <div className="flex-1" />
+            {/* Right: actions (EN) */}
+            <div className="flex items-center gap-2">{headerActions}</div>
+          </>
+        )}
       </div>
     </header>
+
     <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
       <aside className="col-span-12 md:col-span-3">{sidebar}</aside>
       <main className="col-span-12 md:col-span-9">{children}</main>
     </div>
+
     <footer className="max-w-7xl mx-auto px-4 pb-8 text-xs text-gray-500">© Trueprice.cash. All rights reserved.</footer>
   </div>
 );
@@ -219,7 +236,7 @@ function extractJSON(text) {
   return null;
 }
 
-// Arabic currency names for display
+// Arabic currency label
 function ccyName(ccy, lang) {
   if (lang === 'ar') {
     if (ccy === 'SAR') return 'ريال سعودي';
@@ -228,7 +245,6 @@ function ccyName(ccy, lang) {
   return ccy;
 }
 
-// Ensures percent sign glue in RTL
 const AR_PERCENT = '٪';
 function Pct({ n, lang }) {
   const num = Number.isFinite(n) ? n : 0;
@@ -236,7 +252,6 @@ function Pct({ n, lang }) {
   return <bdi>{num.toFixed(2)}{symbol}</bdi>;
 }
 
-// X share link with localized FV breakdown
 function buildXShare({ ticker, company, lang, url, m, aiFV }) {
   const num = (x) => (Number.isFinite(x) ? x.toFixed(2) : '—');
   const cc = m?.currency || '';
@@ -260,11 +275,10 @@ function buildXShare({ ticker, company, lang, url, m, aiFV }) {
         (diff != null ? `AI: ${num(aiFV)} ${cc} (${diff.toFixed(2)}% vs app)\n` : ''),
         url || '',
       ];
-  const text = lines.filter(Boolean).join('');
-  return `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
+  return `https://x.com/intent/tweet?text=${encodeURIComponent(lines.filter(Boolean).join(''))}`;
 }
 
-/* ======== AI cache utils (per-symbol & inputs signature, 24h TTL) ======== */
+/* ======== AI cache utils ======== */
 const AI_TTL_MS = 24 * 60 * 60 * 1000;
 const round2 = (n) => Number.isFinite(n) ? Number(n.toFixed(2)) : 0;
 const aiInputsSig = (m) => `${round2(m.fairEV)}|${round2(m.fairPE)}|${round2(m.fairPS)}|${round2(m.bookValue)}|${round2(m.price)}`;
@@ -278,7 +292,7 @@ function MarketToggle({ value, onChange }) {
   ];
   return (
     <div className="inline-flex items-center rounded-lg border bg-white shadow-sm overflow-hidden">
-      {opts.map((opt, i) => {
+      {opts.map((opt) => {
         const active = value === opt.id;
         return (
           <button
@@ -351,7 +365,7 @@ function IndustryTable({ title, rows, currency, onOpen }) {
   );
 }
 
-function MarketBrowser({ onOpen, T }) {
+function MarketBrowser({ onOpen, T, langApi, onLogoClick }) {
   const [market, setMarket] = useState(() => localStorage.getItem('mkt') || MARKET.SA);
   useEffect(() => { localStorage.setItem('mkt', market); }, [market]);
   const { grouped, loading, error, currency } = useMarketData(market);
@@ -365,42 +379,49 @@ function MarketBrowser({ onOpen, T }) {
     return out;
   }, [grouped, q]);
 
-  return (
+  const headerActions = (
     <>
-      <ShellLayout
-        headerRight={
-          <>
-            <Badge>{market === MARKET.SA ? 'TASI' : 'S&P 500'}</Badge>
-          </>
-        }
-        sidebar={<Sidebar market={market} setMarket={setMarket} q={q} setQ={setQ} T={T} />}
-      >
-        <div className="space-y-4">
-          <Card
-            title={market === MARKET.SA ? '🇸🇦 Saudi Stocks (TASI)' : '🇺🇸 U.S. Stocks (S&P 500)'}
-            subtitle={T('تصفّح حسب الصناعة وافتح السهم للتفاصيل.', 'Browse by industry and open a stock for details.')}
-          >
-            {error && <div className="text-sm text-red-600">{error} — put JSON under <code>public/data</code>.</div>}
-            {loading && <div className="text-sm text-gray-500">Loading…</div>}
-            {!loading && !error && Object.keys(filtered).length === 0 && <div className="text-sm text-gray-500">No results.</div>}
-          </Card>
-
-          {!loading && !error && Object.entries(filtered).map(([industry, list]) => (
-            <IndustryTable
-              key={industry}
-              title={industry}
-              rows={list}
-              currency={currency}
-              onOpen={({ ticker, company }) => onOpen({ ticker, company, market })}
-            />
-          ))}
-        </div>
-      </ShellLayout>
+      <Button variant="ghost" onClick={() => langApi.setLang(langApi.lang === 'ar' ? 'en' : 'ar')}>
+        {langApi.lang === 'ar' ? 'EN' : 'AR'}
+      </Button>
+      <Button as="a" href="https://x.com/dr_sam_78" target="_blank" rel="noopener noreferrer" variant="ghost">
+        Contact us
+      </Button>
     </>
+  );
+
+  return (
+    <ShellLayout
+      lang={langApi.lang}
+      onLogoClick={onLogoClick}
+      headerActions={headerActions}
+      sidebar={<Sidebar market={market} setMarket={setMarket} q={q} setQ={setQ} T={T} />}
+    >
+      <div className="space-y-4">
+        <Card
+          title={market === MARKET.SA ? '🇸🇦 Saudi Stocks (TASI)' : '🇺🇸 U.S. Stocks (S&P 500)'}
+          subtitle={T('تصفّح حسب الصناعة وافتح السهم للتفاصيل.', 'Browse by industry and open a stock for details.')}
+        >
+          {error && <div className="text-sm text-red-600">{error} — put JSON under <code>public/data</code>.</div>}
+          {loading && <div className="text-sm text-gray-500">Loading…</div>}
+          {!loading && !error && Object.keys(filtered).length === 0 && <div className="text-sm text-gray-500">No results.</div>}
+        </Card>
+
+        {!loading && !error && Object.entries(filtered).map(([industry, list]) => (
+          <IndustryTable
+            key={industry}
+            title={industry}
+            rows={list}
+            currency={currency}
+            onOpen={({ ticker, company }) => onOpen({ ticker, company, market })}
+          />
+        ))}
+      </div>
+    </ShellLayout>
   );
 }
 
-function MarketStock({ params, onBack, langApi }) {
+function MarketStock({ params, onBack, langApi, onLogoClick }) {
   const { ticker, company, market } = params;
   const currency = MARKET_CCY[market];
   const { T, lang } = langApi;
@@ -409,7 +430,6 @@ function MarketStock({ params, onBack, langApi }) {
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState('');
 
-  // AI states + UX
   const [aiBusy, setAiBusy] = useState(false);
   const [aiFV, setAiFV] = useState(null);
   const [aiRationale, setAiRationale] = useState('');
@@ -505,25 +525,26 @@ function MarketStock({ params, onBack, langApi }) {
   const equalWithin = Math.abs(diffPct) < 0.0001;
   const compColor = equalWithin ? 'text-blue-600' : (aiFV < (m?.weighted || 0) ? 'text-red-600' : 'text-green-600');
 
+  const headerActions = (
+    <>
+      <Button variant="ghost" onClick={onBack}>{T('الرجوع', 'Back')}</Button>
+      <Button variant="ghost" onClick={() => langApi.setLang(langApi.lang === 'ar' ? 'en' : 'ar')}>
+        {langApi.lang === 'ar' ? 'EN' : 'AR'}
+      </Button>
+      <Button as="a" href="https://x.com/dr_sam_78" target="_blank" rel="noopener noreferrer" variant="ghost">Contact us</Button>
+    </>
+  );
+
   return (
     <ShellLayout
-      headerRight={
-        <>
-          <Button variant="ghost" onClick={onBack}>{T('الرجوع', 'Back')}</Button>
-          <Button as="a" href={xUrl} target="_blank" rel="noopener noreferrer" variant="ghost">Share on X</Button>
-        </>
-      }
+      lang={langApi.lang}
+      onLogoClick={onLogoClick}
+      headerActions={headerActions}
       sidebar={
         <Card title={T('نظرة عامة', 'Overview')}>
           <div className="space-y-2">
             <div className="text-lg font-semibold">{company}</div>
             <div className="text-sm text-gray-500">{ticker}</div>
-            <div className="flex items-center gap-2">
-              <Badge tone="blue">{market === MARKET.SA ? 'TASI' : 'S&P 500'}</Badge>
-              {m && <Badge tone={pct >= 0 ? (pct >= 25 ? 'green' : 'blue') : 'red'}>
-                {pct >= 25 ? 'Undervalued' : pct >= 0 ? 'Fair' : 'Overvalued'}
-              </Badge>}
-            </div>
           </div>
         </Card>
       }
@@ -636,7 +657,6 @@ function MarketStock({ params, onBack, langApi }) {
                   <Card title={T('مشاركة', 'Share')}>
                     <div className="flex items-center gap-2">
                       <Button as="a" href={xUrl} target="_blank" rel="noopener noreferrer" variant="ghost">Share on X</Button>
-                      <Badge tone={pct >= 0 ? (pct >= 25 ? 'green' : 'blue') : 'red'}>{valuationMsg}</Badge>
                     </div>
                   </Card>
                 </div>
@@ -657,11 +677,15 @@ export default function App() {
 
   useEffect(() => { if (typeof navigator !== 'undefined' && 'gpu' in navigator) { getEngine().catch(() => {}); } }, []);
 
+  const onLogoClick = () => { setView('home'); setRoute({}); };
+
   return (
     <div dir={langApi.lang === 'ar' ? 'rtl' : 'ltr'} lang={langApi.lang}>
       {view === 'home' && (
         <MarketBrowser
           T={langApi.T}
+          langApi={langApi}
+          onLogoClick={onLogoClick}
           onOpen={({ ticker, company, market }) => { setView('market_stock'); setRoute({ ticker, company, market }); }}
         />
       )}
@@ -669,21 +693,10 @@ export default function App() {
         <MarketStock
           params={route}
           langApi={langApi}
+          onLogoClick={onLogoClick}
           onBack={() => { setView('home'); setRoute({}); }}
         />
       )}
-
-      {/* Global header actions (language + contact) */}
-      <div className="fixed top-3 right-3 z-30">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" onClick={() => langApi.setLang(langApi.lang === 'ar' ? 'en' : 'ar')}>
-            {langApi.lang === 'ar' ? 'EN' : 'AR'}
-          </Button>
-          <Button as="a" href="https://x.com/dr_sam_78" target="_blank" rel="noopener noreferrer" variant="ghost">
-            Contact us
-          </Button>
-        </div>
-      </div>
     </div>
   );
 }
