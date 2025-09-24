@@ -1,5 +1,5 @@
 // path: src/App.jsx
-// Trueprice.cash — Corporate UI refresh (adjusted header behavior + removed market badges)
+// Trueprice.cash — Corporate UI refresh + WebLLM robust init & JSON handling
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { CreateMLCEngine } from '@mlc-ai/web-llm';
@@ -33,7 +33,7 @@ const Card = ({ title, subtitle, actions, children, className = '' }) => (
   </section>
 );
 
-/* Header swaps brand/actions positions when lang === 'ar' */
+/* Header swaps brand/actions position when lang === 'ar' */
 const ShellLayout = ({ lang, onLogoClick, headerActions, sidebar, children }) => (
   <div className="min-h-screen bg-gray-50 text-gray-900">
     <style>{`
@@ -43,30 +43,18 @@ const ShellLayout = ({ lang, onLogoClick, headerActions, sidebar, children }) =>
       <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
         {lang === 'ar' ? (
           <>
-            {/* Left: actions (Arabic) */}
             <div className="flex items-center gap-2">{headerActions}</div>
             <div className="flex-1" />
-            {/* Right: brand (Arabic) */}
-            <div
-              className="text-lg font-bold tracking-tight cursor-pointer"
-              onClick={onLogoClick}
-              title="Trueprice.cash"
-            >
+            <div className="text-lg font-bold tracking-tight cursor-pointer" onClick={onLogoClick} title="Trueprice.cash">
               <span className="text-gray-900">Trueprice</span><span className="text-gray-400">.cash</span>
             </div>
           </>
         ) : (
           <>
-            {/* Left: brand (EN) */}
-            <div
-              className="text-lg font-bold tracking-tight cursor-pointer"
-              onClick={onLogoClick}
-              title="Trueprice.cash"
-            >
+            <div className="text-lg font-bold tracking-tight cursor-pointer" onClick={onLogoClick} title="Trueprice.cash">
               <span className="text-gray-900">Trueprice</span><span className="text-gray-400">.cash</span>
             </div>
             <div className="flex-1" />
-            {/* Right: actions (EN) */}
             <div className="flex items-center gap-2">{headerActions}</div>
           </>
         )}
@@ -75,7 +63,7 @@ const ShellLayout = ({ lang, onLogoClick, headerActions, sidebar, children }) =>
 
     <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-12 gap-6">
       <aside className="col-span-12 md:col-span-3">{sidebar}</aside>
-      <main className="col-span-12 md:col-span-9">{children}</main>
+      <main className="col-span-12 md:grid-cols-9 md:col-span-9">{children}</main>
     </div>
 
     <footer className="max-w-7xl mx-auto px-4 pb-8 text-xs text-gray-500">© Trueprice.cash. All rights reserved.</footer>
@@ -120,7 +108,7 @@ async function fetchTwelvePrices(symbols) {
       } else if (j && typeof j === 'object') {
         for (const [sym, obj] of Object.entries(j)) { const p = typeof obj?.price === 'string' ? parseFloat(obj.price) : Number(obj?.price); if (sym && Number.isFinite(p)) result[sym] = p; }
       }
-    } catch { /* ignore chunk error */ }
+    } catch {}
   }
   return result;
 }
@@ -163,7 +151,7 @@ function useMarketData(market) {
   return { grouped, loading, error, currency: MARKET_CCY[market] };
 }
 
-/* ========================== Valuation metrics (EV/PE/PS) + cache ========================== */
+/* ========================== Metrics (EV/PE/PS) + cache ========================== */
 const pctColor = (pct) => (pct >= 25 ? 'text-green-600' : pct >= 0 ? 'text-blue-600' : 'text-red-600');
 const bandColor = (v, low, high) => (v < low ? 'text-red-600' : v < high ? 'text-amber-600' : 'text-green-600');
 
@@ -220,20 +208,53 @@ function useLang() {
   return { lang, setLang, T };
 }
 
-/* ========================== On-device AI (WebLLM) ========================== */
-const MODEL_ID = 'Phi-3-mini-4k-instruct-q4f16_1-MLC';
+/* ========================== WebLLM: robust init + parsing ========================== */
+const MODEL_CANDIDATES = [
+  'Phi-3-mini-4k-instruct-q4f16_1-MLC',
+  'Llama-3.2-1B-Instruct-q4f16_1-MLC',
+  'Qwen2.5-1.5B-Instruct-q4f16_1-MLC',
+];
+
 let __engine = null;
+let __modelId = null;
+
+async function tryCreateEngine(modelId) {
+  // Why: API signature changed between versions. Try both.
+  try { return await CreateMLCEngine(modelId); } catch (e1) {
+    try { return await CreateMLCEngine({ model: modelId }); } catch (e2) {
+      const err = new Error(`Failed to init model ${modelId}: ${e2?.message || e1?.message || 'unknown'}`);
+      err.cause = e2 || e1; throw err;
+    }
+  }
+}
+
 async function getEngine() {
   if (__engine) return __engine;
-  const eng = await CreateMLCEngine(MODEL_ID);
-  __engine = eng; return eng;
+  let lastErr;
+  for (const mid of MODEL_CANDIDATES) {
+    try {
+      const eng = await tryCreateEngine(mid);
+      __engine = eng; __modelId = mid;
+      return eng;
+    } catch (e) { lastErr = e; }
+  }
+  throw lastErr || new Error('No WebLLM model could be initialized.');
 }
+
 function extractJSON(text) {
-  if (!text) return null; const fence = /```(?:json)?\n([\s\S]*?)```/i.exec(text); const raw = fence ? fence[1] : text;
+  if (!text) return null;
+  const fence = /```(?:json)?\s*([\s\S]*?)```/i.exec(text);
+  const raw = fence ? fence[1] : text;
   try { return JSON.parse(raw); } catch {}
   const i = raw.lastIndexOf('{'); const j = raw.lastIndexOf('}');
   if (i >= 0 && j > i) { try { return JSON.parse(raw.slice(i, j + 1)); } catch {} }
   return null;
+}
+
+function readLLMContent(resp) {
+  // Why: Different web-llm versions expose either OpenAI-like choices[] or output_text.
+  const c = resp?.choices?.[0]?.message?.content ?? resp?.output_text ?? '';
+  return typeof c === 'string' ? c : '';
 }
 
 // Arabic currency label
@@ -282,7 +303,7 @@ function buildXShare({ ticker, company, lang, url, m, aiFV }) {
 const AI_TTL_MS = 24 * 60 * 60 * 1000;
 const round2 = (n) => Number.isFinite(n) ? Number(n.toFixed(2)) : 0;
 const aiInputsSig = (m) => `${round2(m.fairEV)}|${round2(m.fairPE)}|${round2(m.fairPS)}|${round2(m.bookValue)}|${round2(m.price)}`;
-const AI_CACHE_KEY = (symbolWithSuffix, sig) => `ai_fv_cache_v1_${MODEL_ID}_${symbolWithSuffix}_${sig}`;
+const AI_CACHE_KEY = (symbolWithSuffix, sig) => `ai_fv_cache_v1_${__modelId || 'unknown'}_${symbolWithSuffix}_${sig}`;
 
 /* ========================== Components ========================== */
 function MarketToggle({ value, onChange }) {
@@ -505,7 +526,8 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
         messages: [ { role: 'system', content: sys }, { role: 'user', content: user } ],
         temperature: 0.2, max_tokens: 180,
       });
-      const content = resp?.choices?.[0]?.message?.content || '';
+
+      const content = readLLMContent(resp);
       const j = extractJSON(content);
       if (j && typeof j.fv === 'number') {
         const fvNum = Number(j.fv);
@@ -513,10 +535,15 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
         setAiRationale(typeof j.rationale === 'string' ? j.rationale : '');
         cacheWrite(key, { at: Date.now(), fv: fvNum, rationale: typeof j.rationale === 'string' ? j.rationale : '' });
       } else {
-        setAiError(T('حدث خطأ، حاول مرة أخرى.', 'Something went wrong. Try again.'));
+        // Why: expose parsable error & raw content to help debug formatting
+        setAiError((lang === 'ar'
+          ? 'تعذر قراءة استجابة الذكاء الاصطناعي.'
+          : 'Could not parse AI response.') + (content ? ` [raw: ${content.slice(0, 160)}…]` : ''));
       }
-    } catch {
-      setAiError(T('حدث خطأ، حاول مرة أخرى.', 'Something went wrong. Try again.'));
+    } catch (e) {
+      setAiError((lang === 'ar'
+        ? 'حدث خطأ أثناء تشغيل الذكاء الاصطناعي: '
+        : 'AI runtime error: ') + String(e?.message || e));
     } finally { setAiBusy(false); }
   }
 
@@ -675,7 +702,12 @@ export default function App() {
   const [route, setRoute] = useState({});
   const langApi = useLang();
 
-  useEffect(() => { if (typeof navigator !== 'undefined' && 'gpu' in navigator) { getEngine().catch(() => {}); } }, []);
+  useEffect(() => {
+    if (typeof navigator !== 'undefined' && 'gpu' in navigator) {
+      // Why: warm-up with fallback list to avoid first-click failures
+      getEngine().catch(() => {});
+    }
+  }, []);
 
   const onLogoClick = () => { setView('home'); setRoute({}); };
 
