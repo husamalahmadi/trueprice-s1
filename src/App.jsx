@@ -1,5 +1,6 @@
 // path: src/App.jsx
-// Trueprice.cash — Corporate UI refresh + WebLLM robust init & JSON handling
+// Trueprice.cash — Corporate UI + AR header flip + WebLLM robustness
+// Update: localized "Open" button; grouped fair value tiles under "Stock Fair Value".
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { CreateMLCEngine } from '@mlc-ai/web-llm';
@@ -33,7 +34,7 @@ const Card = ({ title, subtitle, actions, children, className = '' }) => (
   </section>
 );
 
-/* Header swaps brand/actions position when lang === 'ar' */
+/* Header swaps brand/actions when lang === 'ar' */
 const ShellLayout = ({ lang, onLogoClick, headerActions, sidebar, children }) => (
   <div className="min-h-screen bg-gray-50 text-gray-900">
     <style>{`
@@ -202,60 +203,45 @@ async function getValuationMetricsCached(symbolWithSuffix, currency) {
 
 /* ========================== i18n ========================== */
 function useLang() {
+  // Default is English; persists user choice.
   const [lang, setLang] = useState(() => localStorage.getItem('lang') || 'en');
   useEffect(() => { localStorage.setItem('lang', lang); }, [lang]);
   const T = (ar, en) => (lang === 'ar' ? ar : en);
   return { lang, setLang, T };
 }
 
-/* ========================== WebLLM: robust init + parsing ========================== */
+/* ========================== WebLLM robustness ========================== */
 const MODEL_CANDIDATES = [
   'Phi-3-mini-4k-instruct-q4f16_1-MLC',
   'Llama-3.2-1B-Instruct-q4f16_1-MLC',
   'Qwen2.5-1.5B-Instruct-q4f16_1-MLC',
 ];
-
 let __engine = null;
 let __modelId = null;
 
 async function tryCreateEngine(modelId) {
-  // Why: API signature changed between versions. Try both.
   try { return await CreateMLCEngine(modelId); } catch (e1) {
     try { return await CreateMLCEngine({ model: modelId }); } catch (e2) {
-      const err = new Error(`Failed to init model ${modelId}: ${e2?.message || e1?.message || 'unknown'}`);
-      err.cause = e2 || e1; throw err;
+      const err = new Error(`Failed to init model ${modelId}: ${e2?.message || e1?.message || 'unknown'}`); err.cause = e2 || e1; throw err;
     }
   }
 }
-
 async function getEngine() {
   if (__engine) return __engine;
   let lastErr;
   for (const mid of MODEL_CANDIDATES) {
-    try {
-      const eng = await tryCreateEngine(mid);
-      __engine = eng; __modelId = mid;
-      return eng;
-    } catch (e) { lastErr = e; }
+    try { const eng = await tryCreateEngine(mid); __engine = eng; __modelId = mid; return eng; } catch (e) { lastErr = e; }
   }
   throw lastErr || new Error('No WebLLM model could be initialized.');
 }
-
 function extractJSON(text) {
   if (!text) return null;
-  const fence = /```(?:json)?\s*([\s\S]*?)```/i.exec(text);
-  const raw = fence ? fence[1] : text;
+  const fence = /```(?:json)?\s*([\s\S]*?)```/i.exec(text); const raw = fence ? fence[1] : text;
   try { return JSON.parse(raw); } catch {}
-  const i = raw.lastIndexOf('{'); const j = raw.lastIndexOf('}');
-  if (i >= 0 && j > i) { try { return JSON.parse(raw.slice(i, j + 1)); } catch {} }
+  const i = raw.lastIndexOf('{'); const j = raw.lastIndexOf('}'); if (i >= 0 && j > i) { try { return JSON.parse(raw.slice(i, j + 1)); } catch {} }
   return null;
 }
-
-function readLLMContent(resp) {
-  // Why: Different web-llm versions expose either OpenAI-like choices[] or output_text.
-  const c = resp?.choices?.[0]?.message?.content ?? resp?.output_text ?? '';
-  return typeof c === 'string' ? c : '';
-}
+function readLLMContent(resp) { return resp?.choices?.[0]?.message?.content ?? resp?.output_text ?? ''; }
 
 // Arabic currency label
 function ccyName(ccy, lang) {
@@ -265,14 +251,12 @@ function ccyName(ccy, lang) {
   }
   return ccy;
 }
-
 const AR_PERCENT = '٪';
 function Pct({ n, lang }) {
   const num = Number.isFinite(n) ? n : 0;
   const symbol = lang === 'ar' ? AR_PERCENT : '%';
   return <bdi>{num.toFixed(2)}{symbol}</bdi>;
 }
-
 function buildXShare({ ticker, company, lang, url, m, aiFV }) {
   const num = (x) => (Number.isFinite(x) ? x.toFixed(2) : '—');
   const cc = m?.currency || '';
@@ -355,7 +339,7 @@ function Sidebar({ market, setMarket, q, setQ, T }) {
   );
 }
 
-function IndustryTable({ title, rows, currency, onOpen }) {
+function IndustryTable({ title, rows, currency, onOpen, T }) {
   return (
     <Card title={title} className="mb-4">
       <div className="overflow-x-auto">
@@ -375,7 +359,9 @@ function IndustryTable({ title, rows, currency, onOpen }) {
                 <td className="py-2 px-2">{s.companyName}</td>
                 <td className="py-2 px-2 text-right">{s.price == null ? <span className="text-gray-400">—</span> : `${s.price.toFixed(2)} ${currency}`}</td>
                 <td className="py-2 px-2 text-right">
-                  <Button variant="subtle" onClick={() => onOpen({ ticker: s.ticker, company: s.companyName })}>Open</Button>
+                  <Button variant="subtle" onClick={() => onOpen({ ticker: s.ticker, company: s.companyName })}>
+                    {T('فتح', 'Open')}
+                  </Button>
                 </td>
               </tr>
             ))}
@@ -435,6 +421,7 @@ function MarketBrowser({ onOpen, T, langApi, onLogoClick }) {
             rows={list}
             currency={currency}
             onOpen={({ ticker, company }) => onOpen({ ticker, company, market })}
+            T={T}
           />
         ))}
       </div>
@@ -526,7 +513,6 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
         messages: [ { role: 'system', content: sys }, { role: 'user', content: user } ],
         temperature: 0.2, max_tokens: 180,
       });
-
       const content = readLLMContent(resp);
       const j = extractJSON(content);
       if (j && typeof j.fv === 'number') {
@@ -535,7 +521,6 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
         setAiRationale(typeof j.rationale === 'string' ? j.rationale : '');
         cacheWrite(key, { at: Date.now(), fv: fvNum, rationale: typeof j.rationale === 'string' ? j.rationale : '' });
       } else {
-        // Why: expose parsable error & raw content to help debug formatting
         setAiError((lang === 'ar'
           ? 'تعذر قراءة استجابة الذكاء الاصطناعي.'
           : 'Could not parse AI response.') + (content ? ` [raw: ${content.slice(0, 160)}…]` : ''));
@@ -591,7 +576,7 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
               )}
 
               <div className="grid lg:grid-cols-2 gap-6">
-                {/* Left: Fair Value */}
+                {/* Left: Pricing + Weighted FV */}
                 <div className="space-y-3">
                   <div className="flex items-end justify-between">
                     <div>
@@ -606,24 +591,27 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="rounded-lg border p-3">
-                      <div className="text-xs text-gray-500">Enterprise Value</div>
-                      <div className="text-lg font-medium">{m.fairEV.toFixed(2)} {ccyLabel}</div>
+                  {/* Grouped Fair Value Card */}
+                  <Card title={T('القيمة العادلة للسهم', 'Stock Fair Value')}>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="rounded-lg border p-3">
+                        <div className="text-xs text-gray-500">{T('قيمة المؤسسة', 'Enterprise value')}</div>
+                        <div className="text-lg font-medium">{m.fairEV.toFixed(2)} {ccyLabel}</div>
+                      </div>
+                      <div className="rounded-lg border p-3">
+                        <div className="text-xs text-gray-500">{T('قيمة الأرباح', 'Earning value')}</div>
+                        <div className="text-lg font-medium">{m.fairPE.toFixed(2)} {ccyLabel}</div>
+                      </div>
+                      <div className="rounded-lg border p-3">
+                        <div className="text-xs text-gray-500">{T('قيمة المبيعات', 'Sales value')}</div>
+                        <div className="text-lg font-medium">{m.fairPS.toFixed(2)} {ccyLabel}</div>
+                      </div>
+                      <div className="rounded-lg border p-3">
+                        <div className="text-xs text-gray-500">{T('القيمة الدفترية', 'Book value')}</div>
+                        <div className="text-lg font-medium">{m.bookValue.toFixed(2)} {ccyLabel}</div>
+                      </div>
                     </div>
-                    <div className="rounded-lg border p-3">
-                      <div className="text-xs text-gray-500">Earnings (PE)</div>
-                      <div className="text-lg font-medium">{m.fairPE.toFixed(2)} {ccyLabel}</div>
-                    </div>
-                    <div className="rounded-lg border p-3">
-                      <div className="text-xs text-gray-500">Sales (P/S)</div>
-                      <div className="text-lg font-medium">{m.fairPS.toFixed(2)} {ccyLabel}</div>
-                    </div>
-                    <div className="rounded-lg border p-3">
-                      <div className="text-xs text-gray-500">{T('القيمة الدفترية', 'Book Value')}</div>
-                      <div className="text-lg font-medium">{m.bookValue.toFixed(2)} {ccyLabel}</div>
-                    </div>
-                  </div>
+                  </Card>
 
                   <div className="flex items-center gap-2">
                     <Button onClick={askAI} disabled={aiBusy || !hasWebGPU}>{T('اسأل الذكاء الاصطناعي', 'Ask AI')}</Button>
@@ -703,10 +691,7 @@ export default function App() {
   const langApi = useLang();
 
   useEffect(() => {
-    if (typeof navigator !== 'undefined' && 'gpu' in navigator) {
-      // Why: warm-up with fallback list to avoid first-click failures
-      getEngine().catch(() => {});
-    }
+    if (typeof navigator !== 'undefined' && 'gpu' in navigator) { getEngine().catch(() => {}); }
   }, []);
 
   const onLogoClick = () => { setView('home'); setRoute({}); };
