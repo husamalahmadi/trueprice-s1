@@ -1,4464 +1,4 @@
 {
-  "Communication Services": [
-    {
-      "Ticker": "GOOGL",
-      "Company": "Alphabet Inc. (Class A)"
-    },
-    {
-      "Ticker": "GOOG",
-      "Company": "Alphabet Inc. (Class C)"
-    },
-    {
-      "Ticker": "T",
-      "Company": "AT&T"
-    },
-    {
-      "Ticker": "CHTR",
-      "Company": "Charter Communications"
-    },
-    {
-      "Ticker": "CMCSA",
-      "Company": "Comcast"
-    },
-    {
-      "Ticker": "EA",
-      "Company": "Electronic Arts"
-    },
-    {
-      "Ticker": "FOXA",
-      "Company": "Fox Corporation (Class A)"
-    },
-    {
-      "Ticker": "FOX",
-      "Company": "Fox Corporation (Class B)"
-    },
-    {
-      "Ticker": "IPG",
-      "Company": "Interpublic Group of Companies (The)"
-    },
-    {
-      "Ticker": "LYV",
-      "Company": "Live Nation Entertainment"
-    },
-    {
-      "Ticker": "MTCH",
-      "Company": "Match Group"
-    },
-    {
-      "Ticker": "META",
-      "Company": "Meta Platforms"
-    },
-    {
-      "Ticker": "NFLX",
-      "Company": "Netflix"
-    },
-    {
-      "Ticker": "NWSA",
-      "Company": "News Corp (Class A)"
-    },
-    {
-      "Ticker": "NWS",
-      "Company": "News Corp (Class B)"
-    },
-    {
-      "Ticker": "OMC",
-      "Company": "Omnicom Group"
-    },
-    {
-      "Ticker": "PARA",
-      "Company": "Paramount Global"
-    },
-    {
-      "Ticker": "TMUS",
-      "Company": "T-Mobile US"
-    },
-    {
-      "Ticker": "TTWO",
-      "Company": "Take-Two Interactive"
-    },
-    {
-      "Ticker": "TKO",
-      "Company": "TKO Group Holdings"
-    },
-    {
-      "Ticker": "TTD",
-      "Company": "Trade Desk (The)"
-    },
-    {
-      "Ticker": "VZ",
-      "Company": "Verizon"
-    },
-    {
-      "Ticker": "DIS",
-      "Company": "Walt Disney Company (The)"
-    },
-    {
-      "Ticker": "WBD",
-      "Company": "Warner Bros. Discovery"
-    },
-    {
-      "Ticker": "AMC",
-      "Company": "AMC ENTERTAINMENT HOLDINGS, INC."
-    },
-    {
-      "Ticker": "AMCX",
-      "Company": "AMC Networks Inc."
-    },
-    {
-      "Ticker": "ATEX",
-      "Company": "Anterix Inc."
-    },
-    {
-      "Ticker": "ATNI",
-      "Company": "ATN International, Inc."
-    },
-    {
-      "Ticker": "BATRA",
-      "Company": "Atlanta Braves Holdings, Inc."
-    },
-    {
-      "Ticker": "BATRK",
-      "Company": "Atlanta Braves Holdings, Inc."
-    },
-    {
-      "Ticker": "CABO",
-      "Company": "Cable One, Inc."
-    },
-    {
-      "Ticker": "CARG",
-      "Company": "CarGurus, Inc."
-    },
-    {
-      "Ticker": "CCO",
-      "Company": "Clear Channel Outdoor Holdings, Inc."
-    },
-    {
-      "Ticker": "CCOI",
-      "Company": "COGENT COMMUNICATIONS HOLDINGS, INC."
-    },
-    {
-      "Ticker": "CDLX",
-      "Company": "Cardlytics, Inc."
-    },
-    {
-      "Ticker": "CMPR",
-      "Company": "CIMPRESS plc"
-    },
-    {
-      "Ticker": "CNK",
-      "Company": "Cinemark Holdings, Inc."
-    },
-    {
-      "Ticker": "DJCO",
-      "Company": "DAILY JOURNAL CORP"
-    },
-    {
-      "Ticker": "DLX",
-      "Company": "DELUXE CORP"
-    },
-    {
-      "Ticker": "EEX",
-      "Company": "Emerald Holding, Inc."
-    },
-    {
-      "Ticker": "EVC",
-      "Company": "ENTRAVISION COMMUNICATIONS CORP"
-    },
-    {
-      "Ticker": "EVER",
-      "Company": "EverQuote, Inc."
-    },
-    {
-      "Ticker": "GCI",
-      "Company": "Gannett Co., Inc."
-    },
-    {
-      "Ticker": "GMGI",
-      "Company": "Golden Matrix Group, Inc."
-    },
-    {
-      "Ticker": "GOGO",
-      "Company": "Gogo Inc."
-    },
-    {
-      "Ticker": "GRPN",
-      "Company": "Groupon, Inc."
-    },
-    {
-      "Ticker": "GSAT",
-      "Company": "Globalstar, Inc."
-    },
-    {
-      "Ticker": "GTN",
-      "Company": "GRAY TELEVISION INC"
-    },
-    {
-      "Ticker": "IDCC",
-      "Company": "InterDigital, Inc."
-    },
-    {
-      "Ticker": "IDT",
-      "Company": "IDT CORP"
-    },
-    {
-      "Ticker": "IHRT",
-      "Company": "iHeartMedia, Inc."
-    },
-    {
-      "Ticker": "IMAX",
-      "Company": "IMAX CORP"
-    },
-    {
-      "Ticker": "INSE",
-      "Company": "Inspired Entertainment, Inc."
-    },
-    {
-      "Ticker": "LILA",
-      "Company": "Liberty Latin America Ltd."
-    },
-    {
-      "Ticker": "LILAK",
-      "Company": "Liberty Latin America Ltd."
-    },
-    {
-      "Ticker": "MCS",
-      "Company": "MARCUS CORP"
-    },
-    {
-      "Ticker": "NCMI",
-      "Company": "National CineMedia, Inc."
-    },
-    {
-      "Ticker": "OOMA",
-      "Company": "OOMA INC"
-    },
-    {
-      "Ticker": "QNST",
-      "Company": "QUINSTREET, INC"
-    },
-    {
-      "Ticker": "RBBN",
-      "Company": "Ribbon Communications Inc."
-    },
-    {
-      "Ticker": "SBGI",
-      "Company": "Sinclair, Inc."
-    },
-    {
-      "Ticker": "SCHL",
-      "Company": "SCHOLASTIC CORP"
-    },
-    {
-      "Ticker": "SHEN",
-      "Company": "SHENANDOAH TELECOMMUNICATIONS CO/VA/"
-    },
-    {
-      "Ticker": "SPOK",
-      "Company": "Spok Holdings, Inc"
-    },
-    {
-      "Ticker": "SSP",
-      "Company": "E.W. SCRIPPS Co"
-    },
-    {
-      "Ticker": "SSTK",
-      "Company": "Shutterstock, Inc."
-    },
-    {
-      "Ticker": "TDS",
-      "Company": "TELEPHONE & DATA SYSTEMS INC /DE/"
-    },
-    {
-      "Ticker": "TGNA",
-      "Company": "TEGNA INC"
-    },
-    {
-      "Ticker": "TRUE",
-      "Company": "TrueCar, Inc."
-    },
-    {
-      "Ticker": "TSQ",
-      "Company": "Townsquare Media, Inc."
-    },
-    {
-      "Ticker": "TTGT",
-      "Company": "TechTarget Holdings Inc."
-    },
-    {
-      "Ticker": "WOW",
-      "Company": "WideOpenWest, Inc."
-    },
-    {
-      "Ticker": "YELP",
-      "Company": "YELP INC"
-    }
-  ],
-  "Consumer Discretionary": [
-    {
-      "Ticker": "ABNB",
-      "Company": "Airbnb"
-    },
-    {
-      "Ticker": "AMZN",
-      "Company": "Amazon"
-    },
-    {
-      "Ticker": "APTV",
-      "Company": "Aptiv"
-    },
-    {
-      "Ticker": "AZO",
-      "Company": "AutoZone"
-    },
-    {
-      "Ticker": "BBY",
-      "Company": "Best Buy"
-    },
-    {
-      "Ticker": "BKNG",
-      "Company": "Booking Holdings"
-    },
-    {
-      "Ticker": "CZR",
-      "Company": "Caesars Entertainment"
-    },
-    {
-      "Ticker": "KMX",
-      "Company": "CarMax"
-    },
-    {
-      "Ticker": "CCL",
-      "Company": "Carnival"
-    },
-    {
-      "Ticker": "CMG",
-      "Company": "Chipotle Mexican Grill"
-    },
-    {
-      "Ticker": "DRI",
-      "Company": "Darden Restaurants"
-    },
-    {
-      "Ticker": "DECK",
-      "Company": "Deckers Brands"
-    },
-    {
-      "Ticker": "DPZ",
-      "Company": "Domino's"
-    },
-    {
-      "Ticker": "DASH",
-      "Company": "DoorDash"
-    },
-    {
-      "Ticker": "DHI",
-      "Company": "D. R. Horton"
-    },
-    {
-      "Ticker": "EBAY",
-      "Company": "eBay Inc."
-    },
-    {
-      "Ticker": "EXPE",
-      "Company": "Expedia Group"
-    },
-    {
-      "Ticker": "F",
-      "Company": "Ford Motor Company"
-    },
-    {
-      "Ticker": "GRMN",
-      "Company": "Garmin"
-    },
-    {
-      "Ticker": "GM",
-      "Company": "General Motors"
-    },
-    {
-      "Ticker": "GPC",
-      "Company": "Genuine Parts Company"
-    },
-    {
-      "Ticker": "HAS",
-      "Company": "Hasbro"
-    },
-    {
-      "Ticker": "HLT",
-      "Company": "Hilton Worldwide"
-    },
-    {
-      "Ticker": "HD",
-      "Company": "Home Depot (The)"
-    },
-    {
-      "Ticker": "LVS",
-      "Company": "Las Vegas Sands"
-    },
-    {
-      "Ticker": "LEN",
-      "Company": "Lennar"
-    },
-    {
-      "Ticker": "LKQ",
-      "Company": "LKQ Corporation"
-    },
-    {
-      "Ticker": "LOW",
-      "Company": "Lowe's"
-    },
-    {
-      "Ticker": "LULU",
-      "Company": "Lululemon Athletica"
-    },
-    {
-      "Ticker": "MAR",
-      "Company": "Marriott International"
-    },
-    {
-      "Ticker": "MCD",
-      "Company": "McDonald's"
-    },
-    {
-      "Ticker": "MGM",
-      "Company": "MGM Resorts"
-    },
-    {
-      "Ticker": "MHK",
-      "Company": "Mohawk Industries"
-    },
-    {
-      "Ticker": "NKE",
-      "Company": "Nike, Inc."
-    },
-    {
-      "Ticker": "NCLH",
-      "Company": "Norwegian Cruise Line Holdings"
-    },
-    {
-      "Ticker": "NVR",
-      "Company": "NVR, Inc."
-    },
-    {
-      "Ticker": "ORLY",
-      "Company": "O\u2019Reilly Automotive"
-    },
-    {
-      "Ticker": "POOL",
-      "Company": "Pool Corporation"
-    },
-    {
-      "Ticker": "PHM",
-      "Company": "PulteGroup"
-    },
-    {
-      "Ticker": "RL",
-      "Company": "Ralph Lauren Corporation"
-    },
-    {
-      "Ticker": "ROST",
-      "Company": "Ross Stores"
-    },
-    {
-      "Ticker": "RCL",
-      "Company": "Royal Caribbean Group"
-    },
-    {
-      "Ticker": "SBUX",
-      "Company": "Starbucks"
-    },
-    {
-      "Ticker": "TPR",
-      "Company": "Tapestry, Inc."
-    },
-    {
-      "Ticker": "TSLA",
-      "Company": "Tesla, Inc."
-    },
-    {
-      "Ticker": "TJX",
-      "Company": "TJX Companies"
-    },
-    {
-      "Ticker": "TSCO",
-      "Company": "Tractor Supply"
-    },
-    {
-      "Ticker": "ULTA",
-      "Company": "Ulta Beauty"
-    },
-    {
-      "Ticker": "WSM",
-      "Company": "Williams-Sonoma, Inc."
-    },
-    {
-      "Ticker": "WYNN",
-      "Company": "Wynn Resorts"
-    },
-    {
-      "Ticker": "YUM",
-      "Company": "Yum! Brands"
-    },
-    {
-      "Ticker": "ABG",
-      "Company": "ASBURY AUTOMOTIVE GROUP INC"
-    },
-    {
-      "Ticker": "ACEL",
-      "Company": "Accel Entertainment, Inc."
-    },
-    {
-      "Ticker": "ADNT",
-      "Company": "Adient plc"
-    },
-    {
-      "Ticker": "AEO",
-      "Company": "AMERICAN EAGLE OUTFITTERS INC"
-    },
-    {
-      "Ticker": "AGS",
-      "Company": "Ageas N.V."
-    },
-    {
-      "Ticker": "AIN",
-      "Company": "ALBANY INTERNATIONAL CORP /DE/"
-    },
-    {
-      "Ticker": "AMWD",
-      "Company": "AMERICAN WOODMARK CORP"
-    },
-    {
-      "Ticker": "ANF",
-      "Company": "ABERCROMBIE & FITCH CO /DE/"
-    },
-    {
-      "Ticker": "AXL",
-      "Company": "AMERICAN AXLE & MANUFACTURING HOLDINGS INC"
-    },
-    {
-      "Ticker": "BBW",
-      "Company": "BUILD-A-BEAR WORKSHOP INC"
-    },
-    {
-      "Ticker": "BH",
-      "Company": "Biglari Holdings Inc."
-    },
-    {
-      "Ticker": "BJRI",
-      "Company": "BJs RESTAURANTS INC"
-    },
-    {
-      "Ticker": "BKE",
-      "Company": "BUCKLE INC"
-    },
-    {
-      "Ticker": "BLBD",
-      "Company": "Blue Bird Corp"
-    },
-    {
-      "Ticker": "BLMN",
-      "Company": "Bloomin' Brands, Inc."
-    },
-    {
-      "Ticker": "BLNK",
-      "Company": "Blink Charging Co."
-    },
-    {
-      "Ticker": "BOOT",
-      "Company": "Boot Barn Holdings, Inc."
-    },
-    {
-      "Ticker": "BZH",
-      "Company": "BEAZER HOMES USA INC"
-    },
-    {
-      "Ticker": "CAKE",
-      "Company": "CHEESECAKE FACTORY INC"
-    },
-    {
-      "Ticker": "CAL",
-      "Company": "CALERES INC"
-    },
-    {
-      "Ticker": "CARS",
-      "Company": "Cars.com Inc."
-    },
-    {
-      "Ticker": "CBRL",
-      "Company": "CRACKER BARREL OLD COUNTRY STORE, INC"
-    },
-    {
-      "Ticker": "CCS",
-      "Company": "Century Communities, Inc."
-    },
-    {
-      "Ticker": "CLAR",
-      "Company": "Clarus Corp"
-    },
-    {
-      "Ticker": "CNNE",
-      "Company": "Cannae Holdings, Inc."
-    },
-    {
-      "Ticker": "CPS",
-      "Company": "Cooper-Standard Holdings Inc."
-    },
-    {
-      "Ticker": "CRMT",
-      "Company": "AMERICAS CARMART INC"
-    },
-    {
-      "Ticker": "CSV",
-      "Company": "CARRIAGE SERVICES INC"
-    },
-    {
-      "Ticker": "CTRN",
-      "Company": "Citi Trends Inc"
-    },
-    {
-      "Ticker": "CVCO",
-      "Company": "CAVCO INDUSTRIES INC."
-    },
-    {
-      "Ticker": "CVGI",
-      "Company": "Commercial Vehicle Group, Inc."
-    },
-    {
-      "Ticker": "CWH",
-      "Company": "Camping World Holdings, Inc."
-    },
-    {
-      "Ticker": "DAN",
-      "Company": "DANA INC"
-    },
-    {
-      "Ticker": "DBI",
-      "Company": "Designer Brands Inc."
-    },
-    {
-      "Ticker": "DENN",
-      "Company": "DENNY'S Corp"
-    },
-    {
-      "Ticker": "DESP",
-      "Company": "Despegar.com, Corp."
-    },
-    {
-      "Ticker": "DIN",
-      "Company": "Dine Brands Global, Inc."
-    },
-    {
-      "Ticker": "DORM",
-      "Company": "Dorman Products, Inc."
-    },
-    {
-      "Ticker": "DXLG",
-      "Company": "DESTINATION XL GROUP, INC."
-    },
-    {
-      "Ticker": "EAT",
-      "Company": "BRINKER INTERNATIONAL, INC"
-    },
-    {
-      "Ticker": "ESCA",
-      "Company": "ESCALADE INC"
-    },
-    {
-      "Ticker": "EVRI",
-      "Company": "Everi Holdings Inc."
-    },
-    {
-      "Ticker": "EYE",
-      "Company": "National Vision Holdings, Inc."
-    },
-    {
-      "Ticker": "FL",
-      "Company": "Foot Locker, Inc."
-    },
-    {
-      "Ticker": "FLL",
-      "Company": "FULL HOUSE RESORTS INC"
-    },
-    {
-      "Ticker": "FLWS",
-      "Company": "1 800 FLOWERS COM INC"
-    },
-    {
-      "Ticker": "FLXS",
-      "Company": "FLEXSTEEL INDUSTRIES INC"
-    },
-    {
-      "Ticker": "FNKO",
-      "Company": "Funko, Inc."
-    },
-    {
-      "Ticker": "FOXF",
-      "Company": "FOX FACTORY HOLDING CORP"
-    },
-    {
-      "Ticker": "FTDR",
-      "Company": "Frontdoor, Inc."
-    },
-    {
-      "Ticker": "FUN",
-      "Company": "Six Flags Entertainment Corporation/NEW"
-    },
-    {
-      "Ticker": "GCO",
-      "Company": "GENESCO INC"
-    },
-    {
-      "Ticker": "GDEN",
-      "Company": "GOLDEN ENTERTAINMENT, INC."
-    },
-    {
-      "Ticker": "GEF",
-      "Company": "GREIF, INC"
-    },
-    {
-      "Ticker": "GIII",
-      "Company": "G III APPAREL GROUP LTD /DE/"
-    },
-    {
-      "Ticker": "GOLF",
-      "Company": "Acushnet Holdings Corp."
-    },
-    {
-      "Ticker": "GPI",
-      "Company": "GROUP 1 AUTOMOTIVE INC"
-    },
-    {
-      "Ticker": "GRBK",
-      "Company": "Green Brick Partners, Inc."
-    },
-    {
-      "Ticker": "GRWG",
-      "Company": "GrowGeneration Corp."
-    },
-    {
-      "Ticker": "GT",
-      "Company": "GOODYEAR TIRE & RUBBER CO /OH/"
-    },
-    {
-      "Ticker": "HBI",
-      "Company": "Hanesbrands Inc."
-    },
-    {
-      "Ticker": "HGV",
-      "Company": "Hilton Grand Vacations Inc."
-    },
-    {
-      "Ticker": "HOFT",
-      "Company": "HOOKER FURNISHINGS Corp"
-    },
-    {
-      "Ticker": "HOV",
-      "Company": "HOVNANIAN ENTERPRISES INC"
-    },
-    {
-      "Ticker": "HVT",
-      "Company": "HAVERTY FURNITURE COMPANIES INC"
-    },
-    {
-      "Ticker": "HZO",
-      "Company": "MARINEMAX INC"
-    },
-    {
-      "Ticker": "IGT",
-      "Company": "International Game Technology PLC"
-    },
-    {
-      "Ticker": "JACK",
-      "Company": "JACK IN THE BOX INC"
-    },
-    {
-      "Ticker": "JAKK",
-      "Company": "JAKKS PACIFIC INC"
-    },
-    {
-      "Ticker": "JILL",
-      "Company": "J.Jill, Inc."
-    },
-    {
-      "Ticker": "JOUT",
-      "Company": "JOHNSON OUTDOORS INC"
-    },
-    {
-      "Ticker": "KAR",
-      "Company": "OPENLANE, Inc."
-    },
-    {
-      "Ticker": "KBH",
-      "Company": "KB HOME"
-    },
-    {
-      "Ticker": "KFS",
-      "Company": "KINGSWAY FINANCIAL SERVICES INC"
-    },
-    {
-      "Ticker": "KRUS",
-      "Company": "KURA SUSHI USA, INC."
-    },
-    {
-      "Ticker": "KTB",
-      "Company": "Kontoor Brands, Inc."
-    },
-    {
-      "Ticker": "LCII",
-      "Company": "LCI INDUSTRIES"
-    },
-    {
-      "Ticker": "LCUT",
-      "Company": "LIFETIME BRANDS, INC"
-    },
-    {
-      "Ticker": "LE",
-      "Company": "LANDS' END, INC."
-    },
-    {
-      "Ticker": "LEGH",
-      "Company": "Legacy Housing Corp"
-    },
-    {
-      "Ticker": "LGIH",
-      "Company": "LGI Homes, Inc."
-    },
-    {
-      "Ticker": "LIND",
-      "Company": "LINDBLAD EXPEDITIONS HOLDINGS, INC."
-    },
-    {
-      "Ticker": "LOCO",
-      "Company": "El Pollo Loco Holdings, Inc."
-    },
-    {
-      "Ticker": "LOVE",
-      "Company": "Lovesac Co"
-    },
-    {
-      "Ticker": "LQDT",
-      "Company": "LIQUIDITY SERVICES INC"
-    },
-    {
-      "Ticker": "LZB",
-      "Company": "LA-Z-BOY INC"
-    },
-    {
-      "Ticker": "MBUU",
-      "Company": "MALIBU BOATS, INC."
-    },
-    {
-      "Ticker": "MCFT",
-      "Company": "MasterCraft Boat Holdings, Inc."
-    },
-    {
-      "Ticker": "MCRI",
-      "Company": "MONARCH CASINO & RESORT INC"
-    },
-    {
-      "Ticker": "MED",
-      "Company": "MEDIFAST INC"
-    },
-    {
-      "Ticker": "MHO",
-      "Company": "M/I HOMES, INC."
-    },
-    {
-      "Ticker": "MLR",
-      "Company": "MILLER INDUSTRIES INC /TN/"
-    },
-    {
-      "Ticker": "MNRO",
-      "Company": "MONRO, INC."
-    },
-    {
-      "Ticker": "MOD",
-      "Company": "MODINE MANUFACTURING CO"
-    },
-    {
-      "Ticker": "MOV",
-      "Company": "MOVADO GROUP INC"
-    },
-    {
-      "Ticker": "MPX",
-      "Company": "MARINE PRODUCTS CORP"
-    },
-    {
-      "Ticker": "MTH",
-      "Company": "Meritage Homes CORP"
-    },
-    {
-      "Ticker": "MYE",
-      "Company": "MYERS INDUSTRIES INC"
-    },
-    {
-      "Ticker": "NATH",
-      "Company": "NATHANS FAMOUS, INC."
-    },
-    {
-      "Ticker": "ODP",
-      "Company": "ODP Corp"
-    },
-    {
-      "Ticker": "OI",
-      "Company": "O-I Glass, Inc. /DE/"
-    },
-    {
-      "Ticker": "ONEW",
-      "Company": "OneWater Marine Inc."
-    },
-    {
-      "Ticker": "OSW",
-      "Company": "ONESPAWORLD HOLDINGS Ltd"
-    },
-    {
-      "Ticker": "OXM",
-      "Company": "OXFORD INDUSTRIES INC"
-    },
-    {
-      "Ticker": "PACK",
-      "Company": "Ranpak Holdings Corp."
-    },
-    {
-      "Ticker": "PBPB",
-      "Company": "POTBELLY CORP"
-    },
-    {
-      "Ticker": "PLAY",
-      "Company": "Dave & Buster's Entertainment, Inc."
-    },
-    {
-      "Ticker": "PLOW",
-      "Company": "DOUGLAS DYNAMICS, INC"
-    },
-    {
-      "Ticker": "POWW",
-      "Company": "AMMO, INC."
-    },
-    {
-      "Ticker": "PRPL",
-      "Company": "Purple Innovation, Inc."
-    },
-    {
-      "Ticker": "PTON",
-      "Company": "PELOTON INTERACTIVE, INC."
-    },
-    {
-      "Ticker": "PZZA",
-      "Company": "PAPA JOHNS INTERNATIONAL INC"
-    },
-    {
-      "Ticker": "RCKY",
-      "Company": "ROCKY BRANDS, INC."
-    },
-    {
-      "Ticker": "REAL",
-      "Company": "TheRealReal, Inc."
-    },
-    {
-      "Ticker": "RICK",
-      "Company": "RCI HOSPITALITY HOLDINGS, INC."
-    },
-    {
-      "Ticker": "RMBL",
-      "Company": "RumbleOn Inc."
-    },
-    {
-      "Ticker": "RRR",
-      "Company": "Red Rock Resorts, Inc."
-    },
-    {
-      "Ticker": "RUSHA",
-      "Company": "RUSH ENTERPRISES INC \\TX\\"
-    },
-    {
-      "Ticker": "RUSHB",
-      "Company": "RUSH ENTERPRISES INC \\TX\\"
-    },
-    {
-      "Ticker": "RVLV",
-      "Company": "Revolve Group, Inc."
-    },
-    {
-      "Ticker": "SAH",
-      "Company": "SONIC AUTOMOTIVE INC"
-    },
-    {
-      "Ticker": "SBH",
-      "Company": "Sally Beauty Holdings, Inc."
-    },
-    {
-      "Ticker": "SCVL",
-      "Company": "SHOE CARNIVAL INC"
-    },
-    {
-      "Ticker": "SFIX",
-      "Company": "Stitch Fix, Inc."
-    },
-    {
-      "Ticker": "SGC",
-      "Company": "SUPERIOR GROUP OF COMPANIES, INC."
-    },
-    {
-      "Ticker": "SHAK",
-      "Company": "Shake Shack Inc."
-    },
-    {
-      "Ticker": "SHOO",
-      "Company": "STEVEN MADDEN, LTD."
-    },
-    {
-      "Ticker": "SIG",
-      "Company": "SIGNET JEWELERS LTD"
-    },
-    {
-      "Ticker": "SKY",
-      "Company": "Champion Homes, Inc."
-    },
-    {
-      "Ticker": "SMP",
-      "Company": "STANDARD MOTOR PRODUCTS, INC."
-    },
-    {
-      "Ticker": "SMRT",
-      "Company": "SmartRent, Inc."
-    },
-    {
-      "Ticker": "SNBR",
-      "Company": "Sleep Number Corp"
-    },
-    {
-      "Ticker": "SRI",
-      "Company": "STONERIDGE INC"
-    },
-    {
-      "Ticker": "STKS",
-      "Company": "ONE Group Hospitality, Inc."
-    },
-    {
-      "Ticker": "THRM",
-      "Company": "Gentherm Inc"
-    },
-    {
-      "Ticker": "TILE",
-      "Company": "INTERFACE INC"
-    },
-    {
-      "Ticker": "TLYS",
-      "Company": "TILLY'S, INC."
-    },
-    {
-      "Ticker": "TMHC",
-      "Company": "Taylor Morrison Home Corp"
-    },
-    {
-      "Ticker": "TPH",
-      "Company": "Tri Pointe Homes, Inc."
-    },
-    {
-      "Ticker": "TTSH",
-      "Company": "TILE SHOP HOLDINGS, INC."
-    },
-    {
-      "Ticker": "UFPT",
-      "Company": "UFP TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "URBN",
-      "Company": "URBAN OUTFITTERS INC"
-    },
-    {
-      "Ticker": "VC",
-      "Company": "VISTEON CORP"
-    },
-    {
-      "Ticker": "VIRC",
-      "Company": "VIRCO MFG CORPORATION"
-    },
-    {
-      "Ticker": "VRA",
-      "Company": "Vera Bradley, Inc."
-    },
-    {
-      "Ticker": "WEYS",
-      "Company": "WEYCO GROUP INC"
-    },
-    {
-      "Ticker": "WGO",
-      "Company": "WINNEBAGO INDUSTRIES INC"
-    },
-    {
-      "Ticker": "WINA",
-      "Company": "WINMARK CORP"
-    },
-    {
-      "Ticker": "WWW",
-      "Company": "WOLVERINE WORLD WIDE INC /DE/"
-    },
-    {
-      "Ticker": "XPEL",
-      "Company": "XPEL, Inc."
-    },
-    {
-      "Ticker": "ZUMZ",
-      "Company": "Zumiez Inc"
-    }
-  ],
-  "Consumer Staples": [
-    {
-      "Ticker": "MO",
-      "Company": "Altria"
-    },
-    {
-      "Ticker": "ADM",
-      "Company": "Archer Daniels Midland"
-    },
-    {
-      "Ticker": "BF.B",
-      "Company": "Brown\u2013Forman"
-    },
-    {
-      "Ticker": "BG",
-      "Company": "Bunge Global"
-    },
-    {
-      "Ticker": "CPB",
-      "Company": "Campbell's Company (The)"
-    },
-    {
-      "Ticker": "CHD",
-      "Company": "Church & Dwight"
-    },
-    {
-      "Ticker": "CLX",
-      "Company": "Clorox"
-    },
-    {
-      "Ticker": "KO",
-      "Company": "Coca-Cola Company (The)"
-    },
-    {
-      "Ticker": "CL",
-      "Company": "Colgate-Palmolive"
-    },
-    {
-      "Ticker": "CAG",
-      "Company": "Conagra Brands"
-    },
-    {
-      "Ticker": "STZ",
-      "Company": "Constellation Brands"
-    },
-    {
-      "Ticker": "COST",
-      "Company": "Costco"
-    },
-    {
-      "Ticker": "DG",
-      "Company": "Dollar General"
-    },
-    {
-      "Ticker": "DLTR",
-      "Company": "Dollar Tree"
-    },
-    {
-      "Ticker": "EL",
-      "Company": "Est\u00e9e Lauder Companies (The)"
-    },
-    {
-      "Ticker": "GIS",
-      "Company": "General Mills"
-    },
-    {
-      "Ticker": "HSY",
-      "Company": "Hershey Company (The)"
-    },
-    {
-      "Ticker": "HRL",
-      "Company": "Hormel Foods"
-    },
-    {
-      "Ticker": "K",
-      "Company": "Kellanova"
-    },
-    {
-      "Ticker": "KVUE",
-      "Company": "Kenvue"
-    },
-    {
-      "Ticker": "KDP",
-      "Company": "Keurig Dr Pepper"
-    },
-    {
-      "Ticker": "KMB",
-      "Company": "Kimberly-Clark"
-    },
-    {
-      "Ticker": "KHC",
-      "Company": "Kraft Heinz"
-    },
-    {
-      "Ticker": "KR",
-      "Company": "Kroger"
-    },
-    {
-      "Ticker": "LW",
-      "Company": "Lamb Weston"
-    },
-    {
-      "Ticker": "MKC",
-      "Company": "McCormick & Company"
-    },
-    {
-      "Ticker": "TAP",
-      "Company": "Molson Coors Beverage Company"
-    },
-    {
-      "Ticker": "MDLZ",
-      "Company": "Mondelez International"
-    },
-    {
-      "Ticker": "MNST",
-      "Company": "Monster Beverage"
-    },
-    {
-      "Ticker": "PEP",
-      "Company": "PepsiCo"
-    },
-    {
-      "Ticker": "PM",
-      "Company": "Philip Morris International"
-    },
-    {
-      "Ticker": "PG",
-      "Company": "Procter & Gamble"
-    },
-    {
-      "Ticker": "SJM",
-      "Company": "J.M. Smucker Company (The)"
-    },
-    {
-      "Ticker": "SYY",
-      "Company": "Sysco"
-    },
-    {
-      "Ticker": "TGT",
-      "Company": "Target Corporation"
-    },
-    {
-      "Ticker": "TSN",
-      "Company": "Tyson Foods"
-    },
-    {
-      "Ticker": "WBA",
-      "Company": "Walgreens Boots Alliance"
-    },
-    {
-      "Ticker": "WMT",
-      "Company": "Walmart"
-    },
-    {
-      "Ticker": "ALCO",
-      "Company": "ALICO, INC."
-    },
-    {
-      "Ticker": "ANDE",
-      "Company": "Andersons, Inc."
-    },
-    {
-      "Ticker": "APEI",
-      "Company": "AMERICAN PUBLIC EDUCATION INC"
-    },
-    {
-      "Ticker": "ATGE",
-      "Company": "Adtalem Global Education Inc."
-    },
-    {
-      "Ticker": "BGS",
-      "Company": "B&G Foods, Inc."
-    },
-    {
-      "Ticker": "BYND",
-      "Company": "BEYOND MEAT, INC."
-    },
-    {
-      "Ticker": "CALM",
-      "Company": "CAL-MAINE FOODS INC"
-    },
-    {
-      "Ticker": "CENT",
-      "Company": "CENTRAL GARDEN & PET CO"
-    },
-    {
-      "Ticker": "CENTA",
-      "Company": "CENTRAL GARDEN & PET CO"
-    },
-    {
-      "Ticker": "CHEF",
-      "Company": "Chefs' Warehouse, Inc."
-    },
-    {
-      "Ticker": "CHGG",
-      "Company": "CHEGG, INC"
-    },
-    {
-      "Ticker": "CVGW",
-      "Company": "CALAVO GROWERS INC"
-    },
-    {
-      "Ticker": "EPC",
-      "Company": "EDGEWELL PERSONAL CARE Co"
-    },
-    {
-      "Ticker": "FDP",
-      "Company": "FRESH DEL MONTE PRODUCE INC"
-    },
-    {
-      "Ticker": "FIZZ",
-      "Company": "NATIONAL BEVERAGE CORP"
-    },
-    {
-      "Ticker": "GHC",
-      "Company": "Graham Holdings Co"
-    },
-    {
-      "Ticker": "HAIN",
-      "Company": "HAIN CELESTIAL GROUP INC"
-    },
-    {
-      "Ticker": "HELE",
-      "Company": "HELEN OF TROY LTD"
-    },
-    {
-      "Ticker": "HFFG",
-      "Company": "HF Foods Group Inc."
-    },
-    {
-      "Ticker": "HLF",
-      "Company": "HERBALIFE LTD."
-    },
-    {
-      "Ticker": "IMKTA",
-      "Company": "INGLES MARKETS INC"
-    },
-    {
-      "Ticker": "IPAR",
-      "Company": "INTERPARFUMS INC"
-    },
-    {
-      "Ticker": "JBSS",
-      "Company": "SANFILIPPO JOHN B & SON INC"
-    },
-    {
-      "Ticker": "JJSF",
-      "Company": "J&J SNACK FOODS CORP"
-    },
-    {
-      "Ticker": "LANC",
-      "Company": "The Marzetti Company"
-    },
-    {
-      "Ticker": "LAUR",
-      "Company": "LAUREATE EDUCATION, INC."
-    },
-    {
-      "Ticker": "LINC",
-      "Company": "LINCOLN EDUCATIONAL SERVICES CORP"
-    },
-    {
-      "Ticker": "LMNR",
-      "Company": "Limoneira CO"
-    },
-    {
-      "Ticker": "LRN",
-      "Company": "Stride, Inc."
-    },
-    {
-      "Ticker": "LWAY",
-      "Company": "Lifeway Foods, Inc."
-    },
-    {
-      "Ticker": "MGPI",
-      "Company": "MGP INGREDIENTS INC"
-    },
-    {
-      "Ticker": "NATR",
-      "Company": "NATURES SUNSHINE PRODUCTS INC"
-    },
-    {
-      "Ticker": "NGVC",
-      "Company": "Natural Grocers by Vitamin Cottage, Inc."
-    },
-    {
-      "Ticker": "NUS",
-      "Company": "NU SKIN ENTERPRISES, INC."
-    },
-    {
-      "Ticker": "PRDO",
-      "Company": "PERDOCEO EDUCATION Corp"
-    },
-    {
-      "Ticker": "PSMT",
-      "Company": "PRICESMART INC"
-    },
-    {
-      "Ticker": "SENEA",
-      "Company": "Seneca Foods Corp"
-    },
-    {
-      "Ticker": "SFM",
-      "Company": "Sprouts Farmers Market, Inc."
-    },
-    {
-      "Ticker": "SMPL",
-      "Company": "Simply Good Foods Co"
-    },
-    {
-      "Ticker": "SPTN",
-      "Company": "SpartanNash Co"
-    },
-    {
-      "Ticker": "STKL",
-      "Company": "SunOpta Inc."
-    },
-    {
-      "Ticker": "STRA",
-      "Company": "Strategic Education, Inc."
-    },
-    {
-      "Ticker": "THS",
-      "Company": "TreeHouse Foods, Inc."
-    },
-    {
-      "Ticker": "TPB",
-      "Company": "Turning Point Brands, Inc."
-    },
-    {
-      "Ticker": "UNFI",
-      "Company": "UNITED NATURAL FOODS INC"
-    },
-    {
-      "Ticker": "USNA",
-      "Company": "USANA HEALTH SCIENCES INC"
-    },
-    {
-      "Ticker": "UTI",
-      "Company": "UNIVERSAL TECHNICAL INSTITUTE INC"
-    },
-    {
-      "Ticker": "UVV",
-      "Company": "UNIVERSAL CORP /VA/"
-    },
-    {
-      "Ticker": "VLGEA",
-      "Company": "VILLAGE SUPER MARKET INC"
-    },
-    {
-      "Ticker": "WMK",
-      "Company": "WEIS MARKETS INC"
-    }
-  ],
-  "Energy": [
-    {
-      "Ticker": "APA",
-      "Company": "APA Corporation"
-    },
-    {
-      "Ticker": "BKR",
-      "Company": "Baker Hughes"
-    },
-    {
-      "Ticker": "CVX",
-      "Company": "Chevron Corporation"
-    },
-    {
-      "Ticker": "COP",
-      "Company": "ConocoPhillips"
-    },
-    {
-      "Ticker": "CTRA",
-      "Company": "Coterra"
-    },
-    {
-      "Ticker": "DVN",
-      "Company": "Devon Energy"
-    },
-    {
-      "Ticker": "FANG",
-      "Company": "Diamondback Energy"
-    },
-    {
-      "Ticker": "EOG",
-      "Company": "EOG Resources"
-    },
-    {
-      "Ticker": "EQT",
-      "Company": "EQT Corporation"
-    },
-    {
-      "Ticker": "EXE",
-      "Company": "Expand Energy"
-    },
-    {
-      "Ticker": "XOM",
-      "Company": "ExxonMobil"
-    },
-    {
-      "Ticker": "HAL",
-      "Company": "Halliburton"
-    },
-    {
-      "Ticker": "HES",
-      "Company": "Hess Corporation"
-    },
-    {
-      "Ticker": "KMI",
-      "Company": "Kinder Morgan"
-    },
-    {
-      "Ticker": "MPC",
-      "Company": "Marathon Petroleum"
-    },
-    {
-      "Ticker": "OXY",
-      "Company": "Occidental Petroleum"
-    },
-    {
-      "Ticker": "OKE",
-      "Company": "Oneok"
-    },
-    {
-      "Ticker": "PSX",
-      "Company": "Phillips 66"
-    },
-    {
-      "Ticker": "SLB",
-      "Company": "Schlumberger"
-    },
-    {
-      "Ticker": "TRGP",
-      "Company": "Targa Resources"
-    },
-    {
-      "Ticker": "TPL",
-      "Company": "Texas Pacific Land Corporation"
-    },
-    {
-      "Ticker": "VLO",
-      "Company": "Valero Energy"
-    },
-    {
-      "Ticker": "WMB",
-      "Company": "Williams Companies"
-    },
-    {
-      "Ticker": "AMPY",
-      "Company": "Amplify Energy Corp."
-    },
-    {
-      "Ticker": "AMTX",
-      "Company": "AEMETIS, INC"
-    },
-    {
-      "Ticker": "AROC",
-      "Company": "Archrock, Inc."
-    },
-    {
-      "Ticker": "ASC",
-      "Company": "Ardmore Shipping Corp"
-    },
-    {
-      "Ticker": "BOOM",
-      "Company": "DMC Global Inc."
-    },
-    {
-      "Ticker": "BORR",
-      "Company": "Borr Drilling Ltd"
-    },
-    {
-      "Ticker": "BRY",
-      "Company": "Berry Corp (bry)"
-    },
-    {
-      "Ticker": "BTU",
-      "Company": "PEABODY ENERGY CORP"
-    },
-    {
-      "Ticker": "CLB",
-      "Company": "Core Laboratories Inc."
-    },
-    {
-      "Ticker": "CLNE",
-      "Company": "Clean Energy Fuels Corp."
-    },
-    {
-      "Ticker": "CNX",
-      "Company": "CNX Resources Corp"
-    },
-    {
-      "Ticker": "CRC",
-      "Company": "California Resources Corp"
-    },
-    {
-      "Ticker": "CRK",
-      "Company": "COMSTOCK RESOURCES INC"
-    },
-    {
-      "Ticker": "CVI",
-      "Company": "CVR ENERGY INC"
-    },
-    {
-      "Ticker": "DHT",
-      "Company": "DHT Holdings, Inc."
-    },
-    {
-      "Ticker": "DK",
-      "Company": "Delek US Holdings, Inc."
-    },
-    {
-      "Ticker": "DNOW",
-      "Company": "DNOW Inc."
-    },
-    {
-      "Ticker": "EGY",
-      "Company": "VAALCO ENERGY INC /DE/"
-    },
-    {
-      "Ticker": "EPM",
-      "Company": "EVOLUTION PETROLEUM CORP"
-    },
-    {
-      "Ticker": "FET",
-      "Company": "FORUM ENERGY TECHNOLOGIES, INC."
-    },
-    {
-      "Ticker": "FLNG",
-      "Company": "Flex LNG Ltd."
-    },
-    {
-      "Ticker": "GEOS",
-      "Company": "GEOSPACE TECHNOLOGIES CORP"
-    },
-    {
-      "Ticker": "GLNG",
-      "Company": "GOLAR LNG LTD"
-    },
-    {
-      "Ticker": "GPOR",
-      "Company": "GULFPORT ENERGY CORP"
-    },
-    {
-      "Ticker": "HLX",
-      "Company": "HELIX ENERGY SOLUTIONS GROUP INC"
-    },
-    {
-      "Ticker": "HNRG",
-      "Company": "HALLADOR ENERGY CO"
-    },
-    {
-      "Ticker": "HP",
-      "Company": "Helmerich & Payne, Inc."
-    },
-    {
-      "Ticker": "KOS",
-      "Company": "Kosmos Energy Ltd."
-    },
-    {
-      "Ticker": "LBRT",
-      "Company": "Liberty Energy Inc."
-    },
-    {
-      "Ticker": "LEU",
-      "Company": "CENTRUS ENERGY CORP"
-    },
-    {
-      "Ticker": "LPG",
-      "Company": "DORIAN LPG LTD."
-    },
-    {
-      "Ticker": "MGY",
-      "Company": "Magnolia Oil & Gas Corp"
-    },
-    {
-      "Ticker": "MRC",
-      "Company": "MRC GLOBAL INC."
-    },
-    {
-      "Ticker": "MTRX",
-      "Company": "MATRIX SERVICE CO"
-    },
-    {
-      "Ticker": "MUR",
-      "Company": "MURPHY OIL CORP"
-    },
-    {
-      "Ticker": "NBR",
-      "Company": "NABORS INDUSTRIES LTD"
-    },
-    {
-      "Ticker": "NC",
-      "Company": "NACCO INDUSTRIES INC"
-    },
-    {
-      "Ticker": "NE",
-      "Company": "Noble Corp plc"
-    },
-    {
-      "Ticker": "NEXT",
-      "Company": "NextDecade Corp."
-    },
-    {
-      "Ticker": "NGS",
-      "Company": "NATURAL GAS SERVICES GROUP INC"
-    },
-    {
-      "Ticker": "NOG",
-      "Company": "NORTHERN OIL & GAS, INC."
-    },
-    {
-      "Ticker": "OII",
-      "Company": "OCEANEERING INTERNATIONAL INC"
-    },
-    {
-      "Ticker": "OIS",
-      "Company": "OIL STATES INTERNATIONAL, INC"
-    },
-    {
-      "Ticker": "PARR",
-      "Company": "PAR PACIFIC HOLDINGS, INC."
-    },
-    {
-      "Ticker": "PBF",
-      "Company": "PBF Energy Inc."
-    },
-    {
-      "Ticker": "PNRG",
-      "Company": "PRIMEENERGY RESOURCES CORP"
-    },
-    {
-      "Ticker": "PROP",
-      "Company": "Prairie Operating Co."
-    },
-    {
-      "Ticker": "PTEN",
-      "Company": "PATTERSON UTI ENERGY INC"
-    },
-    {
-      "Ticker": "PUMP",
-      "Company": "ProPetro Holding Corp."
-    },
-    {
-      "Ticker": "REI",
-      "Company": "RING ENERGY, INC."
-    },
-    {
-      "Ticker": "RES",
-      "Company": "RPC INC"
-    },
-    {
-      "Ticker": "REX",
-      "Company": "REX AMERICAN RESOURCES Corp"
-    },
-    {
-      "Ticker": "RIG",
-      "Company": "Transocean Ltd."
-    },
-    {
-      "Ticker": "RNGR",
-      "Company": "Ranger Energy Services, Inc."
-    },
-    {
-      "Ticker": "SD",
-      "Company": "SANDRIDGE ENERGY INC"
-    },
-    {
-      "Ticker": "SDRL",
-      "Company": "Seadrill Ltd"
-    },
-    {
-      "Ticker": "SES",
-      "Company": "SES AI Corp"
-    },
-    {
-      "Ticker": "SM",
-      "Company": "SM Energy Co"
-    },
-    {
-      "Ticker": "STNG",
-      "Company": "Scorpio Tankers Inc."
-    },
-    {
-      "Ticker": "TALO",
-      "Company": "TALOS ENERGY INC."
-    },
-    {
-      "Ticker": "TDW",
-      "Company": "TIDEWATER INC"
-    },
-    {
-      "Ticker": "TH",
-      "Company": "Target Hospitality Corp."
-    },
-    {
-      "Ticker": "TK",
-      "Company": "TEEKAY CORP LTD"
-    },
-    {
-      "Ticker": "TNK",
-      "Company": "TEEKAY TANKERS LTD."
-    },
-    {
-      "Ticker": "TTI",
-      "Company": "TETRA TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "TUSK",
-      "Company": "MAMMOTH ENERGY SERVICES, INC."
-    },
-    {
-      "Ticker": "UEC",
-      "Company": "URANIUM ENERGY CORP"
-    },
-    {
-      "Ticker": "URG",
-      "Company": "UR-ENERGY INC"
-    },
-    {
-      "Ticker": "UUUU",
-      "Company": "ENERGY FUELS INC"
-    },
-    {
-      "Ticker": "VAL",
-      "Company": "Valaris Ltd"
-    },
-    {
-      "Ticker": "WHD",
-      "Company": "Cactus, Inc."
-    },
-    {
-      "Ticker": "WTI",
-      "Company": "W&T OFFSHORE INC"
-    },
-    {
-      "Ticker": "WTTR",
-      "Company": "Select Water Solutions, Inc."
-    }
-  ],
-  "Financials": [
-    {
-      "Ticker": "AFL",
-      "Company": "Aflac"
-    },
-    {
-      "Ticker": "ALL",
-      "Company": "Allstate"
-    },
-    {
-      "Ticker": "AXP",
-      "Company": "American Express"
-    },
-    {
-      "Ticker": "AIG",
-      "Company": "American International Group"
-    },
-    {
-      "Ticker": "AMP",
-      "Company": "Ameriprise Financial"
-    },
-    {
-      "Ticker": "AON",
-      "Company": "Aon plc"
-    },
-    {
-      "Ticker": "APO",
-      "Company": "Apollo Global Management"
-    },
-    {
-      "Ticker": "ACGL",
-      "Company": "Arch Capital Group"
-    },
-    {
-      "Ticker": "AJG",
-      "Company": "Arthur J. Gallagher & Co."
-    },
-    {
-      "Ticker": "AIZ",
-      "Company": "Assurant"
-    },
-    {
-      "Ticker": "BAC",
-      "Company": "Bank of America"
-    },
-    {
-      "Ticker": "BRK.B",
-      "Company": "Berkshire Hathaway"
-    },
-    {
-      "Ticker": "BLK",
-      "Company": "BlackRock"
-    },
-    {
-      "Ticker": "BX",
-      "Company": "Blackstone Inc."
-    },
-    {
-      "Ticker": "BK",
-      "Company": "BNY Mellon"
-    },
-    {
-      "Ticker": "BRO",
-      "Company": "Brown & Brown"
-    },
-    {
-      "Ticker": "COF",
-      "Company": "Capital One"
-    },
-    {
-      "Ticker": "CBOE",
-      "Company": "Cboe Global Markets"
-    },
-    {
-      "Ticker": "SCHW",
-      "Company": "Charles Schwab Corporation"
-    },
-    {
-      "Ticker": "CB",
-      "Company": "Chubb Limited"
-    },
-    {
-      "Ticker": "CINF",
-      "Company": "Cincinnati Financial"
-    },
-    {
-      "Ticker": "C",
-      "Company": "Citigroup"
-    },
-    {
-      "Ticker": "CFG",
-      "Company": "Citizens Financial Group"
-    },
-    {
-      "Ticker": "CME",
-      "Company": "CME Group"
-    },
-    {
-      "Ticker": "COIN",
-      "Company": "Coinbase"
-    },
-    {
-      "Ticker": "CPAY",
-      "Company": "Corpay"
-    },
-    {
-      "Ticker": "ERIE",
-      "Company": "Erie Indemnity"
-    },
-    {
-      "Ticker": "EG",
-      "Company": "Everest Group"
-    },
-    {
-      "Ticker": "FDS",
-      "Company": "FactSet"
-    },
-    {
-      "Ticker": "FIS",
-      "Company": "Fidelity National Information Services"
-    },
-    {
-      "Ticker": "FITB",
-      "Company": "Fifth Third Bancorp"
-    },
-    {
-      "Ticker": "FI",
-      "Company": "Fiserv"
-    },
-    {
-      "Ticker": "BEN",
-      "Company": "Franklin Resources"
-    },
-    {
-      "Ticker": "GPN",
-      "Company": "Global Payments"
-    },
-    {
-      "Ticker": "GL",
-      "Company": "Globe Life"
-    },
-    {
-      "Ticker": "GS",
-      "Company": "Goldman Sachs"
-    },
-    {
-      "Ticker": "HIG",
-      "Company": "Hartford (The)"
-    },
-    {
-      "Ticker": "HBAN",
-      "Company": "Huntington Bancshares"
-    },
-    {
-      "Ticker": "ICE",
-      "Company": "Intercontinental Exchange"
-    },
-    {
-      "Ticker": "IVZ",
-      "Company": "Invesco"
-    },
-    {
-      "Ticker": "JKHY",
-      "Company": "Jack Henry & Associates"
-    },
-    {
-      "Ticker": "JPM",
-      "Company": "JPMorgan Chase"
-    },
-    {
-      "Ticker": "KEY",
-      "Company": "KeyCorp"
-    },
-    {
-      "Ticker": "KKR",
-      "Company": "KKR & Co."
-    },
-    {
-      "Ticker": "L",
-      "Company": "Loews Corporation"
-    },
-    {
-      "Ticker": "MTB",
-      "Company": "M&T Bank"
-    },
-    {
-      "Ticker": "MKTX",
-      "Company": "MarketAxess"
-    },
-    {
-      "Ticker": "MMC",
-      "Company": "Marsh McLennan"
-    },
-    {
-      "Ticker": "MA",
-      "Company": "Mastercard"
-    },
-    {
-      "Ticker": "MET",
-      "Company": "MetLife"
-    },
-    {
-      "Ticker": "MCO",
-      "Company": "Moody's Corporation"
-    },
-    {
-      "Ticker": "MS",
-      "Company": "Morgan Stanley"
-    },
-    {
-      "Ticker": "MSCI",
-      "Company": "MSCI Inc."
-    },
-    {
-      "Ticker": "NDAQ",
-      "Company": "Nasdaq, Inc."
-    },
-    {
-      "Ticker": "NTRS",
-      "Company": "Northern Trust"
-    },
-    {
-      "Ticker": "PYPL",
-      "Company": "PayPal"
-    },
-    {
-      "Ticker": "PNC",
-      "Company": "PNC Financial Services"
-    },
-    {
-      "Ticker": "PFG",
-      "Company": "Principal Financial Group"
-    },
-    {
-      "Ticker": "PGR",
-      "Company": "Progressive Corporation"
-    },
-    {
-      "Ticker": "PRU",
-      "Company": "Prudential Financial"
-    },
-    {
-      "Ticker": "RJF",
-      "Company": "Raymond James Financial"
-    },
-    {
-      "Ticker": "RF",
-      "Company": "Regions Financial Corporation"
-    },
-    {
-      "Ticker": "SPGI",
-      "Company": "S&P Global"
-    },
-    {
-      "Ticker": "STT",
-      "Company": "State Street Corporation"
-    },
-    {
-      "Ticker": "SYF",
-      "Company": "Synchrony Financial"
-    },
-    {
-      "Ticker": "TROW",
-      "Company": "T. Rowe Price"
-    },
-    {
-      "Ticker": "TRV",
-      "Company": "Travelers Companies (The)"
-    },
-    {
-      "Ticker": "TFC",
-      "Company": "Truist Financial"
-    },
-    {
-      "Ticker": "USB",
-      "Company": "U.S. Bancorp"
-    },
-    {
-      "Ticker": "V",
-      "Company": "Visa Inc."
-    },
-    {
-      "Ticker": "WRB",
-      "Company": "W. R. Berkley Corporation"
-    },
-    {
-      "Ticker": "WFC",
-      "Company": "Wells Fargo"
-    },
-    {
-      "Ticker": "WTW",
-      "Company": "Willis Towers Watson"
-    },
-    {
-      "Ticker": "ABCB",
-      "Company": "Ameris Bancorp"
-    },
-    {
-      "Ticker": "ACNB",
-      "Company": "ACNB CORP"
-    },
-    {
-      "Ticker": "AGM",
-      "Company": "FEDERAL AGRICULTURAL MORTGAGE CORP"
-    },
-    {
-      "Ticker": "ALRS",
-      "Company": "ALERUS FINANCIAL CORP"
-    },
-    {
-      "Ticker": "AMAL",
-      "Company": "Amalgamated Financial Corp."
-    },
-    {
-      "Ticker": "AMBC",
-      "Company": "AMBAC FINANCIAL GROUP INC"
-    },
-    {
-      "Ticker": "AMRK",
-      "Company": "A-Mark Precious Metals, Inc."
-    },
-    {
-      "Ticker": "AMSF",
-      "Company": "AMERISAFE INC"
-    },
-    {
-      "Ticker": "AMTB",
-      "Company": "Amerant Bancorp Inc."
-    },
-    {
-      "Ticker": "APAM",
-      "Company": "Artisan Partners Asset Management Inc."
-    },
-    {
-      "Ticker": "AROW",
-      "Company": "ARROW FINANCIAL CORP"
-    },
-    {
-      "Ticker": "ASB",
-      "Company": "ASSOCIATED BANC-CORP"
-    },
-    {
-      "Ticker": "ATLC",
-      "Company": "Atlanticus Holdings Corp"
-    },
-    {
-      "Ticker": "ATLO",
-      "Company": "AMES NATIONAL CORP"
-    },
-    {
-      "Ticker": "AUB",
-      "Company": "Atlantic Union Bankshares Corp"
-    },
-    {
-      "Ticker": "AX",
-      "Company": "Axos Financial, Inc."
-    },
-    {
-      "Ticker": "BANC",
-      "Company": "BANC OF CALIFORNIA, INC."
-    },
-    {
-      "Ticker": "BANF",
-      "Company": "BANCFIRST CORP /OK/"
-    },
-    {
-      "Ticker": "BANR",
-      "Company": "BANNER CORP"
-    },
-    {
-      "Ticker": "BARK",
-      "Company": "Bark, Inc."
-    },
-    {
-      "Ticker": "BCAL",
-      "Company": "California BanCorp \\ CA"
-    },
-    {
-      "Ticker": "BCBP",
-      "Company": "BCB BANCORP INC"
-    },
-    {
-      "Ticker": "BCML",
-      "Company": "BayCom Corp"
-    },
-    {
-      "Ticker": "BFC",
-      "Company": "Bank First Corp"
-    },
-    {
-      "Ticker": "BFST",
-      "Company": "Business First Bancshares, Inc."
-    },
-    {
-      "Ticker": "BHB",
-      "Company": "BAR HARBOR BANKSHARES"
-    },
-    {
-      "Ticker": "BHLB",
-      "Company": "Berkshire Hills Bancorp Inc"
-    },
-    {
-      "Ticker": "BHRB",
-      "Company": "Burke & Herbert Financial Services Corp."
-    },
-    {
-      "Ticker": "BIPC",
-      "Company": "Brookfield Infrastructure Corp"
-    },
-    {
-      "Ticker": "BKU",
-      "Company": "BankUnited, Inc."
-    },
-    {
-      "Ticker": "BLX",
-      "Company": "FOREIGN TRADE BANK OF LATIN AMERICA, INC."
-    },
-    {
-      "Ticker": "BMRC",
-      "Company": "Bank of Marin Bancorp"
-    },
-    {
-      "Ticker": "BOH",
-      "Company": "BANK OF HAWAII CORP"
-    },
-    {
-      "Ticker": "BPRN",
-      "Company": "Princeton Bancorp, Inc."
-    },
-    {
-      "Ticker": "BRKL",
-      "Company": "BROOKLINE BANCORP INC"
-    },
-    {
-      "Ticker": "BSRR",
-      "Company": "SIERRA BANCORP"
-    },
-    {
-      "Ticker": "BSVN",
-      "Company": "Bank7 Corp."
-    },
-    {
-      "Ticker": "BUSE",
-      "Company": "FIRST BUSEY CORP /NV/"
-    },
-    {
-      "Ticker": "BWB",
-      "Company": "Bridgewater Bancshares Inc"
-    },
-    {
-      "Ticker": "BWFG",
-      "Company": "Bankwell Financial Group, Inc."
-    },
-    {
-      "Ticker": "BY",
-      "Company": "BYLINE BANCORP, INC."
-    },
-    {
-      "Ticker": "CAC",
-      "Company": "CAMDEN NATIONAL CORP"
-    },
-    {
-      "Ticker": "CADE",
-      "Company": "Cadence Bank"
-    },
-    {
-      "Ticker": "CARE",
-      "Company": "Carter Bankshares, Inc."
-    },
-    {
-      "Ticker": "CASH",
-      "Company": "PATHWARD FINANCIAL, INC."
-    },
-    {
-      "Ticker": "CATY",
-      "Company": "CATHAY GENERAL BANCORP"
-    },
-    {
-      "Ticker": "CBAN",
-      "Company": "COLONY BANKCORP INC"
-    },
-    {
-      "Ticker": "CBNK",
-      "Company": "Capital Bancorp Inc"
-    },
-    {
-      "Ticker": "CBU",
-      "Company": "COMMUNITY FINANCIAL SYSTEM, INC."
-    },
-    {
-      "Ticker": "CCB",
-      "Company": "COASTAL FINANCIAL CORP"
-    },
-    {
-      "Ticker": "CCBG",
-      "Company": "CAPITAL CITY BANK GROUP INC"
-    },
-    {
-      "Ticker": "CCNE",
-      "Company": "CNB FINANCIAL CORP/PA"
-    },
-    {
-      "Ticker": "CFFN",
-      "Company": "Capitol Federal Financial, Inc."
-    },
-    {
-      "Ticker": "CHCO",
-      "Company": "CITY HOLDING CO"
-    },
-    {
-      "Ticker": "CHMG",
-      "Company": "CHEMUNG FINANCIAL CORP"
-    },
-    {
-      "Ticker": "CIVB",
-      "Company": "CIVISTA BANCSHARES, INC."
-    },
-    {
-      "Ticker": "CLBK",
-      "Company": "Columbia Financial, Inc."
-    },
-    {
-      "Ticker": "CNO",
-      "Company": "CNO Financial Group, Inc."
-    },
-    {
-      "Ticker": "CNOB",
-      "Company": "ConnectOne Bancorp, Inc."
-    },
-    {
-      "Ticker": "CNS",
-      "Company": "COHEN & STEERS, INC."
-    },
-    {
-      "Ticker": "COFS",
-      "Company": "CHOICEONE FINANCIAL SERVICES INC"
-    },
-    {
-      "Ticker": "COOP",
-      "Company": "Mr. Cooper Group Inc."
-    },
-    {
-      "Ticker": "CPF",
-      "Company": "CENTRAL PACIFIC FINANCIAL CORP"
-    },
-    {
-      "Ticker": "CPSS",
-      "Company": "CONSUMER PORTFOLIO SERVICES, INC."
-    },
-    {
-      "Ticker": "CRVL",
-      "Company": "CORVEL CORP"
-    },
-    {
-      "Ticker": "CTBI",
-      "Company": "COMMUNITY TRUST BANCORP INC /KY/"
-    },
-    {
-      "Ticker": "CUBI",
-      "Company": "Customers Bancorp, Inc."
-    },
-    {
-      "Ticker": "CVBF",
-      "Company": "CVB FINANCIAL CORP"
-    },
-    {
-      "Ticker": "CWBC",
-      "Company": "Community West Bancshares"
-    },
-    {
-      "Ticker": "CZFS",
-      "Company": "CITIZENS FINANCIAL SERVICES INC"
-    },
-    {
-      "Ticker": "CZNC",
-      "Company": "CITIZENS & NORTHERN CORP"
-    },
-    {
-      "Ticker": "DCOM",
-      "Company": "Dime Community Bancshares, Inc. /NY/"
-    },
-    {
-      "Ticker": "DFIN",
-      "Company": "Donnelley Financial Solutions, Inc."
-    },
-    {
-      "Ticker": "DGICA",
-      "Company": "DONEGAL GROUP INC"
-    },
-    {
-      "Ticker": "DHIL",
-      "Company": "DIAMOND HILL INVESTMENT GROUP INC"
-    },
-    {
-      "Ticker": "EBTC",
-      "Company": "ENTERPRISE BANCORP INC /MA/"
-    },
-    {
-      "Ticker": "ECPG",
-      "Company": "ENCORE CAPITAL GROUP INC"
-    },
-    {
-      "Ticker": "EFC",
-      "Company": "Ellington Financial Inc."
-    },
-    {
-      "Ticker": "EFSC",
-      "Company": "ENTERPRISE FINANCIAL SERVICES CORP"
-    },
-    {
-      "Ticker": "EGBN",
-      "Company": "EAGLE BANCORP INC"
-    },
-    {
-      "Ticker": "EIG",
-      "Company": "Employers Holdings, Inc."
-    },
-    {
-      "Ticker": "ENVA",
-      "Company": "Enova International, Inc."
-    },
-    {
-      "Ticker": "EQBK",
-      "Company": "EQUITY BANCSHARES INC"
-    },
-    {
-      "Ticker": "ESGR",
-      "Company": "Enstar Group LTD"
-    },
-    {
-      "Ticker": "ESNT",
-      "Company": "Essent Group Ltd."
-    },
-    {
-      "Ticker": "ESQ",
-      "Company": "Esquire Financial Holdings, Inc."
-    },
-    {
-      "Ticker": "ESSA",
-      "Company": "ESSA Bancorp, Inc."
-    },
-    {
-      "Ticker": "FBIZ",
-      "Company": "FIRST BUSINESS FINANCIAL SERVICES, INC."
-    },
-    {
-      "Ticker": "FBK",
-      "Company": "FB Financial Corp"
-    },
-    {
-      "Ticker": "FBNC",
-      "Company": "FIRST BANCORP /NC/"
-    },
-    {
-      "Ticker": "FBP",
-      "Company": "FIRST BANCORP /PR/"
-    },
-    {
-      "Ticker": "FCBC",
-      "Company": "FIRST COMMUNITY BANKSHARES INC /VA/"
-    },
-    {
-      "Ticker": "FCF",
-      "Company": "FIRST COMMONWEALTH FINANCIAL CORP /PA/"
-    },
-    {
-      "Ticker": "FCFS",
-      "Company": "FirstCash Holdings, Inc."
-    },
-    {
-      "Ticker": "FDBC",
-      "Company": "FIDELITY D & D BANCORP INC"
-    },
-    {
-      "Ticker": "FFBC",
-      "Company": "FIRST FINANCIAL BANCORP /OH/"
-    },
-    {
-      "Ticker": "FFIC",
-      "Company": "FLUSHING FINANCIAL CORP"
-    },
-    {
-      "Ticker": "FFIN",
-      "Company": "FIRST FINANCIAL BANKSHARES INC"
-    },
-    {
-      "Ticker": "FFNW",
-      "Company": "First Financial Northwest, Inc."
-    },
-    {
-      "Ticker": "FFWM",
-      "Company": "First Foundation Inc."
-    },
-    {
-      "Ticker": "FG",
-      "Company": "F&G Annuities & Life, Inc."
-    },
-    {
-      "Ticker": "FIBK",
-      "Company": "FIRST INTERSTATE BANCSYSTEM INC"
-    },
-    {
-      "Ticker": "FISI",
-      "Company": "FINANCIAL INSTITUTIONS INC"
-    },
-    {
-      "Ticker": "FLIC",
-      "Company": "FIRST OF LONG ISLAND CORP"
-    },
-    {
-      "Ticker": "FMAO",
-      "Company": "FARMERS & MERCHANTS BANCORP INC"
-    },
-    {
-      "Ticker": "FMBH",
-      "Company": "FIRST MID BANCSHARES, INC."
-    },
-    {
-      "Ticker": "FMNB",
-      "Company": "FARMERS NATIONAL BANC CORP /OH/"
-    },
-    {
-      "Ticker": "FNLC",
-      "Company": "First Bancorp, Inc /ME/"
-    },
-    {
-      "Ticker": "FRBA",
-      "Company": "First Bank"
-    },
-    {
-      "Ticker": "FRME",
-      "Company": "FIRST MERCHANTS CORP"
-    },
-    {
-      "Ticker": "FSBC",
-      "Company": "FIVE STAR BANCORP"
-    },
-    {
-      "Ticker": "FSBW",
-      "Company": "FS Bancorp, Inc."
-    },
-    {
-      "Ticker": "FULT",
-      "Company": "FULTON FINANCIAL CORP"
-    },
-    {
-      "Ticker": "FVCB",
-      "Company": "FVCBankcorp, Inc."
-    },
-    {
-      "Ticker": "GABC",
-      "Company": "GERMAN AMERICAN BANCORP, INC."
-    },
-    {
-      "Ticker": "GBCI",
-      "Company": "GLACIER BANCORP, INC."
-    },
-    {
-      "Ticker": "GCBC",
-      "Company": "GREENE COUNTY BANCORP INC"
-    },
-    {
-      "Ticker": "GDOT",
-      "Company": "GREEN DOT CORP"
-    },
-    {
-      "Ticker": "GLRE",
-      "Company": "GREENLIGHT CAPITAL RE, LTD."
-    },
-    {
-      "Ticker": "GNTY",
-      "Company": "GUARANTY BANCSHARES INC /TX/"
-    },
-    {
-      "Ticker": "GNW",
-      "Company": "GENWORTH FINANCIAL INC"
-    },
-    {
-      "Ticker": "GSBC",
-      "Company": "GREAT SOUTHERN BANCORP, INC."
-    },
-    {
-      "Ticker": "GSHD",
-      "Company": "Goosehead Insurance, Inc."
-    },
-    {
-      "Ticker": "HAFC",
-      "Company": "HANMI FINANCIAL CORP"
-    },
-    {
-      "Ticker": "HBCP",
-      "Company": "HOME BANCORP, INC."
-    },
-    {
-      "Ticker": "HBNC",
-      "Company": "HORIZON BANCORP INC /IN/"
-    },
-    {
-      "Ticker": "HBT",
-      "Company": "HBT Financial, Inc."
-    },
-    {
-      "Ticker": "HCI",
-      "Company": "HCI Group, Inc."
-    },
-    {
-      "Ticker": "HFWA",
-      "Company": "HERITAGE FINANCIAL CORP /WA/"
-    },
-    {
-      "Ticker": "HIFS",
-      "Company": "Hingham Institution for Savings"
-    },
-    {
-      "Ticker": "HLNE",
-      "Company": "Hamilton Lane INC"
-    },
-    {
-      "Ticker": "HMN",
-      "Company": "HORACE MANN EDUCATORS CORP /DE/"
-    },
-    {
-      "Ticker": "HMST",
-      "Company": "HomeStreet Inc."
-    },
-    {
-      "Ticker": "HOMB",
-      "Company": "HOME BANCSHARES INC"
-    },
-    {
-      "Ticker": "HONE",
-      "Company": "HarborOne Bancorp, Inc."
-    },
-    {
-      "Ticker": "HOPE",
-      "Company": "HOPE BANCORP INC"
-    },
-    {
-      "Ticker": "HRTG",
-      "Company": "Heritage Insurance Holdings, Inc."
-    },
-    {
-      "Ticker": "HTBK",
-      "Company": "HERITAGE COMMERCE CORP"
-    },
-    {
-      "Ticker": "HTH",
-      "Company": "Hilltop Holdings Inc."
-    },
-    {
-      "Ticker": "HWC",
-      "Company": "HANCOCK WHITNEY CORP"
-    },
-    {
-      "Ticker": "IBCP",
-      "Company": "INDEPENDENT BANK CORP /MI/"
-    },
-    {
-      "Ticker": "IBOC",
-      "Company": "INTERNATIONAL BANCSHARES CORP"
-    },
-    {
-      "Ticker": "INBK",
-      "Company": "First Internet Bancorp"
-    },
-    {
-      "Ticker": "INDB",
-      "Company": "INDEPENDENT BANK CORP"
-    },
-    {
-      "Ticker": "ISTR",
-      "Company": "Investar Holding Corp"
-    },
-    {
-      "Ticker": "ITIC",
-      "Company": "INVESTORS TITLE CO"
-    },
-    {
-      "Ticker": "JMSB",
-      "Company": "John Marshall Bancorp, Inc."
-    },
-    {
-      "Ticker": "JRVR",
-      "Company": "James River Group Holdings, Ltd."
-    },
-    {
-      "Ticker": "KRNY",
-      "Company": "Kearny Financial Corp."
-    },
-    {
-      "Ticker": "LC",
-      "Company": "LendingClub Corp"
-    },
-    {
-      "Ticker": "LCNB",
-      "Company": "LCNB CORP"
-    },
-    {
-      "Ticker": "LKFN",
-      "Company": "LAKELAND FINANCIAL CORP"
-    },
-    {
-      "Ticker": "LNKB",
-      "Company": "LINKBANCORP, Inc."
-    },
-    {
-      "Ticker": "LOB",
-      "Company": "Live Oak Bancshares, Inc."
-    },
-    {
-      "Ticker": "MARA",
-      "Company": "MARA Holdings, Inc."
-    },
-    {
-      "Ticker": "MBCN",
-      "Company": "MIDDLEFIELD BANC CORP"
-    },
-    {
-      "Ticker": "MBI",
-      "Company": "MBIA INC"
-    },
-    {
-      "Ticker": "MBIN",
-      "Company": "Merchants Bancorp"
-    },
-    {
-      "Ticker": "MBWM",
-      "Company": "MERCANTILE BANK CORP"
-    },
-    {
-      "Ticker": "MC",
-      "Company": "Moelis & Co"
-    },
-    {
-      "Ticker": "MCB",
-      "Company": "Metropolitan Bank Holding Corp."
-    },
-    {
-      "Ticker": "MCBS",
-      "Company": "MetroCity Bankshares, Inc."
-    },
-    {
-      "Ticker": "MCY",
-      "Company": "MERCURY GENERAL CORP"
-    },
-    {
-      "Ticker": "MFIN",
-      "Company": "MEDALLION FINANCIAL CORP"
-    },
-    {
-      "Ticker": "MHLD",
-      "Company": "Maiden Holdings, Ltd."
-    },
-    {
-      "Ticker": "MOFG",
-      "Company": "MidWestOne Financial Group, Inc."
-    },
-    {
-      "Ticker": "MPB",
-      "Company": "MID PENN BANCORP INC"
-    },
-    {
-      "Ticker": "MSBI",
-      "Company": "Midland States Bancorp, Inc."
-    },
-    {
-      "Ticker": "MVBF",
-      "Company": "MVB FINANCIAL CORP"
-    },
-    {
-      "Ticker": "MYFW",
-      "Company": "First Western Financial Inc"
-    },
-    {
-      "Ticker": "NAVI",
-      "Company": "NAVIENT CORP"
-    },
-    {
-      "Ticker": "NBHC",
-      "Company": "National Bank Holdings Corp"
-    },
-    {
-      "Ticker": "NBN",
-      "Company": "Northeast Bank"
-    },
-    {
-      "Ticker": "NBTB",
-      "Company": "NBT BANCORP INC"
-    },
-    {
-      "Ticker": "NECB",
-      "Company": "NorthEast Community Bancorp, Inc./MD/"
-    },
-    {
-      "Ticker": "NEWT",
-      "Company": "NewtekOne, Inc."
-    },
-    {
-      "Ticker": "NFBK",
-      "Company": "Northfield Bancorp, Inc."
-    },
-    {
-      "Ticker": "NKSH",
-      "Company": "NATIONAL BANKSHARES INC"
-    },
-    {
-      "Ticker": "NMIH",
-      "Company": "NMI Holdings, Inc."
-    },
-    {
-      "Ticker": "NNI",
-      "Company": "NELNET INC"
-    },
-    {
-      "Ticker": "NODK",
-      "Company": "NI Holdings, Inc."
-    },
-    {
-      "Ticker": "NRIM",
-      "Company": "NORTHRIM BANCORP INC"
-    },
-    {
-      "Ticker": "NTB",
-      "Company": "Bank of N.T. Butterfield & Son Ltd"
-    },
-    {
-      "Ticker": "NWBI",
-      "Company": "Northwest Bancshares, Inc."
-    },
-    {
-      "Ticker": "NWFL",
-      "Company": "NORWOOD FINANCIAL CORP"
-    },
-    {
-      "Ticker": "OCFC",
-      "Company": "OCEANFIRST FINANCIAL CORP"
-    },
-    {
-      "Ticker": "OFG",
-      "Company": "OFG BANCORP"
-    },
-    {
-      "Ticker": "ONB",
-      "Company": "OLD NATIONAL BANCORP /IN/"
-    },
-    {
-      "Ticker": "ORRF",
-      "Company": "ORRSTOWN FINANCIAL SERVICES INC"
-    },
-    {
-      "Ticker": "OSBC",
-      "Company": "OLD SECOND BANCORP INC"
-    },
-    {
-      "Ticker": "OVLY",
-      "Company": "Oak Valley Bancorp"
-    },
-    {
-      "Ticker": "PBFS",
-      "Company": "Pioneer Bancorp, Inc./MD"
-    },
-    {
-      "Ticker": "PCB",
-      "Company": "PCB BANCORP"
-    },
-    {
-      "Ticker": "PDLB",
-      "Company": "Ponce Financial Group, Inc."
-    },
-    {
-      "Ticker": "PEBK",
-      "Company": "PEOPLES BANCORP OF NORTH CAROLINA INC"
-    },
-    {
-      "Ticker": "PEBO",
-      "Company": "PEOPLES BANCORP INC"
-    },
-    {
-      "Ticker": "PFBC",
-      "Company": "Preferred Bank"
-    },
-    {
-      "Ticker": "PFIS",
-      "Company": "PEOPLES FINANCIAL SERVICES CORP."
-    },
-    {
-      "Ticker": "PFS",
-      "Company": "PROVIDENT FINANCIAL SERVICES INC"
-    },
-    {
-      "Ticker": "PFSI",
-      "Company": "PennyMac Financial Services, Inc."
-    },
-    {
-      "Ticker": "PGC",
-      "Company": "PEAPACK GLADSTONE FINANCIAL CORP"
-    },
-    {
-      "Ticker": "PIPR",
-      "Company": "PIPER SANDLER COMPANIES"
-    },
-    {
-      "Ticker": "PJT",
-      "Company": "PJT Partners Inc."
-    },
-    {
-      "Ticker": "PKBK",
-      "Company": "PARKE BANCORP, INC."
-    },
-    {
-      "Ticker": "PLBC",
-      "Company": "PLUMAS BANCORP"
-    },
-    {
-      "Ticker": "PLMR",
-      "Company": "Palomar Holdings, Inc."
-    },
-    {
-      "Ticker": "PPBI",
-      "Company": "PACIFIC PREMIER BANCORP INC"
-    },
-    {
-      "Ticker": "PRA",
-      "Company": "PROASSURANCE CORP"
-    },
-    {
-      "Ticker": "PRAA",
-      "Company": "PRA GROUP INC"
-    },
-    {
-      "Ticker": "PRK",
-      "Company": "PARK NATIONAL CORP /OH/"
-    },
-    {
-      "Ticker": "PVBC",
-      "Company": "Provident Bancorp, Inc. /MD/"
-    },
-    {
-      "Ticker": "QCRH",
-      "Company": "QCR HOLDINGS INC"
-    },
-    {
-      "Ticker": "RBB",
-      "Company": "RBB Bancorp"
-    },
-    {
-      "Ticker": "RBCAA",
-      "Company": "REPUBLIC BANCORP INC /KY/"
-    },
-    {
-      "Ticker": "RDN",
-      "Company": "RADIAN GROUP INC"
-    },
-    {
-      "Ticker": "RILY",
-      "Company": "B. Riley Financial, Inc."
-    },
-    {
-      "Ticker": "RM",
-      "Company": "Regional Management Corp."
-    },
-    {
-      "Ticker": "RNST",
-      "Company": "RENASANT CORP"
-    },
-    {
-      "Ticker": "RRBI",
-      "Company": "RED RIVER BANCSHARES INC"
-    },
-    {
-      "Ticker": "SAFT",
-      "Company": "SAFETY INSURANCE GROUP INC"
-    },
-    {
-      "Ticker": "SAMG",
-      "Company": "Silvercrest Asset Management Group Inc."
-    },
-    {
-      "Ticker": "SBCF",
-      "Company": "SEACOAST BANKING CORP OF FLORIDA"
-    },
-    {
-      "Ticker": "SBSI",
-      "Company": "SOUTHSIDE BANCSHARES INC"
-    },
-    {
-      "Ticker": "SBT",
-      "Company": "Sterling Bancorp, Inc."
-    },
-    {
-      "Ticker": "SFBS",
-      "Company": "ServisFirst Bancshares, Inc."
-    },
-    {
-      "Ticker": "SFNC",
-      "Company": "SIMMONS FIRST NATIONAL CORP"
-    },
-    {
-      "Ticker": "SFST",
-      "Company": "SOUTHERN FIRST BANCSHARES INC"
-    },
-    {
-      "Ticker": "SG",
-      "Company": "Sweetgreen, Inc."
-    },
-    {
-      "Ticker": "SHBI",
-      "Company": "SHORE BANCSHARES INC"
-    },
-    {
-      "Ticker": "SIGI",
-      "Company": "SELECTIVE INSURANCE GROUP INC"
-    },
-    {
-      "Ticker": "SMBC",
-      "Company": "SOUTHERN MISSOURI BANCORP, INC."
-    },
-    {
-      "Ticker": "SMBK",
-      "Company": "SMARTFINANCIAL INC."
-    },
-    {
-      "Ticker": "SPFI",
-      "Company": "SOUTH PLAINS FINANCIAL, INC."
-    },
-    {
-      "Ticker": "SRCE",
-      "Company": "1ST SOURCE CORP"
-    },
-    {
-      "Ticker": "SSB",
-      "Company": "SouthState Corp"
-    },
-    {
-      "Ticker": "STBA",
-      "Company": "S&T BANCORP INC"
-    },
-    {
-      "Ticker": "STC",
-      "Company": "STEWART INFORMATION SERVICES CORP"
-    },
-    {
-      "Ticker": "SUNS",
-      "Company": "Sunrise Realty Trust Inc."
-    },
-    {
-      "Ticker": "SWKH",
-      "Company": "SWK Holdings Corp"
-    },
-    {
-      "Ticker": "SYBT",
-      "Company": "Stock Yards Bancorp, Inc."
-    },
-    {
-      "Ticker": "TBBK",
-      "Company": "Bancorp, Inc."
-    },
-    {
-      "Ticker": "TCBI",
-      "Company": "TEXAS CAPITAL BANCSHARES INC/TX"
-    },
-    {
-      "Ticker": "TCBK",
-      "Company": "TRICO BANCSHARES /"
-    },
-    {
-      "Ticker": "THFF",
-      "Company": "FIRST FINANCIAL CORP /IN/"
-    },
-    {
-      "Ticker": "TIPT",
-      "Company": "TIPTREE INC."
-    },
-    {
-      "Ticker": "TMP",
-      "Company": "TOMPKINS FINANCIAL CORP"
-    },
-    {
-      "Ticker": "TOWN",
-      "Company": "TowneBank"
-    },
-    {
-      "Ticker": "TREE",
-      "Company": "LendingTree, Inc."
-    },
-    {
-      "Ticker": "TRMK",
-      "Company": "TRUSTMARK CORP"
-    },
-    {
-      "Ticker": "TRST",
-      "Company": "TRUSTCO BANK CORP N Y"
-    },
-    {
-      "Ticker": "TRUP",
-      "Company": "TRUPANION, INC."
-    },
-    {
-      "Ticker": "TSBK",
-      "Company": "TIMBERLAND BANCORP INC"
-    },
-    {
-      "Ticker": "UBSI",
-      "Company": "UNITED BANKSHARES INC/WV"
-    },
-    {
-      "Ticker": "UFCS",
-      "Company": "UNITED FIRE GROUP INC"
-    },
-    {
-      "Ticker": "UMBF",
-      "Company": "UMB FINANCIAL CORP"
-    },
-    {
-      "Ticker": "UNTY",
-      "Company": "UNITY BANCORP INC /NJ/"
-    },
-    {
-      "Ticker": "UVE",
-      "Company": "UNIVERSAL INSURANCE HOLDINGS, INC."
-    },
-    {
-      "Ticker": "UVSP",
-      "Company": "UNIVEST FINANCIAL Corp"
-    },
-    {
-      "Ticker": "VABK",
-      "Company": "Virginia National Bankshares Corp"
-    },
-    {
-      "Ticker": "VALU",
-      "Company": "VALUE LINE INC"
-    },
-    {
-      "Ticker": "VBTX",
-      "Company": "Veritex Holdings, Inc."
-    },
-    {
-      "Ticker": "VCTR",
-      "Company": "Victory Capital Holdings, Inc."
-    },
-    {
-      "Ticker": "VEL",
-      "Company": "Velocity Financial, Inc."
-    },
-    {
-      "Ticker": "VLY",
-      "Company": "VALLEY NATIONAL BANCORP"
-    },
-    {
-      "Ticker": "VRTS",
-      "Company": "VIRTUS INVESTMENT PARTNERS, INC."
-    },
-    {
-      "Ticker": "WABC",
-      "Company": "WESTAMERICA BANCORPORATION"
-    },
-    {
-      "Ticker": "WAFD",
-      "Company": "WAFD INC"
-    },
-    {
-      "Ticker": "WASH",
-      "Company": "WASHINGTON TRUST BANCORP INC"
-    },
-    {
-      "Ticker": "WD",
-      "Company": "Walker & Dunlop, Inc."
-    },
-    {
-      "Ticker": "WRLD",
-      "Company": "WORLD ACCEPTANCE CORP"
-    },
-    {
-      "Ticker": "WSBC",
-      "Company": "WESBANCO INC"
-    },
-    {
-      "Ticker": "WSBF",
-      "Company": "Waterstone Financial, Inc."
-    },
-    {
-      "Ticker": "WSFS",
-      "Company": "WSFS FINANCIAL CORP"
-    },
-    {
-      "Ticker": "WTBA",
-      "Company": "WEST BANCORPORATION INC"
-    }
-  ],
-  "Health Care": [
-    {
-      "Ticker": "ABT",
-      "Company": "Abbott Laboratories"
-    },
-    {
-      "Ticker": "ABBV",
-      "Company": "AbbVie"
-    },
-    {
-      "Ticker": "A",
-      "Company": "Agilent Technologies"
-    },
-    {
-      "Ticker": "ALGN",
-      "Company": "Align Technology"
-    },
-    {
-      "Ticker": "AMGN",
-      "Company": "Amgen"
-    },
-    {
-      "Ticker": "BAX",
-      "Company": "Baxter International"
-    },
-    {
-      "Ticker": "BDX",
-      "Company": "Becton Dickinson"
-    },
-    {
-      "Ticker": "TECH",
-      "Company": "Bio-Techne"
-    },
-    {
-      "Ticker": "BIIB",
-      "Company": "Biogen"
-    },
-    {
-      "Ticker": "BSX",
-      "Company": "Boston Scientific"
-    },
-    {
-      "Ticker": "BMY",
-      "Company": "Bristol Myers Squibb"
-    },
-    {
-      "Ticker": "CAH",
-      "Company": "Cardinal Health"
-    },
-    {
-      "Ticker": "COR",
-      "Company": "Cencora"
-    },
-    {
-      "Ticker": "CNC",
-      "Company": "Centene Corporation"
-    },
-    {
-      "Ticker": "CRL",
-      "Company": "Charles River Laboratories"
-    },
-    {
-      "Ticker": "CI",
-      "Company": "Cigna"
-    },
-    {
-      "Ticker": "COO",
-      "Company": "Cooper Companies (The)"
-    },
-    {
-      "Ticker": "CVS",
-      "Company": "CVS Health"
-    },
-    {
-      "Ticker": "DHR",
-      "Company": "Danaher Corporation"
-    },
-    {
-      "Ticker": "DVA",
-      "Company": "DaVita"
-    },
-    {
-      "Ticker": "DXCM",
-      "Company": "Dexcom"
-    },
-    {
-      "Ticker": "EW",
-      "Company": "Edwards Lifesciences"
-    },
-    {
-      "Ticker": "ELV",
-      "Company": "Elevance Health"
-    },
-    {
-      "Ticker": "GEHC",
-      "Company": "GE HealthCare"
-    },
-    {
-      "Ticker": "GILD",
-      "Company": "Gilead Sciences"
-    },
-    {
-      "Ticker": "HCA",
-      "Company": "HCA Healthcare"
-    },
-    {
-      "Ticker": "HSIC",
-      "Company": "Henry Schein"
-    },
-    {
-      "Ticker": "HOLX",
-      "Company": "Hologic"
-    },
-    {
-      "Ticker": "HUM",
-      "Company": "Humana"
-    },
-    {
-      "Ticker": "IDXX",
-      "Company": "Idexx Laboratories"
-    },
-    {
-      "Ticker": "INCY",
-      "Company": "Incyte"
-    },
-    {
-      "Ticker": "PODD",
-      "Company": "Insulet Corporation"
-    },
-    {
-      "Ticker": "ISRG",
-      "Company": "Intuitive Surgical"
-    },
-    {
-      "Ticker": "IQV",
-      "Company": "IQVIA"
-    },
-    {
-      "Ticker": "JNJ",
-      "Company": "Johnson & Johnson"
-    },
-    {
-      "Ticker": "LH",
-      "Company": "Labcorp"
-    },
-    {
-      "Ticker": "LLY",
-      "Company": "Lilly (Eli)"
-    },
-    {
-      "Ticker": "MCK",
-      "Company": "McKesson Corporation"
-    },
-    {
-      "Ticker": "MDT",
-      "Company": "Medtronic"
-    },
-    {
-      "Ticker": "MRK",
-      "Company": "Merck & Co."
-    },
-    {
-      "Ticker": "MTD",
-      "Company": "Mettler Toledo"
-    },
-    {
-      "Ticker": "MRNA",
-      "Company": "Moderna"
-    },
-    {
-      "Ticker": "MOH",
-      "Company": "Molina Healthcare"
-    },
-    {
-      "Ticker": "PFE",
-      "Company": "Pfizer"
-    },
-    {
-      "Ticker": "DGX",
-      "Company": "Quest Diagnostics"
-    },
-    {
-      "Ticker": "REGN",
-      "Company": "Regeneron Pharmaceuticals"
-    },
-    {
-      "Ticker": "RMD",
-      "Company": "ResMed"
-    },
-    {
-      "Ticker": "RVTY",
-      "Company": "Revvity"
-    },
-    {
-      "Ticker": "SOLV",
-      "Company": "Solventum"
-    },
-    {
-      "Ticker": "STE",
-      "Company": "Steris"
-    },
-    {
-      "Ticker": "SYK",
-      "Company": "Stryker Corporation"
-    },
-    {
-      "Ticker": "TMO",
-      "Company": "Thermo Fisher Scientific"
-    },
-    {
-      "Ticker": "UNH",
-      "Company": "UnitedHealth Group"
-    },
-    {
-      "Ticker": "UHS",
-      "Company": "Universal Health Services"
-    },
-    {
-      "Ticker": "VRTX",
-      "Company": "Vertex Pharmaceuticals"
-    },
-    {
-      "Ticker": "VTRS",
-      "Company": "Viatris"
-    },
-    {
-      "Ticker": "WAT",
-      "Company": "Waters Corporation"
-    },
-    {
-      "Ticker": "WST",
-      "Company": "West Pharmaceutical Services"
-    },
-    {
-      "Ticker": "ZBH",
-      "Company": "Zimmer Biomet"
-    },
-    {
-      "Ticker": "ZTS",
-      "Company": "Zoetis"
-    },
-    {
-      "Ticker": "ABUS",
-      "Company": "Arbutus Biopharma Corp"
-    },
-    {
-      "Ticker": "ACAD",
-      "Company": "ACADIA PHARMACEUTICALS INC"
-    },
-    {
-      "Ticker": "ACHV",
-      "Company": "ACHIEVE LIFE SCIENCES, INC."
-    },
-    {
-      "Ticker": "ADMA",
-      "Company": "ADMA BIOLOGICS, INC."
-    },
-    {
-      "Ticker": "ADPT",
-      "Company": "Adaptive Biotechnologies Corp"
-    },
-    {
-      "Ticker": "ADUS",
-      "Company": "Addus HomeCare Corp"
-    },
-    {
-      "Ticker": "ADVM",
-      "Company": "Adverum Biotechnologies, Inc."
-    },
-    {
-      "Ticker": "AGEN",
-      "Company": "AGENUS INC"
-    },
-    {
-      "Ticker": "AGIO",
-      "Company": "AGIOS PHARMACEUTICALS, INC."
-    },
-    {
-      "Ticker": "AHCO",
-      "Company": "AdaptHealth Corp."
-    },
-    {
-      "Ticker": "AKBA",
-      "Company": "Akebia Therapeutics, Inc."
-    },
-    {
-      "Ticker": "AKRO",
-      "Company": "Akero Therapeutics, Inc."
-    },
-    {
-      "Ticker": "ALDX",
-      "Company": "Aldeyra Therapeutics, Inc."
-    },
-    {
-      "Ticker": "ALEC",
-      "Company": "Alector, Inc."
-    },
-    {
-      "Ticker": "ALKS",
-      "Company": "Alkermes plc."
-    },
-    {
-      "Ticker": "ALLO",
-      "Company": "Allogene Therapeutics, Inc."
-    },
-    {
-      "Ticker": "ALT",
-      "Company": "Altimmune, Inc."
-    },
-    {
-      "Ticker": "AMN",
-      "Company": "AMN HEALTHCARE SERVICES INC"
-    },
-    {
-      "Ticker": "AMPH",
-      "Company": "Amphastar Pharmaceuticals, Inc."
-    },
-    {
-      "Ticker": "AMRX",
-      "Company": "Amneal Pharmaceuticals, Inc."
-    },
-    {
-      "Ticker": "ANAB",
-      "Company": "ANAPTYSBIO, INC"
-    },
-    {
-      "Ticker": "ANGO",
-      "Company": "ANGIODYNAMICS INC"
-    },
-    {
-      "Ticker": "ANIK",
-      "Company": "Anika Therapeutics, Inc."
-    },
-    {
-      "Ticker": "ANIP",
-      "Company": "ANI PHARMACEUTICALS INC"
-    },
-    {
-      "Ticker": "APLT",
-      "Company": "Applied Therapeutics, Inc."
-    },
-    {
-      "Ticker": "AQST",
-      "Company": "Aquestive Therapeutics, Inc."
-    },
-    {
-      "Ticker": "ARAY",
-      "Company": "ACCURAY INC"
-    },
-    {
-      "Ticker": "ARCT",
-      "Company": "Arcturus Therapeutics Holdings Inc."
-    },
-    {
-      "Ticker": "ARDX",
-      "Company": "ARDELYX, INC."
-    },
-    {
-      "Ticker": "ARQT",
-      "Company": "Arcutis Biotherapeutics, Inc."
-    },
-    {
-      "Ticker": "ARVN",
-      "Company": "ARVINAS, INC."
-    },
-    {
-      "Ticker": "ARWR",
-      "Company": "ARROWHEAD PHARMACEUTICALS, INC."
-    },
-    {
-      "Ticker": "ATEC",
-      "Company": "Alphatec Holdings, Inc."
-    },
-    {
-      "Ticker": "ATNM",
-      "Company": "Actinium Pharmaceuticals, Inc."
-    },
-    {
-      "Ticker": "ATOS",
-      "Company": "ATOSSA THERAPEUTICS, INC."
-    },
-    {
-      "Ticker": "ATRC",
-      "Company": "AtriCure, Inc."
-    },
-    {
-      "Ticker": "AUPH",
-      "Company": "Aurinia Pharmaceuticals Inc."
-    },
-    {
-      "Ticker": "AVDL",
-      "Company": "AVADEL PHARMACEUTICALS PLC"
-    },
-    {
-      "Ticker": "AVDX",
-      "Company": "AvidXchange Holdings, Inc."
-    },
-    {
-      "Ticker": "AVNS",
-      "Company": "AVANOS MEDICAL, INC."
-    },
-    {
-      "Ticker": "AVXL",
-      "Company": "ANAVEX LIFE SCIENCES CORP."
-    },
-    {
-      "Ticker": "AXGN",
-      "Company": "Axogen, Inc."
-    },
-    {
-      "Ticker": "AXSM",
-      "Company": "Axsome Therapeutics, Inc."
-    },
-    {
-      "Ticker": "BBIO",
-      "Company": "BridgeBio Pharma, Inc."
-    },
-    {
-      "Ticker": "BCRX",
-      "Company": "BIOCRYST PHARMACEUTICALS INC"
-    },
-    {
-      "Ticker": "BDTX",
-      "Company": "Black Diamond Therapeutics, Inc."
-    },
-    {
-      "Ticker": "BEAM",
-      "Company": "Beam Therapeutics Inc."
-    },
-    {
-      "Ticker": "BHVN",
-      "Company": "Biohaven Ltd."
-    },
-    {
-      "Ticker": "BKD",
-      "Company": "Brookdale Senior Living Inc."
-    },
-    {
-      "Ticker": "BLFS",
-      "Company": "BIOLIFE SOLUTIONS INC"
-    },
-    {
-      "Ticker": "BLUE",
-      "Company": "bluebird bio, Inc."
-    },
-    {
-      "Ticker": "BPMC",
-      "Company": "Blueprint Medicines Corp"
-    },
-    {
-      "Ticker": "CABA",
-      "Company": "Cabaletta Bio, Inc."
-    },
-    {
-      "Ticker": "CAPR",
-      "Company": "CAPRICOR THERAPEUTICS, INC."
-    },
-    {
-      "Ticker": "CDNA",
-      "Company": "CareDx, Inc."
-    },
-    {
-      "Ticker": "CDXS",
-      "Company": "CODEXIS, INC."
-    },
-    {
-      "Ticker": "CELC",
-      "Company": "Celcuity Inc."
-    },
-    {
-      "Ticker": "CERS",
-      "Company": "CERUS CORP"
-    },
-    {
-      "Ticker": "CHRS",
-      "Company": "Coherus BioSciences, Inc."
-    },
-    {
-      "Ticker": "CLDX",
-      "Company": "Celldex Therapeutics, Inc."
-    },
-    {
-      "Ticker": "CNMD",
-      "Company": "CONMED Corp"
-    },
-    {
-      "Ticker": "COLL",
-      "Company": "COLLEGIUM PHARMACEUTICAL, INC"
-    },
-    {
-      "Ticker": "CORT",
-      "Company": "CORCEPT THERAPEUTICS INC"
-    },
-    {
-      "Ticker": "CPRX",
-      "Company": "CATALYST PHARMACEUTICALS, INC."
-    },
-    {
-      "Ticker": "CRBP",
-      "Company": "Corbus Pharmaceuticals Holdings, Inc."
-    },
-    {
-      "Ticker": "CRMD",
-      "Company": "CorMedix Inc."
-    },
-    {
-      "Ticker": "CRNX",
-      "Company": "Crinetics Pharmaceuticals, Inc."
-    },
-    {
-      "Ticker": "CSTL",
-      "Company": "CASTLE BIOSCIENCES INC"
-    },
-    {
-      "Ticker": "CYH",
-      "Company": "COMMUNITY HEALTH SYSTEMS INC"
-    },
-    {
-      "Ticker": "CYTK",
-      "Company": "CYTOKINETICS INC"
-    },
-    {
-      "Ticker": "DNLI",
-      "Company": "Denali Therapeutics Inc."
-    },
-    {
-      "Ticker": "DVAX",
-      "Company": "DYNAVAX TECHNOLOGIES CORP"
-    },
-    {
-      "Ticker": "EDIT",
-      "Company": "Editas Medicine, Inc."
-    },
-    {
-      "Ticker": "ENSG",
-      "Company": "ENSIGN GROUP, INC"
-    },
-    {
-      "Ticker": "ENTA",
-      "Company": "ENANTA PHARMACEUTICALS INC"
-    },
-    {
-      "Ticker": "EOLS",
-      "Company": "Evolus, Inc."
-    },
-    {
-      "Ticker": "ESPR",
-      "Company": "Esperion Therapeutics, Inc."
-    },
-    {
-      "Ticker": "ETNB",
-      "Company": "89bio, Inc."
-    },
-    {
-      "Ticker": "EVH",
-      "Company": "Evolent Health, Inc."
-    },
-    {
-      "Ticker": "EYPT",
-      "Company": "EyePoint Pharmaceuticals, Inc."
-    },
-    {
-      "Ticker": "FATE",
-      "Company": "FATE THERAPEUTICS INC"
-    },
-    {
-      "Ticker": "FENC",
-      "Company": "FENNEC PHARMACEUTICALS INC."
-    },
-    {
-      "Ticker": "FLGT",
-      "Company": "Fulgent Genetics, Inc."
-    },
-    {
-      "Ticker": "FOLD",
-      "Company": "AMICUS THERAPEUTICS, INC."
-    },
-    {
-      "Ticker": "FULC",
-      "Company": "Fulcrum Therapeutics, Inc."
-    },
-    {
-      "Ticker": "GALT",
-      "Company": "GALECTIN THERAPEUTICS INC"
-    },
-    {
-      "Ticker": "GERN",
-      "Company": "GERON CORP"
-    },
-    {
-      "Ticker": "GH",
-      "Company": "Guardant Health, Inc."
-    },
-    {
-      "Ticker": "GKOS",
-      "Company": "GLAUKOS Corp"
-    },
-    {
-      "Ticker": "HAE",
-      "Company": "HAEMONETICS CORP"
-    },
-    {
-      "Ticker": "HALO",
-      "Company": "HALOZYME THERAPEUTICS, INC."
-    },
-    {
-      "Ticker": "HBIO",
-      "Company": "HARVARD BIOSCIENCE INC"
-    },
-    {
-      "Ticker": "HCAT",
-      "Company": "Health Catalyst, Inc."
-    },
-    {
-      "Ticker": "HCSG",
-      "Company": "HEALTHCARE SERVICES GROUP INC"
-    },
-    {
-      "Ticker": "HQY",
-      "Company": "HEALTHEQUITY, INC."
-    },
-    {
-      "Ticker": "HROW",
-      "Company": "HARROW, INC."
-    },
-    {
-      "Ticker": "HRTX",
-      "Company": "HERON THERAPEUTICS, INC. /DE/"
-    },
-    {
-      "Ticker": "HSTM",
-      "Company": "HEALTHSTREAM INC"
-    },
-    {
-      "Ticker": "IART",
-      "Company": "INTEGRA LIFESCIENCES HOLDINGS CORP"
-    },
-    {
-      "Ticker": "ICUI",
-      "Company": "ICU MEDICAL INC/DE"
-    },
-    {
-      "Ticker": "IDYA",
-      "Company": "IDEAYA Biosciences, Inc."
-    },
-    {
-      "Ticker": "IGMS",
-      "Company": "IGM Biosciences, Inc."
-    },
-    {
-      "Ticker": "IMVT",
-      "Company": "Immunovant, Inc."
-    },
-    {
-      "Ticker": "INFU",
-      "Company": "InfuSystem Holdings, Inc"
-    },
-    {
-      "Ticker": "INGN",
-      "Company": "Inogen Inc"
-    },
-    {
-      "Ticker": "INMB",
-      "Company": "Inmune Bio, Inc."
-    },
-    {
-      "Ticker": "INMD",
-      "Company": "InMode Ltd."
-    },
-    {
-      "Ticker": "INO",
-      "Company": "INOVIO PHARMACEUTICALS, INC."
-    },
-    {
-      "Ticker": "INSM",
-      "Company": "INSMED Inc"
-    },
-    {
-      "Ticker": "INVA",
-      "Company": "Innoviva, Inc."
-    },
-    {
-      "Ticker": "IOVA",
-      "Company": "IOVANCE BIOTHERAPEUTICS, INC."
-    },
-    {
-      "Ticker": "IRMD",
-      "Company": "IRADIMED CORP"
-    },
-    {
-      "Ticker": "IRTC",
-      "Company": "iRhythm Technologies, Inc."
-    },
-    {
-      "Ticker": "IRWD",
-      "Company": "IRONWOOD PHARMACEUTICALS INC"
-    },
-    {
-      "Ticker": "ITGR",
-      "Company": "Integer Holdings Corp"
-    },
-    {
-      "Ticker": "JYNT",
-      "Company": "JOINT Corp"
-    },
-    {
-      "Ticker": "KALV",
-      "Company": "KalVista Pharmaceuticals, Inc."
-    },
-    {
-      "Ticker": "KIDS",
-      "Company": "ORTHOPEDIATRICS CORP"
-    },
-    {
-      "Ticker": "KNSA",
-      "Company": "Kiniksa Pharmaceuticals International, plc"
-    },
-    {
-      "Ticker": "KOD",
-      "Company": "Kodiak Sciences Inc."
-    },
-    {
-      "Ticker": "KROS",
-      "Company": "Keros Therapeutics, Inc."
-    },
-    {
-      "Ticker": "KRYS",
-      "Company": "Krystal Biotech, Inc."
-    },
-    {
-      "Ticker": "KURA",
-      "Company": "Kura Oncology, Inc."
-    },
-    {
-      "Ticker": "LCTX",
-      "Company": "Lineage Cell Therapeutics, Inc."
-    },
-    {
-      "Ticker": "LGND",
-      "Company": "LIGAND PHARMACEUTICALS INC"
-    },
-    {
-      "Ticker": "LIVN",
-      "Company": "LivaNova PLC"
-    },
-    {
-      "Ticker": "LMAT",
-      "Company": "LEMAITRE VASCULAR INC"
-    },
-    {
-      "Ticker": "LNTH",
-      "Company": "Lantheus Holdings, Inc."
-    },
-    {
-      "Ticker": "LQDA",
-      "Company": "Liquidia Corp"
-    },
-    {
-      "Ticker": "LXRX",
-      "Company": "LEXICON PHARMACEUTICALS, INC."
-    },
-    {
-      "Ticker": "MD",
-      "Company": "Pediatrix Medical Group, Inc."
-    },
-    {
-      "Ticker": "MDGL",
-      "Company": "MADRIGAL PHARMACEUTICALS, INC."
-    },
-    {
-      "Ticker": "MDWD",
-      "Company": "MediWound Ltd."
-    },
-    {
-      "Ticker": "MDXG",
-      "Company": "MIMEDX GROUP, INC."
-    },
-    {
-      "Ticker": "MGNX",
-      "Company": "MACROGENICS INC"
-    },
-    {
-      "Ticker": "MGTX",
-      "Company": "MeiraGTx Holdings plc"
-    },
-    {
-      "Ticker": "MIRM",
-      "Company": "Mirum Pharmaceuticals, Inc."
-    },
-    {
-      "Ticker": "MMSI",
-      "Company": "MERIT MEDICAL SYSTEMS INC"
-    },
-    {
-      "Ticker": "MNKD",
-      "Company": "MANNKIND CORP"
-    },
-    {
-      "Ticker": "MRSN",
-      "Company": "Mersana Therapeutics, Inc."
-    },
-    {
-      "Ticker": "MYGN",
-      "Company": "MYRIAD GENETICS INC"
-    },
-    {
-      "Ticker": "NEO",
-      "Company": "NEOGENOMICS INC"
-    },
-    {
-      "Ticker": "NEOG",
-      "Company": "NEOGEN CORP"
-    },
-    {
-      "Ticker": "NHC",
-      "Company": "NATIONAL HEALTHCARE CORP"
-    },
-    {
-      "Ticker": "NKTR",
-      "Company": "NEKTAR THERAPEUTICS"
-    },
-    {
-      "Ticker": "NRC",
-      "Company": "NATIONAL RESEARCH CORP"
-    },
-    {
-      "Ticker": "NTLA",
-      "Company": "Intellia Therapeutics, Inc."
-    },
-    {
-      "Ticker": "NVAX",
-      "Company": "NOVAVAX INC"
-    },
-    {
-      "Ticker": "NVCR",
-      "Company": "NovoCure Ltd"
-    },
-    {
-      "Ticker": "OCGN",
-      "Company": "Ocugen, Inc."
-    },
-    {
-      "Ticker": "OCUL",
-      "Company": "OCULAR THERAPEUTIX, INC"
-    },
-    {
-      "Ticker": "OFIX",
-      "Company": "Orthofix Medical Inc."
-    },
-    {
-      "Ticker": "OMCL",
-      "Company": "OMNICELL, INC."
-    },
-    {
-      "Ticker": "OMER",
-      "Company": "OMEROS CORP"
-    },
-    {
-      "Ticker": "OMI",
-      "Company": "OWENS & MINOR INC/VA/"
-    },
-    {
-      "Ticker": "OPCH",
-      "Company": "Option Care Health, Inc."
-    },
-    {
-      "Ticker": "OPK",
-      "Company": "OPKO HEALTH, INC."
-    },
-    {
-      "Ticker": "OPRX",
-      "Company": "OptimizeRx Corp"
-    },
-    {
-      "Ticker": "ORGO",
-      "Company": "Organogenesis Holdings Inc."
-    },
-    {
-      "Ticker": "OSUR",
-      "Company": "ORASURE TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "OTLK",
-      "Company": "Outlook Therapeutics, Inc."
-    },
-    {
-      "Ticker": "OVID",
-      "Company": "Ovid Therapeutics Inc."
-    },
-    {
-      "Ticker": "PACB",
-      "Company": "PACIFIC BIOSCIENCES OF CALIFORNIA, INC."
-    },
-    {
-      "Ticker": "PAHC",
-      "Company": "PHIBRO ANIMAL HEALTH CORP"
-    },
-    {
-      "Ticker": "PBH",
-      "Company": "Prestige Consumer Healthcare Inc."
-    },
-    {
-      "Ticker": "PBYI",
-      "Company": "PUMA BIOTECHNOLOGY, INC."
-    },
-    {
-      "Ticker": "PCRX",
-      "Company": "Pacira BioSciences, Inc."
-    },
-    {
-      "Ticker": "PDCO",
-      "Company": "PATTERSON COMPANIES, INC."
-    },
-    {
-      "Ticker": "PDLI",
-      "Company": NaN
-    },
-    {
-      "Ticker": "PGEN",
-      "Company": "PRECIGEN, INC."
-    },
-    {
-      "Ticker": "PGNY",
-      "Company": "Progyny, Inc."
-    },
-    {
-      "Ticker": "PHAT",
-      "Company": "Phathom Pharmaceuticals, Inc."
-    },
-    {
-      "Ticker": "PHR",
-      "Company": "Phreesia, Inc."
-    },
-    {
-      "Ticker": "PLSE",
-      "Company": "PULSE BIOSCIENCES, INC."
-    },
-    {
-      "Ticker": "PNTG",
-      "Company": "Pennant Group, Inc."
-    },
-    {
-      "Ticker": "PRTA",
-      "Company": "PROTHENA CORP PUBLIC LTD CO"
-    },
-    {
-      "Ticker": "PTCT",
-      "Company": "PTC THERAPEUTICS, INC."
-    },
-    {
-      "Ticker": "PTGX",
-      "Company": "Protagonist Therapeutics, Inc"
-    },
-    {
-      "Ticker": "QTRX",
-      "Company": "Quanterix Corp"
-    },
-    {
-      "Ticker": "RAPT",
-      "Company": "RAPT Therapeutics, Inc."
-    },
-    {
-      "Ticker": "RCEL",
-      "Company": "AVITA Medical, Inc."
-    },
-    {
-      "Ticker": "RCKT",
-      "Company": "ROCKET PHARMACEUTICALS, INC."
-    },
-    {
-      "Ticker": "RCUS",
-      "Company": "Arcus Biosciences, Inc."
-    },
-    {
-      "Ticker": "RDNT",
-      "Company": "RadNet, Inc."
-    },
-    {
-      "Ticker": "RDUS",
-      "Company": "RADIUS RECYCLING, INC."
-    },
-    {
-      "Ticker": "REPL",
-      "Company": "Replimune Group, Inc."
-    },
-    {
-      "Ticker": "RGLS",
-      "Company": "Regulus Therapeutics Inc."
-    },
-    {
-      "Ticker": "RGNX",
-      "Company": "REGENXBIO Inc."
-    },
-    {
-      "Ticker": "RIGL",
-      "Company": "RIGEL PHARMACEUTICALS INC"
-    },
-    {
-      "Ticker": "RVMD",
-      "Company": "Revolution Medicines, Inc."
-    },
-    {
-      "Ticker": "RYTM",
-      "Company": "RHYTHM PHARMACEUTICALS, INC."
-    },
-    {
-      "Ticker": "SAGE",
-      "Company": "Sage Therapeutics, Inc."
-    },
-    {
-      "Ticker": "SAVA",
-      "Company": "CASSAVA SCIENCES INC"
-    },
-    {
-      "Ticker": "SCPH",
-      "Company": "scPharmaceuticals Inc."
-    },
-    {
-      "Ticker": "SDGR",
-      "Company": "Schrodinger, Inc."
-    },
-    {
-      "Ticker": "SEM",
-      "Company": "SELECT MEDICAL HOLDINGS CORP"
-    },
-    {
-      "Ticker": "SGRY",
-      "Company": "Surgery Partners, Inc."
-    },
-    {
-      "Ticker": "SIBN",
-      "Company": "SI-BONE, Inc."
-    },
-    {
-      "Ticker": "SIGA",
-      "Company": "SIGA TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "SLDB",
-      "Company": "Solid Biosciences Inc."
-    },
-    {
-      "Ticker": "SLNO",
-      "Company": "SOLENO THERAPEUTICS INC"
-    },
-    {
-      "Ticker": "SLP",
-      "Company": "Simulations Plus, Inc."
-    },
-    {
-      "Ticker": "SMLR",
-      "Company": "Semler Scientific, Inc."
-    },
-    {
-      "Ticker": "SMMT",
-      "Company": "Summit Therapeutics Inc."
-    },
-    {
-      "Ticker": "SMTI",
-      "Company": "Sanara MedTech Inc."
-    },
-    {
-      "Ticker": "SNDX",
-      "Company": "Syndax Pharmaceuticals Inc"
-    },
-    {
-      "Ticker": "SRDX",
-      "Company": "SURMODICS INC"
-    },
-    {
-      "Ticker": "SRRK",
-      "Company": "Scholar Rock Holding Corp"
-    },
-    {
-      "Ticker": "STAA",
-      "Company": "STAAR SURGICAL CO"
-    },
-    {
-      "Ticker": "STOK",
-      "Company": "Stoke Therapeutics, Inc."
-    },
-    {
-      "Ticker": "STRO",
-      "Company": "SUTRO BIOPHARMA, INC."
-    },
-    {
-      "Ticker": "STXS",
-      "Company": "Stereotaxis, Inc."
-    },
-    {
-      "Ticker": "SUPN",
-      "Company": "SUPERNUS PHARMACEUTICALS, INC."
-    },
-    {
-      "Ticker": "SVRA",
-      "Company": "Savara Inc"
-    },
-    {
-      "Ticker": "SWTX",
-      "Company": "SpringWorks Therapeutics, Inc."
-    },
-    {
-      "Ticker": "TBPH",
-      "Company": "Theravance Biopharma, Inc."
-    },
-    {
-      "Ticker": "TCMD",
-      "Company": "TACTILE SYSTEMS TECHNOLOGY INC"
-    },
-    {
-      "Ticker": "TDOC",
-      "Company": "Teladoc Health, Inc."
-    },
-    {
-      "Ticker": "TGTX",
-      "Company": "TG THERAPEUTICS, INC."
-    },
-    {
-      "Ticker": "TMDX",
-      "Company": "TransMedics Group, Inc."
-    },
-    {
-      "Ticker": "TNDM",
-      "Company": "TANDEM DIABETES CARE INC"
-    },
-    {
-      "Ticker": "TRVI",
-      "Company": "Trevi Therapeutics, Inc."
-    },
-    {
-      "Ticker": "TWST",
-      "Company": "Twist Bioscience Corp"
-    },
-    {
-      "Ticker": "URGN",
-      "Company": "UroGen Pharma Ltd."
-    },
-    {
-      "Ticker": "USPH",
-      "Company": "U S PHYSICAL THERAPY INC /NV"
-    },
-    {
-      "Ticker": "UTMD",
-      "Company": "UTAH MEDICAL PRODUCTS INC"
-    },
-    {
-      "Ticker": "VCEL",
-      "Company": "Vericel Corp"
-    },
-    {
-      "Ticker": "VCYT",
-      "Company": "VERACYTE, INC."
-    },
-    {
-      "Ticker": "VERU",
-      "Company": "VERU INC."
-    },
-    {
-      "Ticker": "VIR",
-      "Company": "Vir Biotechnology, Inc."
-    },
-    {
-      "Ticker": "VMD",
-      "Company": "VIEMED HEALTHCARE, INC."
-    },
-    {
-      "Ticker": "VNDA",
-      "Company": "Vanda Pharmaceuticals Inc."
-    },
-    {
-      "Ticker": "VRCA",
-      "Company": "Verrica Pharmaceuticals Inc."
-    },
-    {
-      "Ticker": "VREX",
-      "Company": "Varex Imaging Corp"
-    },
-    {
-      "Ticker": "VSTM",
-      "Company": "Verastem, Inc."
-    },
-    {
-      "Ticker": "VYGR",
-      "Company": "Voyager Therapeutics, Inc."
-    },
-    {
-      "Ticker": "WVE",
-      "Company": "Wave Life Sciences Ltd."
-    },
-    {
-      "Ticker": "XBIT",
-      "Company": "XBiotech Inc."
-    },
-    {
-      "Ticker": "XERS",
-      "Company": "Xeris Biopharma Holdings, Inc."
-    },
-    {
-      "Ticker": "XFOR",
-      "Company": "X4 Pharmaceuticals, Inc"
-    },
-    {
-      "Ticker": "XNCR",
-      "Company": "Xencor Inc"
-    },
-    {
-      "Ticker": "XOMA",
-      "Company": "XOMA Royalty Corp"
-    },
-    {
-      "Ticker": "YMAB",
-      "Company": "Y-mAbs Therapeutics, Inc."
-    },
-    {
-      "Ticker": "ZNTL",
-      "Company": "Zentalis Pharmaceuticals, Inc."
-    },
-    {
-      "Ticker": "ZYME",
-      "Company": "Zymeworks Inc."
-    },
-    {
-      "Ticker": "ZYXI",
-      "Company": "ZYNEX INC"
-    }
-  ],
   "Industrials": [
     {
       "Ticker": "MMM",
@@ -4771,806 +311,248 @@
     {
       "Ticker": "XYL",
       "Company": "Xylem Inc."
-    },
-    {
-      "Ticker": "ABM",
-      "Company": "ABM INDUSTRIES INC /DE/"
-    },
-    {
-      "Ticker": "ACA",
-      "Company": "Arcosa, Inc."
-    },
-    {
-      "Ticker": "ACCO",
-      "Company": "ACCO BRANDS Corp"
-    },
-    {
-      "Ticker": "ACTG",
-      "Company": "ACACIA RESEARCH CORP"
-    },
-    {
-      "Ticker": "AEIS",
-      "Company": "ADVANCED ENERGY INDUSTRIES INC"
-    },
-    {
-      "Ticker": "AGX",
-      "Company": "ARGAN INC"
-    },
-    {
-      "Ticker": "AIR",
-      "Company": "AAR CORP"
-    },
-    {
-      "Ticker": "AIT",
-      "Company": "APPLIED INDUSTRIAL TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "ALG",
-      "Company": "ALAMO GROUP INC"
-    },
-    {
-      "Ticker": "ALGT",
-      "Company": "Allegiant Travel CO"
-    },
-    {
-      "Ticker": "ALTG",
-      "Company": "ALTA EQUIPMENT GROUP INC."
-    },
-    {
-      "Ticker": "AMRC",
-      "Company": "Ameresco, Inc."
-    },
-    {
-      "Ticker": "AMSC",
-      "Company": "AMERICAN SUPERCONDUCTOR CORP /DE/"
-    },
-    {
-      "Ticker": "APLD",
-      "Company": "Applied Digital Corp."
-    },
-    {
-      "Ticker": "APOG",
-      "Company": "APOGEE ENTERPRISES, INC."
-    },
-    {
-      "Ticker": "ARCB",
-      "Company": "ARCBEST CORP /DE/"
-    },
-    {
-      "Ticker": "ARLO",
-      "Company": "Arlo Technologies, Inc."
-    },
-    {
-      "Ticker": "ASGN",
-      "Company": "ASGN Inc"
-    },
-    {
-      "Ticker": "ASPN",
-      "Company": "ASPEN AEROGELS INC"
-    },
-    {
-      "Ticker": "ASTE",
-      "Company": "ASTEC INDUSTRIES INC"
-    },
-    {
-      "Ticker": "ATKR",
-      "Company": "Atkore Inc."
-    },
-    {
-      "Ticker": "ATRO",
-      "Company": "ASTRONICS CORP"
-    },
-    {
-      "Ticker": "ATSG",
-      "Company": "Air Transport Services Group, Inc."
-    },
-    {
-      "Ticker": "AVAV",
-      "Company": "AeroVironment Inc"
-    },
-    {
-      "Ticker": "AZZ",
-      "Company": "AZZ INC"
-    },
-    {
-      "Ticker": "BBCP",
-      "Company": "Concrete Pumping Holdings, Inc."
-    },
-    {
-      "Ticker": "BBSI",
-      "Company": "BARRETT BUSINESS SERVICES INC"
-    },
-    {
-      "Ticker": "BCO",
-      "Company": "BRINKS CO"
-    },
-    {
-      "Ticker": "BDC",
-      "Company": "BELDEN INC."
-    },
-    {
-      "Ticker": "BE",
-      "Company": "Bloom Energy Corp"
-    },
-    {
-      "Ticker": "BECN",
-      "Company": "BEACON ROOFING SUPPLY INC"
-    },
-    {
-      "Ticker": "BMI",
-      "Company": "BADGER METER INC"
-    },
-    {
-      "Ticker": "BV",
-      "Company": "BrightView Holdings, Inc."
-    },
-    {
-      "Ticker": "BXC",
-      "Company": "BlueLinx Holdings Inc."
-    },
-    {
-      "Ticker": "BYRN",
-      "Company": "Byrna Technologies Inc."
-    },
-    {
-      "Ticker": "CASS",
-      "Company": "CASS INFORMATION SYSTEMS INC"
-    },
-    {
-      "Ticker": "CBZ",
-      "Company": "CBIZ, Inc."
-    },
-    {
-      "Ticker": "CCRN",
-      "Company": "CROSS COUNTRY HEALTHCARE INC"
-    },
-    {
-      "Ticker": "CIX",
-      "Company": "COMPX INTERNATIONAL INC"
-    },
-    {
-      "Ticker": "CMCO",
-      "Company": "COLUMBUS MCKINNON CORP"
-    },
-    {
-      "Ticker": "CMRE",
-      "Company": "Costamare Inc."
-    },
-    {
-      "Ticker": "CNR",
-      "Company": "Core Natural Resources, Inc."
-    },
-    {
-      "Ticker": "CODI",
-      "Company": "Compass Diversified Holdings"
-    },
-    {
-      "Ticker": "CRAI",
-      "Company": "CRA INTERNATIONAL, INC."
-    },
-    {
-      "Ticker": "CRS",
-      "Company": "CARPENTER TECHNOLOGY CORP"
-    },
-    {
-      "Ticker": "CSTE",
-      "Company": "Caesarstone Ltd."
-    },
-    {
-      "Ticker": "CSWI",
-      "Company": "CSW Industrials Inc."
-    },
-    {
-      "Ticker": "CWST",
-      "Company": "CASELLA WASTE SYSTEMS INC"
-    },
-    {
-      "Ticker": "CYRX",
-      "Company": "Cryoport, Inc."
-    },
-    {
-      "Ticker": "DCO",
-      "Company": "DUCOMMUN INC /DE/"
-    },
-    {
-      "Ticker": "DLHC",
-      "Company": "DLH Holdings Corp."
-    },
-    {
-      "Ticker": "DXPE",
-      "Company": "DXP ENTERPRISES INC"
-    },
-    {
-      "Ticker": "DY",
-      "Company": "DYCOM INDUSTRIES INC"
-    },
-    {
-      "Ticker": "EAF",
-      "Company": "GRAFTECH INTERNATIONAL LTD"
-    },
-    {
-      "Ticker": "EBF",
-      "Company": "ENNIS, INC."
-    },
-    {
-      "Ticker": "EML",
-      "Company": "EASTERN CO"
-    },
-    {
-      "Ticker": "ENR",
-      "Company": "ENERGIZER HOLDINGS, INC."
-    },
-    {
-      "Ticker": "ENS",
-      "Company": "EnerSys"
-    },
-    {
-      "Ticker": "EPAC",
-      "Company": "ENERPAC TOOL GROUP CORP"
-    },
-    {
-      "Ticker": "ERII",
-      "Company": "Energy Recovery, Inc."
-    },
-    {
-      "Ticker": "EVI",
-      "Company": "EVI INDUSTRIES, INC."
-    },
-    {
-      "Ticker": "EXPO",
-      "Company": "EXPONENT INC"
-    },
-    {
-      "Ticker": "FC",
-      "Company": "FRANKLIN COVEY CO"
-    },
-    {
-      "Ticker": "FCEL",
-      "Company": "FUELCELL ENERGY INC"
-    },
-    {
-      "Ticker": "FELE",
-      "Company": "FRANKLIN ELECTRIC CO INC"
-    },
-    {
-      "Ticker": "FLR",
-      "Company": "FLUOR CORP"
-    },
-    {
-      "Ticker": "FORR",
-      "Company": "FORRESTER RESEARCH, INC."
-    },
-    {
-      "Ticker": "FSS",
-      "Company": "FEDERAL SIGNAL CORP /DE/"
-    },
-    {
-      "Ticker": "FSTR",
-      "Company": "FOSTER L B CO"
-    },
-    {
-      "Ticker": "FTAI",
-      "Company": "FTAI Aviation Ltd."
-    },
-    {
-      "Ticker": "FWRD",
-      "Company": "FORWARD AIR CORP"
-    },
-    {
-      "Ticker": "GATX",
-      "Company": "GATX CORP"
-    },
-    {
-      "Ticker": "GBX",
-      "Company": "GREENBRIER COMPANIES INC"
-    },
-    {
-      "Ticker": "GENC",
-      "Company": "GENCOR INDUSTRIES INC"
-    },
-    {
-      "Ticker": "GFF",
-      "Company": "GRIFFON CORP"
-    },
-    {
-      "Ticker": "GHM",
-      "Company": "GRAHAM CORP"
-    },
-    {
-      "Ticker": "GLDD",
-      "Company": "Great Lakes Dredge & Dock CORP"
-    },
-    {
-      "Ticker": "GMS",
-      "Company": "GMS Inc."
-    },
-    {
-      "Ticker": "GNK",
-      "Company": "GENCO SHIPPING & TRADING LTD"
-    },
-    {
-      "Ticker": "GOGL",
-      "Company": "Golden Ocean Group Ltd"
-    },
-    {
-      "Ticker": "GRC",
-      "Company": "GORMAN RUPP CO"
-    },
-    {
-      "Ticker": "GTLS",
-      "Company": "CHART INDUSTRIES INC"
-    },
-    {
-      "Ticker": "GVA",
-      "Company": "GRANITE CONSTRUCTION INC"
-    },
-    {
-      "Ticker": "HEES",
-      "Company": "H&E Equipment Services, Inc."
-    },
-    {
-      "Ticker": "HI",
-      "Company": "Hillenbrand, Inc."
-    },
-    {
-      "Ticker": "HLIO",
-      "Company": "HELIOS TECHNOLOGIES, INC."
-    },
-    {
-      "Ticker": "HNI",
-      "Company": "HNI CORP"
-    },
-    {
-      "Ticker": "HQI",
-      "Company": "HireQuest, Inc."
-    },
-    {
-      "Ticker": "HRI",
-      "Company": "HERC HOLDINGS INC"
-    },
-    {
-      "Ticker": "HSII",
-      "Company": "HEIDRICK & STRUGGLES INTERNATIONAL INC"
-    },
-    {
-      "Ticker": "HTLD",
-      "Company": "HEARTLAND EXPRESS INC"
-    },
-    {
-      "Ticker": "HTZ",
-      "Company": "HERTZ GLOBAL HOLDINGS, INC"
-    },
-    {
-      "Ticker": "HUBG",
-      "Company": "Hub Group, Inc."
-    },
-    {
-      "Ticker": "HURN",
-      "Company": "Huron Consulting Group Inc."
-    },
-    {
-      "Ticker": "HY",
-      "Company": "HYSTER-YALE, INC."
-    },
-    {
-      "Ticker": "IBP",
-      "Company": "Installed Building Products, Inc."
-    },
-    {
-      "Ticker": "ICFI",
-      "Company": "ICF International, Inc."
-    },
-    {
-      "Ticker": "IESC",
-      "Company": "IES Holdings, Inc."
-    },
-    {
-      "Ticker": "IIIN",
-      "Company": "INSTEEL INDUSTRIES INC"
-    },
-    {
-      "Ticker": "INSW",
-      "Company": "International Seaways, Inc."
-    },
-    {
-      "Ticker": "JBLU",
-      "Company": "JETBLUE AIRWAYS CORP"
-    },
-    {
-      "Ticker": "JELD",
-      "Company": "JELD-WEN Holding, Inc."
-    },
-    {
-      "Ticker": "KAI",
-      "Company": "KADANT INC"
-    },
-    {
-      "Ticker": "KE",
-      "Company": "Kimball Electronics, Inc."
-    },
-    {
-      "Ticker": "KELYA",
-      "Company": "KELLY SERVICES INC"
-    },
-    {
-      "Ticker": "KFRC",
-      "Company": "KFORCE INC"
-    },
-    {
-      "Ticker": "KFY",
-      "Company": "KORN FERRY"
-    },
-    {
-      "Ticker": "KMT",
-      "Company": "KENNAMETAL INC"
-    },
-    {
-      "Ticker": "KODK",
-      "Company": "EASTMAN KODAK CO"
-    },
-    {
-      "Ticker": "KTOS",
-      "Company": "KRATOS DEFENSE & SECURITY SOLUTIONS, INC."
-    },
-    {
-      "Ticker": "LMB",
-      "Company": "Limbach Holdings, Inc."
-    },
-    {
-      "Ticker": "LNN",
-      "Company": "LINDSAY CORP"
-    },
-    {
-      "Ticker": "LXFR",
-      "Company": "LUXFER HOLDINGS PLC"
-    },
-    {
-      "Ticker": "MATW",
-      "Company": "MATTHEWS INTERNATIONAL CORP"
-    },
-    {
-      "Ticker": "MATX",
-      "Company": "Matson, Inc."
-    },
-    {
-      "Ticker": "MEC",
-      "Company": "Mayville Engineering Company, Inc."
-    },
-    {
-      "Ticker": "MG",
-      "Company": "Mistras Group, Inc."
-    },
-    {
-      "Ticker": "MGRC",
-      "Company": "MCGRATH RENTCORP"
-    },
-    {
-      "Ticker": "MLI",
-      "Company": "MUELLER INDUSTRIES INC"
-    },
-    {
-      "Ticker": "MMS",
-      "Company": "MAXIMUS, INC."
-    },
-    {
-      "Ticker": "MRCY",
-      "Company": "MERCURY SYSTEMS INC"
-    },
-    {
-      "Ticker": "MRTN",
-      "Company": "MARTEN TRANSPORT LTD"
-    },
-    {
-      "Ticker": "MTW",
-      "Company": "MANITOWOC CO INC"
-    },
-    {
-      "Ticker": "MWA",
-      "Company": "Mueller Water Products, Inc."
-    },
-    {
-      "Ticker": "MYRG",
-      "Company": "MYR GROUP INC."
-    },
-    {
-      "Ticker": "NAT",
-      "Company": "NORDIC AMERICAN TANKERS Ltd"
-    },
-    {
-      "Ticker": "NL",
-      "Company": "NL INDUSTRIES INC"
-    },
-    {
-      "Ticker": "NNBR",
-      "Company": "NN INC"
-    },
-    {
-      "Ticker": "NPK",
-      "Company": "NATIONAL PRESTO INDUSTRIES INC"
-    },
-    {
-      "Ticker": "NPO",
-      "Company": "Enpro Inc."
-    },
-    {
-      "Ticker": "NSP",
-      "Company": "INSPERITY, INC."
-    },
-    {
-      "Ticker": "NSSC",
-      "Company": "NAPCO SECURITY TECHNOLOGIES, INC"
-    },
-    {
-      "Ticker": "NVEE",
-      "Company": "NV5 Global, Inc."
-    },
-    {
-      "Ticker": "NWPX",
-      "Company": "NORTHWEST PIPE CO"
-    },
-    {
-      "Ticker": "NX",
-      "Company": "Quanex Building Products CORP"
-    },
-    {
-      "Ticker": "OFLX",
-      "Company": "Omega Flex, Inc."
-    },
-    {
-      "Ticker": "ORN",
-      "Company": "Orion Group Holdings Inc"
-    },
-    {
-      "Ticker": "PANL",
-      "Company": "Pangaea Logistics Solutions Ltd."
-    },
-    {
-      "Ticker": "PATK",
-      "Company": "PATRICK INDUSTRIES INC"
-    },
-    {
-      "Ticker": "PAYS",
-      "Company": "Paysign, Inc."
-    },
+    }
+  ],
+  "Health Care": [
     {
-      "Ticker": "PBI",
-      "Company": "PITNEY BOWES INC /DE/"
+      "Ticker": "ABT",
+      "Company": "Abbott Laboratories"
     },
     {
-      "Ticker": "PESI",
-      "Company": "PERMA FIX ENVIRONMENTAL SERVICES INC"
+      "Ticker": "ABBV",
+      "Company": "AbbVie"
     },
     {
-      "Ticker": "PKE",
-      "Company": "PARK AEROSPACE CORP"
+      "Ticker": "A",
+      "Company": "Agilent Technologies"
     },
     {
-      "Ticker": "PKOH",
-      "Company": "PARK OHIO HOLDINGS CORP"
+      "Ticker": "ALGN",
+      "Company": "Align Technology"
     },
     {
-      "Ticker": "PLPC",
-      "Company": "PREFORMED LINE PRODUCTS CO"
+      "Ticker": "AMGN",
+      "Company": "Amgen"
     },
     {
-      "Ticker": "PLUG",
-      "Company": "PLUG POWER INC"
+      "Ticker": "BAX",
+      "Company": "Baxter International"
     },
     {
-      "Ticker": "PMTS",
-      "Company": "CPI Card Group Inc."
+      "Ticker": "BDX",
+      "Company": "Becton Dickinson"
     },
     {
-      "Ticker": "POWL",
-      "Company": "POWELL INDUSTRIES INC"
+      "Ticker": "TECH",
+      "Company": "Bio-Techne"
     },
     {
-      "Ticker": "PRIM",
-      "Company": "Primoris Services Corp"
+      "Ticker": "BIIB",
+      "Company": "Biogen"
     },
     {
-      "Ticker": "PRLB",
-      "Company": "Proto Labs Inc"
+      "Ticker": "BSX",
+      "Company": "Boston Scientific"
     },
     {
-      "Ticker": "QRHC",
-      "Company": "Quest Resource Holding Corp"
+      "Ticker": "BMY",
+      "Company": "Bristol Myers Squibb"
     },
     {
-      "Ticker": "QUAD",
-      "Company": "Quad/Graphics, Inc."
+      "Ticker": "CAH",
+      "Company": "Cardinal Health"
     },
     {
-      "Ticker": "REKR",
-      "Company": "Rekor Systems, Inc."
+      "Ticker": "COR",
+      "Company": "Cencora"
     },
     {
-      "Ticker": "REVG",
-      "Company": "REV Group, Inc."
+      "Ticker": "CNC",
+      "Company": "Centene Corporation"
     },
     {
-      "Ticker": "REZI",
-      "Company": "RESIDEO TECHNOLOGIES, INC."
+      "Ticker": "CRL",
+      "Company": "Charles River Laboratories"
     },
     {
-      "Ticker": "RGP",
-      "Company": "RESOURCES CONNECTION, INC."
+      "Ticker": "CI",
+      "Company": "Cigna"
     },
     {
-      "Ticker": "RGR",
-      "Company": "STURM RUGER & CO INC"
+      "Ticker": "COO",
+      "Company": "Cooper Companies (The)"
     },
     {
-      "Ticker": "RLGT",
-      "Company": "RADIANT LOGISTICS, INC"
+      "Ticker": "CVS",
+      "Company": "CVS Health"
     },
     {
-      "Ticker": "ROAD",
-      "Company": "Construction Partners, Inc."
+      "Ticker": "DHR",
+      "Company": "Danaher Corporation"
     },
     {
-      "Ticker": "ROCK",
-      "Company": "GIBRALTAR INDUSTRIES, INC."
+      "Ticker": "DVA",
+      "Company": "DaVita"
     },
     {
-      "Ticker": "RYI",
-      "Company": "Ryerson Holding Corp"
+      "Ticker": "DXCM",
+      "Company": "Dexcom"
     },
     {
-      "Ticker": "SB",
-      "Company": "SAFE BULKERS, INC."
+      "Ticker": "EW",
+      "Company": "Edwards Lifesciences"
     },
     {
-      "Ticker": "SCS",
-      "Company": "STEELCASE INC"
+      "Ticker": "ELV",
+      "Company": "Elevance Health"
     },
     {
-      "Ticker": "SFL",
-      "Company": "SFL Corp Ltd."
+      "Ticker": "GEHC",
+      "Company": "GE HealthCare"
     },
     {
-      "Ticker": "SKYW",
-      "Company": "SKYWEST INC"
+      "Ticker": "GILD",
+      "Company": "Gilead Sciences"
     },
     {
-      "Ticker": "SMHI",
-      "Company": "SEACOR Marine Holdings Inc."
+      "Ticker": "HCA",
+      "Company": "HCA Healthcare"
     },
     {
-      "Ticker": "SPCE",
-      "Company": "Virgin Galactic Holdings, Inc"
+      "Ticker": "HSIC",
+      "Company": "Henry Schein"
     },
     {
-      "Ticker": "SPXC",
-      "Company": "SPX Technologies, Inc."
+      "Ticker": "HOLX",
+      "Company": "Hologic"
     },
     {
-      "Ticker": "STRL",
-      "Company": "STERLING INFRASTRUCTURE, INC."
+      "Ticker": "HUM",
+      "Company": "Humana"
     },
     {
-      "Ticker": "SXI",
-      "Company": "STANDEX INTERNATIONAL CORP/DE/"
+      "Ticker": "IDXX",
+      "Company": "Idexx Laboratories"
     },
     {
-      "Ticker": "TAYD",
-      "Company": "TAYLOR DEVICES, INC."
+      "Ticker": "INCY",
+      "Company": "Incyte"
     },
     {
-      "Ticker": "TBI",
-      "Company": "TrueBlue, Inc."
+      "Ticker": "PODD",
+      "Company": "Insulet Corporation"
     },
     {
-      "Ticker": "TEX",
-      "Company": "TEREX CORP"
+      "Ticker": "ISRG",
+      "Company": "Intuitive Surgical"
     },
     {
-      "Ticker": "TGI",
-      "Company": "TETRA TECHNOLOGIES INC"
+      "Ticker": "IQV",
+      "Company": "IQVIA"
     },
     {
-      "Ticker": "TGLS",
-      "Company": "Tecnoglass Inc."
+      "Ticker": "JNJ",
+      "Company": "Johnson & Johnson"
     },
     {
-      "Ticker": "THR",
-      "Company": "Thermon Group Holdings, Inc."
+      "Ticker": "LH",
+      "Company": "Labcorp"
     },
     {
-      "Ticker": "TITN",
-      "Company": "Titan Machinery Inc."
+      "Ticker": "LLY",
+      "Company": "Lilly (Eli)"
     },
     {
-      "Ticker": "TNC",
-      "Company": "TENNANT CO"
+      "Ticker": "MCK",
+      "Company": "McKesson Corporation"
     },
     {
-      "Ticker": "TNET",
-      "Company": "TRINET GROUP, INC."
+      "Ticker": "MDT",
+      "Company": "Medtronic"
     },
     {
-      "Ticker": "TPC",
-      "Company": "TUTOR PERINI CORP"
+      "Ticker": "MRK",
+      "Company": "Merck & Co."
     },
     {
-      "Ticker": "TPIC",
-      "Company": "TPI Composites Inc."
+      "Ticker": "MTD",
+      "Company": "Mettler Toledo"
     },
     {
-      "Ticker": "TRC",
-      "Company": "TEJON RANCH CO"
+      "Ticker": "MRNA",
+      "Company": "Moderna"
     },
     {
-      "Ticker": "TRN",
-      "Company": "TRINITY INDUSTRIES INC"
+      "Ticker": "MOH",
+      "Company": "Molina Healthcare"
     },
     {
-      "Ticker": "TRNS",
-      "Company": "TRANSCAT INC"
+      "Ticker": "PFE",
+      "Company": "Pfizer"
     },
     {
-      "Ticker": "TRS",
-      "Company": "TRIMAS CORP"
+      "Ticker": "DGX",
+      "Company": "Quest Diagnostics"
     },
     {
-      "Ticker": "TWI",
-      "Company": "TITAN INTERNATIONAL INC"
+      "Ticker": "REGN",
+      "Company": "Regeneron Pharmaceuticals"
     },
     {
-      "Ticker": "TWIN",
-      "Company": "TWIN DISC INC"
+      "Ticker": "RMD",
+      "Company": "ResMed"
     },
     {
-      "Ticker": "ULBI",
-      "Company": "ULTRALIFE CORP"
+      "Ticker": "RVTY",
+      "Company": "Revvity"
     },
     {
-      "Ticker": "ULH",
-      "Company": "UNIVERSAL LOGISTICS HOLDINGS, INC."
+      "Ticker": "SOLV",
+      "Company": "Solventum"
     },
     {
-      "Ticker": "UNF",
-      "Company": "UNIFIRST CORP"
+      "Ticker": "STE",
+      "Company": "Steris"
     },
     {
-      "Ticker": "UPWK",
-      "Company": "UPWORK, INC"
+      "Ticker": "SYK",
+      "Company": "Stryker Corporation"
     },
     {
-      "Ticker": "VRRM",
-      "Company": "VERRA MOBILITY Corp"
+      "Ticker": "TMO",
+      "Company": "Thermo Fisher Scientific"
     },
     {
-      "Ticker": "VSEC",
-      "Company": "VSE CORP"
+      "Ticker": "UNH",
+      "Company": "UnitedHealth Group"
     },
     {
-      "Ticker": "VTSI",
-      "Company": "VirTra, Inc"
+      "Ticker": "UHS",
+      "Company": "Universal Health Services"
     },
     {
-      "Ticker": "WERN",
-      "Company": "WERNER ENTERPRISES INC"
+      "Ticker": "VRTX",
+      "Company": "Vertex Pharmaceuticals"
     },
     {
-      "Ticker": "WLDN",
-      "Company": "Willdan Group, Inc."
+      "Ticker": "VTRS",
+      "Company": "Viatris"
     },
     {
-      "Ticker": "WLFC",
-      "Company": "WILLIS LEASE FINANCE CORP"
+      "Ticker": "WAT",
+      "Company": "Waters Corporation"
     },
     {
-      "Ticker": "WNC",
-      "Company": "WABASH NATIONAL Corp"
+      "Ticker": "WST",
+      "Company": "West Pharmaceutical Services"
     },
     {
-      "Ticker": "WNS",
-      "Company": "WNS (HOLDINGS) LTD"
+      "Ticker": "ZBH",
+      "Company": "Zimmer Biomet"
     },
     {
-      "Ticker": "WTS",
-      "Company": "WATTS WATER TECHNOLOGIES INC"
+      "Ticker": "ZTS",
+      "Company": "Zoetis"
     }
   ],
   "Information Technology": [
@@ -5845,1450 +827,6 @@
     {
       "Ticker": "ZBRA",
       "Company": "Zebra Technologies"
-    },
-    {
-      "Ticker": "AAOI",
-      "Company": "APPLIED OPTOELECTRONICS, INC."
-    },
-    {
-      "Ticker": "ACIW",
-      "Company": "ACI WORLDWIDE, INC."
-    },
-    {
-      "Ticker": "ACLS",
-      "Company": "AXCELIS TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "ACMR",
-      "Company": "ACM Research, Inc."
-    },
-    {
-      "Ticker": "ADTN",
-      "Company": "ADTRAN Holdings, Inc."
-    },
-    {
-      "Ticker": "AEHR",
-      "Company": "AEHR TEST SYSTEMS"
-    },
-    {
-      "Ticker": "AEYE",
-      "Company": "AUDIOEYE INC"
-    },
-    {
-      "Ticker": "AGYS",
-      "Company": "AGILYSYS INC"
-    },
-    {
-      "Ticker": "ALRM",
-      "Company": "Alarm.com Holdings, Inc."
-    },
-    {
-      "Ticker": "AMBA",
-      "Company": "AMBARELLA INC"
-    },
-    {
-      "Ticker": "AOSL",
-      "Company": "ALPHA & OMEGA SEMICONDUCTOR Ltd"
-    },
-    {
-      "Ticker": "APPN",
-      "Company": "APPIAN CORP"
-    },
-    {
-      "Ticker": "APPS",
-      "Company": "Digital Turbine, Inc."
-    },
-    {
-      "Ticker": "ASUR",
-      "Company": "ASURE SOFTWARE INC"
-    },
-    {
-      "Ticker": "ATEN",
-      "Company": "A10 Networks, Inc."
-    },
-    {
-      "Ticker": "AVNW",
-      "Company": "AVIAT NETWORKS, INC."
-    },
-    {
-      "Ticker": "BAND",
-      "Company": "Bandwidth Inc."
-    },
-    {
-      "Ticker": "BELFA",
-      "Company": "BEL FUSE INC /NJ"
-    },
-    {
-      "Ticker": "BELFB",
-      "Company": "BEL FUSE INC /NJ"
-    },
-    {
-      "Ticker": "BHE",
-      "Company": "BENCHMARK ELECTRONICS INC"
-    },
-    {
-      "Ticker": "BL",
-      "Company": "BLACKLINE, INC."
-    },
-    {
-      "Ticker": "BLKB",
-      "Company": "BLACKBAUD INC"
-    },
-    {
-      "Ticker": "BOX",
-      "Company": "BOX INC"
-    },
-    {
-      "Ticker": "CALX",
-      "Company": "CALIX, INC"
-    },
-    {
-      "Ticker": "CAMP",
-      "Company": "Camp4 Therapeutics Corp"
-    },
-    {
-      "Ticker": "CEVA",
-      "Company": "CEVA INC"
-    },
-    {
-      "Ticker": "CLFD",
-      "Company": "Clearfield, Inc."
-    },
-    {
-      "Ticker": "CNDT",
-      "Company": "CONDUENT Inc"
-    },
-    {
-      "Ticker": "CNXN",
-      "Company": "PC CONNECTION INC"
-    },
-    {
-      "Ticker": "COHU",
-      "Company": "COHU INC"
-    },
-    {
-      "Ticker": "COMM",
-      "Company": "CommScope Holding Company, Inc."
-    },
-    {
-      "Ticker": "CRNC",
-      "Company": "Cerence Inc."
-    },
-    {
-      "Ticker": "CSGS",
-      "Company": "CSG SYSTEMS INTERNATIONAL INC"
-    },
-    {
-      "Ticker": "CTS",
-      "Company": "CTS CORP"
-    },
-    {
-      "Ticker": "CVLT",
-      "Company": "COMMVAULT SYSTEMS INC"
-    },
-    {
-      "Ticker": "DAKT",
-      "Company": "DAKTRONICS INC /SD/"
-    },
-    {
-      "Ticker": "DBD",
-      "Company": "Diebold Nixdorf Inc."
-    },
-    {
-      "Ticker": "DDD",
-      "Company": "3D SYSTEMS CORP"
-    },
-    {
-      "Ticker": "DGII",
-      "Company": "DIGI INTERNATIONAL INC"
-    },
-    {
-      "Ticker": "DIOD",
-      "Company": "DIODES INC /DEL/"
-    },
-    {
-      "Ticker": "DMRC",
-      "Company": "Digimarc CORP"
-    },
-    {
-      "Ticker": "DOMO",
-      "Company": "DOMO, INC."
-    },
-    {
-      "Ticker": "EB",
-      "Company": "Eventbrite, Inc."
-    },
-    {
-      "Ticker": "EGAN",
-      "Company": "EGAIN Corp"
-    },
-    {
-      "Ticker": "EGHT",
-      "Company": "8X8 INC /DE/"
-    },
-    {
-      "Ticker": "ESE",
-      "Company": "ESCO TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "EVTC",
-      "Company": "EVERTEC, Inc."
-    },
-    {
-      "Ticker": "EXLS",
-      "Company": "ExlService Holdings, Inc."
-    },
-    {
-      "Ticker": "EXTR",
-      "Company": "EXTREME NETWORKS INC"
-    },
-    {
-      "Ticker": "FARO",
-      "Company": "FARO TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "FN",
-      "Company": "Fabrinet"
-    },
-    {
-      "Ticker": "FORM",
-      "Company": "FORMFACTOR INC"
-    },
-    {
-      "Ticker": "FSLY",
-      "Company": "Fastly, Inc."
-    },
-    {
-      "Ticker": "GDYN",
-      "Company": "GRID DYNAMICS HOLDINGS, INC."
-    },
-    {
-      "Ticker": "GPRO",
-      "Company": "GoPro, Inc."
-    },
-    {
-      "Ticker": "HBB",
-      "Company": "Hamilton Beach Brands Holding Co"
-    },
-    {
-      "Ticker": "HCKT",
-      "Company": "HACKETT GROUP, INC."
-    },
-    {
-      "Ticker": "HLIT",
-      "Company": "HARMONIC INC"
-    },
-    {
-      "Ticker": "ICHR",
-      "Company": "ICHOR HOLDINGS, LTD."
-    },
-    {
-      "Ticker": "III",
-      "Company": "Information Services Group Inc."
-    },
-    {
-      "Ticker": "IIIV",
-      "Company": "i3 Verticals, Inc."
-    },
-    {
-      "Ticker": "IMMR",
-      "Company": "IMMERSION CORP"
-    },
-    {
-      "Ticker": "IMXI",
-      "Company": "International Money Express, Inc."
-    },
-    {
-      "Ticker": "INOD",
-      "Company": "INNODATA INC"
-    },
-    {
-      "Ticker": "IRBT",
-      "Company": "IROBOT CORP"
-    },
-    {
-      "Ticker": "ITRI",
-      "Company": "ITRON, INC."
-    },
-    {
-      "Ticker": "KLIC",
-      "Company": "KULICKE & SOFFA INDUSTRIES INC"
-    },
-    {
-      "Ticker": "KN",
-      "Company": "Knowles Corp"
-    },
-    {
-      "Ticker": "LASR",
-      "Company": "NLIGHT, INC."
-    },
-    {
-      "Ticker": "LYTS",
-      "Company": "LSI INDUSTRIES INC"
-    },
-    {
-      "Ticker": "MEI",
-      "Company": "METHODE ELECTRONICS INC"
-    },
-    {
-      "Ticker": "MITK",
-      "Company": "MITEK SYSTEMS INC"
-    },
-    {
-      "Ticker": "MLAB",
-      "Company": "MESA LABORATORIES INC /CO/"
-    },
-    {
-      "Ticker": "MRAM",
-      "Company": "EVERSPIN TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "MVIS",
-      "Company": "MICROVISION, INC."
-    },
-    {
-      "Ticker": "MXL",
-      "Company": "MAXLINEAR, INC"
-    },
-    {
-      "Ticker": "NOVA",
-      "Company": "Sunnova Energy International Inc."
-    },
-    {
-      "Ticker": "NOVT",
-      "Company": "NOVANTA INC"
-    },
-    {
-      "Ticker": "NSIT",
-      "Company": "INSIGHT ENTERPRISES INC"
-    },
-    {
-      "Ticker": "NTCT",
-      "Company": "NETSCOUT SYSTEMS INC"
-    },
-    {
-      "Ticker": "NTGR",
-      "Company": "NETGEAR, INC."
-    },
-    {
-      "Ticker": "NVEC",
-      "Company": "NVE CORP /NEW/"
-    },
-    {
-      "Ticker": "OSIS",
-      "Company": "OSI SYSTEMS INC"
-    },
-    {
-      "Ticker": "OSPN",
-      "Company": "OneSpan Inc."
-    },
-    {
-      "Ticker": "PAGS",
-      "Company": "PagSeguro Digital Ltd."
-    },
-    {
-      "Ticker": "PAR",
-      "Company": "PAR TECHNOLOGY CORP"
-    },
-    {
-      "Ticker": "PD",
-      "Company": "PagerDuty, Inc."
-    },
-    {
-      "Ticker": "PDFS",
-      "Company": "PDF SOLUTIONS INC"
-    },
-    {
-      "Ticker": "PI",
-      "Company": "IMPINJ INC"
-    },
-    {
-      "Ticker": "PLAB",
-      "Company": "PHOTRONICS INC"
-    },
-    {
-      "Ticker": "PLUS",
-      "Company": "EPLUS INC"
-    },
-    {
-      "Ticker": "PLXS",
-      "Company": "PLEXUS CORP"
-    },
-    {
-      "Ticker": "POWI",
-      "Company": "POWER INTEGRATIONS INC"
-    },
-    {
-      "Ticker": "PRGS",
-      "Company": "PROGRESS SOFTWARE CORP /MA"
-    },
-    {
-      "Ticker": "PRO",
-      "Company": "PROS Holdings, Inc."
-    },
-    {
-      "Ticker": "PRTH",
-      "Company": "Priority Technology Holdings, Inc."
-    },
-    {
-      "Ticker": "QLYS",
-      "Company": "QUALYS, INC."
-    },
-    {
-      "Ticker": "QTWO",
-      "Company": "Q2 Holdings, Inc."
-    },
-    {
-      "Ticker": "QUIK",
-      "Company": "QUICKLOGIC Corp"
-    },
-    {
-      "Ticker": "RAMP",
-      "Company": "LiveRamp Holdings, Inc."
-    },
-    {
-      "Ticker": "RDVT",
-      "Company": "Red Violet, Inc."
-    },
-    {
-      "Ticker": "RELL",
-      "Company": "RICHARDSON ELECTRONICS, LTD."
-    },
-    {
-      "Ticker": "RIOT",
-      "Company": "Riot Platforms, Inc."
-    },
-    {
-      "Ticker": "RMBS",
-      "Company": "RAMBUS INC"
-    },
-    {
-      "Ticker": "RMNI",
-      "Company": "Rimini Street, Inc."
-    },
-    {
-      "Ticker": "ROG",
-      "Company": "ROGERS CORP"
-    },
-    {
-      "Ticker": "RPAY",
-      "Company": "Repay Holdings Corp"
-    },
-    {
-      "Ticker": "RPD",
-      "Company": "Rapid7, Inc."
-    },
-    {
-      "Ticker": "RUN",
-      "Company": "Sunrun Inc."
-    },
-    {
-      "Ticker": "SABR",
-      "Company": "Sabre Corp"
-    },
-    {
-      "Ticker": "SANM",
-      "Company": "SANMINA CORP"
-    },
-    {
-      "Ticker": "SATS",
-      "Company": "EchoStar CORP"
-    },
-    {
-      "Ticker": "SCSC",
-      "Company": "SCANSOURCE, INC."
-    },
-    {
-      "Ticker": "SITM",
-      "Company": "SITIME Corp"
-    },
-    {
-      "Ticker": "SLAB",
-      "Company": "SILICON LABORATORIES INC."
-    },
-    {
-      "Ticker": "SMTC",
-      "Company": "SEMTECH CORP"
-    },
-    {
-      "Ticker": "SONO",
-      "Company": "Sonos Inc"
-    },
-    {
-      "Ticker": "SPIR",
-      "Company": "Spire Global, Inc."
-    },
-    {
-      "Ticker": "SPNS",
-      "Company": "SAPIENS INTERNATIONAL CORP N V"
-    },
-    {
-      "Ticker": "SPSC",
-      "Company": "SPS COMMERCE INC"
-    },
-    {
-      "Ticker": "SPT",
-      "Company": "Sprout Social, Inc."
-    },
-    {
-      "Ticker": "SSTI",
-      "Company": "SOUNDTHINKING, INC."
-    },
-    {
-      "Ticker": "STNE",
-      "Company": "StoneCo Ltd."
-    },
-    {
-      "Ticker": "SWI",
-      "Company": "Swire Pacific Ltd"
-    },
-    {
-      "Ticker": "SYNA",
-      "Company": "SYNAPTICS Inc"
-    },
-    {
-      "Ticker": "TCX",
-      "Company": "TUCOWS INC /PA/"
-    },
-    {
-      "Ticker": "TENB",
-      "Company": "Tenable Holdings, Inc."
-    },
-    {
-      "Ticker": "TTEC",
-      "Company": "TTEC Holdings, Inc."
-    },
-    {
-      "Ticker": "TTMI",
-      "Company": "TTM TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "UCTT",
-      "Company": "Ultra Clean Holdings, Inc."
-    },
-    {
-      "Ticker": "UIS",
-      "Company": "UNISYS CORP"
-    },
-    {
-      "Ticker": "VECO",
-      "Company": "VEECO INSTRUMENTS INC"
-    },
-    {
-      "Ticker": "VIAV",
-      "Company": "VIAVI SOLUTIONS INC."
-    },
-    {
-      "Ticker": "VICR",
-      "Company": "VICOR CORP"
-    },
-    {
-      "Ticker": "VPG",
-      "Company": "Vishay Precision Group, Inc."
-    },
-    {
-      "Ticker": "VRNS",
-      "Company": "VARONIS SYSTEMS INC"
-    },
-    {
-      "Ticker": "VRNT",
-      "Company": "VERINT SYSTEMS INC"
-    },
-    {
-      "Ticker": "VSAT",
-      "Company": "VIASAT INC"
-    },
-    {
-      "Ticker": "VSH",
-      "Company": "VISHAY INTERTECHNOLOGY INC"
-    },
-    {
-      "Ticker": "WK",
-      "Company": "WORKIVA INC"
-    },
-    {
-      "Ticker": "XPER",
-      "Company": "Xperi Inc."
-    },
-    {
-      "Ticker": "XRX",
-      "Company": "Xerox Holdings Corp"
-    },
-    {
-      "Ticker": "YEXT",
-      "Company": "Yext, Inc."
-    }
-  ],
-  "Materials": [
-    {
-      "Ticker": "APD",
-      "Company": "Air Products"
-    },
-    {
-      "Ticker": "ALB",
-      "Company": "Albemarle Corporation"
-    },
-    {
-      "Ticker": "AMCR",
-      "Company": "Amcor"
-    },
-    {
-      "Ticker": "AVY",
-      "Company": "Avery Dennison"
-    },
-    {
-      "Ticker": "BALL",
-      "Company": "Ball Corporation"
-    },
-    {
-      "Ticker": "CF",
-      "Company": "CF Industries"
-    },
-    {
-      "Ticker": "CTVA",
-      "Company": "Corteva"
-    },
-    {
-      "Ticker": "DOW",
-      "Company": "Dow Inc."
-    },
-    {
-      "Ticker": "DD",
-      "Company": "DuPont"
-    },
-    {
-      "Ticker": "EMN",
-      "Company": "Eastman Chemical Company"
-    },
-    {
-      "Ticker": "ECL",
-      "Company": "Ecolab"
-    },
-    {
-      "Ticker": "FCX",
-      "Company": "Freeport-McMoRan"
-    },
-    {
-      "Ticker": "IFF",
-      "Company": "International Flavors & Fragrances"
-    },
-    {
-      "Ticker": "IP",
-      "Company": "International Paper"
-    },
-    {
-      "Ticker": "LIN",
-      "Company": "Linde plc"
-    },
-    {
-      "Ticker": "LYB",
-      "Company": "LyondellBasell"
-    },
-    {
-      "Ticker": "MLM",
-      "Company": "Martin Marietta Materials"
-    },
-    {
-      "Ticker": "MOS",
-      "Company": "Mosaic Company (The)"
-    },
-    {
-      "Ticker": "NEM",
-      "Company": "Newmont"
-    },
-    {
-      "Ticker": "NUE",
-      "Company": "Nucor"
-    },
-    {
-      "Ticker": "PKG",
-      "Company": "Packaging Corporation of America"
-    },
-    {
-      "Ticker": "PPG",
-      "Company": "PPG Industries"
-    },
-    {
-      "Ticker": "SHW",
-      "Company": "Sherwin-Williams"
-    },
-    {
-      "Ticker": "SW",
-      "Company": "Smurfit Westrock"
-    },
-    {
-      "Ticker": "STLD",
-      "Company": "Steel Dynamics"
-    },
-    {
-      "Ticker": "VMC",
-      "Company": "Vulcan Materials Company"
-    },
-    {
-      "Ticker": "ASIX",
-      "Company": "AdvanSix Inc."
-    },
-    {
-      "Ticker": "AVD",
-      "Company": "AMERICAN VANGUARD CORP"
-    },
-    {
-      "Ticker": "BCC",
-      "Company": "BOISE CASCADE Co"
-    },
-    {
-      "Ticker": "BCPC",
-      "Company": "BALCHEM CORP"
-    },
-    {
-      "Ticker": "CBT",
-      "Company": "CABOT CORP"
-    },
-    {
-      "Ticker": "CDE",
-      "Company": "Coeur Mining, Inc."
-    },
-    {
-      "Ticker": "CENX",
-      "Company": "CENTURY ALUMINUM CO"
-    },
-    {
-      "Ticker": "CLW",
-      "Company": "Clearwater Paper Corp"
-    },
-    {
-      "Ticker": "CMC",
-      "Company": "COMMERCIAL METALS Co"
-    },
-    {
-      "Ticker": "CMCL",
-      "Company": "Caledonia Mining Corp Plc"
-    },
-    {
-      "Ticker": "CMP",
-      "Company": "COMPASS MINERALS INTERNATIONAL INC"
-    },
-    {
-      "Ticker": "CMT",
-      "Company": "CORE MOLDING TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "CSTM",
-      "Company": "CONSTELLIUM SE"
-    },
-    {
-      "Ticker": "CTGO",
-      "Company": "Contango ORE, Inc."
-    },
-    {
-      "Ticker": "FF",
-      "Company": "FutureFuel Corp."
-    },
-    {
-      "Ticker": "FUL",
-      "Company": "FULLER H B CO"
-    },
-    {
-      "Ticker": "GPRE",
-      "Company": "Green Plains Inc."
-    },
-    {
-      "Ticker": "HCC",
-      "Company": "WARRIOR MET COAL, INC."
-    },
-    {
-      "Ticker": "HDSN",
-      "Company": "HUDSON TECHNOLOGIES INC /NY"
-    },
-    {
-      "Ticker": "HL",
-      "Company": "HECLA MINING CO/DE/"
-    },
-    {
-      "Ticker": "HWKN",
-      "Company": "HAWKINS INC"
-    },
-    {
-      "Ticker": "IOSP",
-      "Company": "INNOSPEC INC."
-    },
-    {
-      "Ticker": "IPI",
-      "Company": "Intrepid Potash, Inc."
-    },
-    {
-      "Ticker": "KALU",
-      "Company": "KAISER ALUMINUM CORP"
-    },
-    {
-      "Ticker": "KOP",
-      "Company": "Koppers Holdings Inc."
-    },
-    {
-      "Ticker": "KRO",
-      "Company": "KRONOS WORLDWIDE INC"
-    },
-    {
-      "Ticker": "KWR",
-      "Company": "QUAKER CHEMICAL CORP"
-    },
-    {
-      "Ticker": "LWLG",
-      "Company": "Lightwave Logic, Inc."
-    },
-    {
-      "Ticker": "LXU",
-      "Company": "LSB INDUSTRIES, INC."
-    },
-    {
-      "Ticker": "MTRN",
-      "Company": "MATERION Corp"
-    },
-    {
-      "Ticker": "MTX",
-      "Company": "MINERALS TECHNOLOGIES INC"
-    },
-    {
-      "Ticker": "NG",
-      "Company": "NOVAGOLD RESOURCES INC"
-    },
-    {
-      "Ticker": "NGVT",
-      "Company": "Ingevity Corp"
-    },
-    {
-      "Ticker": "NTIC",
-      "Company": "NORTHERN TECHNOLOGIES INTERNATIONAL CORP"
-    },
-    {
-      "Ticker": "ODC",
-      "Company": "Oil-Dri Corp of America"
-    },
-    {
-      "Ticker": "OEC",
-      "Company": "Orion S.A."
-    },
-    {
-      "Ticker": "PLL",
-      "Company": "PRUDENTIAL FINANCIAL INC"
-    },
-    {
-      "Ticker": "RYAM",
-      "Company": "RAYONIER ADVANCED MATERIALS INC."
-    },
-    {
-      "Ticker": "SCL",
-      "Company": "STEPAN CO"
-    },
-    {
-      "Ticker": "SMID",
-      "Company": "SMITH MIDLAND CORP"
-    },
-    {
-      "Ticker": "SSRM",
-      "Company": "SSR MINING INC."
-    },
-    {
-      "Ticker": "SXC",
-      "Company": "SunCoke Energy, Inc."
-    },
-    {
-      "Ticker": "SXT",
-      "Company": "SENSIENT TECHNOLOGIES CORP"
-    },
-    {
-      "Ticker": "TG",
-      "Company": "TREDEGAR CORP"
-    },
-    {
-      "Ticker": "TROX",
-      "Company": "Tronox Holdings plc"
-    },
-    {
-      "Ticker": "UFPI",
-      "Company": "UFP INDUSTRIES INC"
-    },
-    {
-      "Ticker": "USLM",
-      "Company": "UNITED STATES LIME & MINERALS INC"
-    },
-    {
-      "Ticker": "VHI",
-      "Company": "VALHI INC /DE/"
-    },
-    {
-      "Ticker": "WDFC",
-      "Company": "WD 40 CO"
-    },
-    {
-      "Ticker": "WOR",
-      "Company": "WORTHINGTON ENTERPRISES, INC."
-    },
-    {
-      "Ticker": "ZEUS",
-      "Company": "OLYMPIC STEEL INC"
-    }
-  ],
-  "Real Estate": [
-    {
-      "Ticker": "ARE",
-      "Company": "Alexandria Real Estate Equities"
-    },
-    {
-      "Ticker": "AMT",
-      "Company": "American Tower"
-    },
-    {
-      "Ticker": "AVB",
-      "Company": "AvalonBay Communities"
-    },
-    {
-      "Ticker": "BXP",
-      "Company": "BXP, Inc."
-    },
-    {
-      "Ticker": "CPT",
-      "Company": "Camden Property Trust"
-    },
-    {
-      "Ticker": "CBRE",
-      "Company": "CBRE Group"
-    },
-    {
-      "Ticker": "CSGP",
-      "Company": "CoStar Group"
-    },
-    {
-      "Ticker": "CCI",
-      "Company": "Crown Castle"
-    },
-    {
-      "Ticker": "DLR",
-      "Company": "Digital Realty"
-    },
-    {
-      "Ticker": "EQIX",
-      "Company": "Equinix"
-    },
-    {
-      "Ticker": "EQR",
-      "Company": "Equity Residential"
-    },
-    {
-      "Ticker": "ESS",
-      "Company": "Essex Property Trust"
-    },
-    {
-      "Ticker": "EXR",
-      "Company": "Extra Space Storage"
-    },
-    {
-      "Ticker": "FRT",
-      "Company": "Federal Realty Investment Trust"
-    },
-    {
-      "Ticker": "DOC",
-      "Company": "Healthpeak Properties"
-    },
-    {
-      "Ticker": "HST",
-      "Company": "Host Hotels & Resorts"
-    },
-    {
-      "Ticker": "INVH",
-      "Company": "Invitation Homes"
-    },
-    {
-      "Ticker": "IRM",
-      "Company": "Iron Mountain"
-    },
-    {
-      "Ticker": "KIM",
-      "Company": "Kimco Realty"
-    },
-    {
-      "Ticker": "MAA",
-      "Company": "Mid-America Apartment Communities"
-    },
-    {
-      "Ticker": "PLD",
-      "Company": "Prologis"
-    },
-    {
-      "Ticker": "PSA",
-      "Company": "Public Storage"
-    },
-    {
-      "Ticker": "O",
-      "Company": "Realty Income"
-    },
-    {
-      "Ticker": "REG",
-      "Company": "Regency Centers"
-    },
-    {
-      "Ticker": "SBAC",
-      "Company": "SBA Communications"
-    },
-    {
-      "Ticker": "SPG",
-      "Company": "Simon Property Group"
-    },
-    {
-      "Ticker": "UDR",
-      "Company": "UDR, Inc."
-    },
-    {
-      "Ticker": "VTR",
-      "Company": "Ventas"
-    },
-    {
-      "Ticker": "VICI",
-      "Company": "Vici Properties"
-    },
-    {
-      "Ticker": "WELL",
-      "Company": "Welltower"
-    },
-    {
-      "Ticker": "WY",
-      "Company": "Weyerhaeuser"
-    },
-    {
-      "Ticker": "AAT",
-      "Company": "American Assets Trust, Inc."
-    },
-    {
-      "Ticker": "ABR",
-      "Company": "ARBOR REALTY TRUST INC"
-    },
-    {
-      "Ticker": "ACRE",
-      "Company": "Ares Commercial Real Estate Corp"
-    },
-    {
-      "Ticker": "AHH",
-      "Company": "Armada Hoffler Properties, Inc."
-    },
-    {
-      "Ticker": "AI",
-      "Company": "C3.ai, Inc."
-    },
-    {
-      "Ticker": "AIV",
-      "Company": "APARTMENT INVESTMENT & MANAGEMENT CO"
-    },
-    {
-      "Ticker": "AKR",
-      "Company": "ACADIA REALTY TRUST"
-    },
-    {
-      "Ticker": "ALEX",
-      "Company": "Alexander & Baldwin, Inc."
-    },
-    {
-      "Ticker": "ALX",
-      "Company": "ALEXANDERS INC"
-    },
-    {
-      "Ticker": "APLE",
-      "Company": "Apple Hospitality REIT, Inc."
-    },
-    {
-      "Ticker": "ARI",
-      "Company": "Apollo Commercial Real Estate Finance, Inc."
-    },
-    {
-      "Ticker": "ARL",
-      "Company": "AMERICAN REALTY INVESTORS INC"
-    },
-    {
-      "Ticker": "ARR",
-      "Company": "Armour Residential REIT, Inc."
-    },
-    {
-      "Ticker": "BDN",
-      "Company": "BRANDYWINE REALTY TRUST"
-    },
-    {
-      "Ticker": "BFS",
-      "Company": "SAUL CENTERS, INC."
-    },
-    {
-      "Ticker": "BHR",
-      "Company": "Braemar Hotels & Resorts Inc."
-    },
-    {
-      "Ticker": "BRT",
-      "Company": "BRT Apartments Corp."
-    },
-    {
-      "Ticker": "BXMT",
-      "Company": "BLACKSTONE MORTGAGE TRUST, INC."
-    },
-    {
-      "Ticker": "CBL",
-      "Company": "CBL & ASSOCIATES PROPERTIES INC"
-    },
-    {
-      "Ticker": "CHCT",
-      "Company": "Community Healthcare Trust Inc"
-    },
-    {
-      "Ticker": "CIM",
-      "Company": "CHIMERA INVESTMENT CORP"
-    },
-    {
-      "Ticker": "CIO",
-      "Company": "City Office REIT, Inc."
-    },
-    {
-      "Ticker": "CLDT",
-      "Company": "Chatham Lodging Trust"
-    },
-    {
-      "Ticker": "CLPR",
-      "Company": "Clipper Realty Inc."
-    },
-    {
-      "Ticker": "CTO",
-      "Company": "CTO Realty Growth, Inc."
-    },
-    {
-      "Ticker": "CTRE",
-      "Company": "CareTrust REIT, Inc."
-    },
-    {
-      "Ticker": "CWK",
-      "Company": "Cushman & Wakefield plc"
-    },
-    {
-      "Ticker": "CXW",
-      "Company": "CoreCivic, Inc."
-    },
-    {
-      "Ticker": "DEA",
-      "Company": "Easterly Government Properties, Inc."
-    },
-    {
-      "Ticker": "DEI",
-      "Company": "Douglas Emmett Inc"
-    },
-    {
-      "Ticker": "DHC",
-      "Company": "DIVERSIFIED HEALTHCARE TRUST"
-    },
-    {
-      "Ticker": "DRH",
-      "Company": "DiamondRock Hospitality Co"
-    },
-    {
-      "Ticker": "DX",
-      "Company": "DYNEX CAPITAL INC"
-    },
-    {
-      "Ticker": "EPRT",
-      "Company": "ESSENTIAL PROPERTIES REALTY TRUST, INC."
-    },
-    {
-      "Ticker": "ESRT",
-      "Company": "Empire State Realty Trust, Inc."
-    },
-    {
-      "Ticker": "EXPI",
-      "Company": "EXP World Holdings, Inc."
-    },
-    {
-      "Ticker": "FCPT",
-      "Company": "Four Corners Property Trust, Inc."
-    },
-    {
-      "Ticker": "FOR",
-      "Company": "Forestar Group Inc."
-    },
-    {
-      "Ticker": "FPI",
-      "Company": "Farmland Partners Inc."
-    },
-    {
-      "Ticker": "FRPH",
-      "Company": "FRP HOLDINGS, INC."
-    },
-    {
-      "Ticker": "FSP",
-      "Company": "FRANKLIN STREET PROPERTIES CORP /MA/"
-    },
-    {
-      "Ticker": "GEO",
-      "Company": "GEO GROUP INC"
-    },
-    {
-      "Ticker": "GMRE",
-      "Company": "Global Medical REIT Inc."
-    },
-    {
-      "Ticker": "GNL",
-      "Company": "Global Net Lease, Inc."
-    },
-    {
-      "Ticker": "GOOD",
-      "Company": "GLADSTONE COMMERCIAL CORP"
-    },
-    {
-      "Ticker": "GPMT",
-      "Company": "Granite Point Mortgage Trust Inc."
-    },
-    {
-      "Ticker": "GTY",
-      "Company": "GETTY REALTY CORP /MD/"
-    },
-    {
-      "Ticker": "HASI",
-      "Company": "HA Sustainable Infrastructure Capital, Inc."
-    },
-    {
-      "Ticker": "HPP",
-      "Company": "Hudson Pacific Properties, Inc."
-    },
-    {
-      "Ticker": "IIPR",
-      "Company": "INNOVATIVE INDUSTRIAL PROPERTIES INC"
-    },
-    {
-      "Ticker": "ILPT",
-      "Company": "Industrial Logistics Properties Trust"
-    },
-    {
-      "Ticker": "INN",
-      "Company": "Summit Hotel Properties, Inc."
-    },
-    {
-      "Ticker": "IRT",
-      "Company": "INDEPENDENCE REALTY TRUST, INC."
-    },
-    {
-      "Ticker": "IVR",
-      "Company": "Invesco Mortgage Capital Inc."
-    },
-    {
-      "Ticker": "JBGS",
-      "Company": "JBG SMITH Properties"
-    },
-    {
-      "Ticker": "JOE",
-      "Company": "ST JOE Co"
-    },
-    {
-      "Ticker": "KREF",
-      "Company": "KKR Real Estate Finance Trust Inc."
-    },
-    {
-      "Ticker": "KRG",
-      "Company": "KITE REALTY GROUP TRUST"
-    },
-    {
-      "Ticker": "KW",
-      "Company": "Kennedy-Wilson Holdings, Inc."
-    },
-    {
-      "Ticker": "LADR",
-      "Company": "Ladder Capital Corp"
-    },
-    {
-      "Ticker": "LAND",
-      "Company": "GLADSTONE LAND Corp"
-    },
-    {
-      "Ticker": "LTC",
-      "Company": "LTC PROPERTIES INC"
-    },
-    {
-      "Ticker": "LXP",
-      "Company": "LXP Industrial Trust"
-    },
-    {
-      "Ticker": "MAC",
-      "Company": "MACERICH CO"
-    },
-    {
-      "Ticker": "MFA",
-      "Company": "MFA FINANCIAL, INC."
-    },
-    {
-      "Ticker": "MITT",
-      "Company": "AG Mortgage Investment Trust, Inc."
-    },
-    {
-      "Ticker": "MLP",
-      "Company": "MAUI LAND & PINEAPPLE CO INC"
-    },
-    {
-      "Ticker": "MMI",
-      "Company": "Marcus & Millichap, Inc."
-    },
-    {
-      "Ticker": "NHI",
-      "Company": "NATIONAL HEALTH INVESTORS INC"
-    },
-    {
-      "Ticker": "NMRK",
-      "Company": "NEWMARK GROUP, INC."
-    },
-    {
-      "Ticker": "NREF",
-      "Company": "NexPoint Real Estate Finance, Inc."
-    },
-    {
-      "Ticker": "NXRT",
-      "Company": "NexPoint Residential Trust, Inc."
-    },
-    {
-      "Ticker": "NYMT",
-      "Company": "New York Mortgage Trust Inc."
-    },
-    {
-      "Ticker": "OLP",
-      "Company": "ONE LIBERTY PROPERTIES INC"
-    },
-    {
-      "Ticker": "ORC",
-      "Company": "Orchid Island Capital, Inc."
-    },
-    {
-      "Ticker": "OUT",
-      "Company": "OUTFRONT Media Inc."
-    },
-    {
-      "Ticker": "PCH",
-      "Company": "POTLATCHDELTIC CORP"
-    },
-    {
-      "Ticker": "PDM",
-      "Company": "Piedmont Office Realty Trust, Inc."
-    },
-    {
-      "Ticker": "PEB",
-      "Company": "Pebblebrook Hotel Trust"
-    },
-    {
-      "Ticker": "PGRE",
-      "Company": "Paramount Group, Inc."
-    },
-    {
-      "Ticker": "PINE",
-      "Company": "Alpine Income Property Trust, Inc."
-    },
-    {
-      "Ticker": "PLYM",
-      "Company": "Plymouth Industrial REIT, Inc."
-    },
-    {
-      "Ticker": "PMT",
-      "Company": "PennyMac Mortgage Investment Trust"
-    },
-    {
-      "Ticker": "PSTL",
-      "Company": "Postal Realty Trust, Inc."
-    },
-    {
-      "Ticker": "RC",
-      "Company": "Ready Capital Corp"
-    },
-    {
-      "Ticker": "RDFN",
-      "Company": "Redfin Corp"
-    },
-    {
-      "Ticker": "RHP",
-      "Company": "Ryman Hospitality Properties, Inc."
-    },
-    {
-      "Ticker": "RLJ",
-      "Company": "RLJ Lodging Trust"
-    },
-    {
-      "Ticker": "RMAX",
-      "Company": "RE/MAX Holdings, Inc."
-    },
-    {
-      "Ticker": "RMR",
-      "Company": "RMR GROUP INC."
-    },
-    {
-      "Ticker": "RWT",
-      "Company": "REDWOOD TRUST INC"
-    },
-    {
-      "Ticker": "SAFE",
-      "Company": "Safehold Inc."
-    },
-    {
-      "Ticker": "SBRA",
-      "Company": "Sabra Health Care REIT, Inc."
-    },
-    {
-      "Ticker": "SHO",
-      "Company": "Sunstone Hotel Investors, Inc."
-    },
-    {
-      "Ticker": "SITC",
-      "Company": "SITE Centers Corp."
-    },
-    {
-      "Ticker": "SKT",
-      "Company": "TANGER INC."
-    },
-    {
-      "Ticker": "SLG",
-      "Company": "SL GREEN REALTY CORP"
-    },
-    {
-      "Ticker": "STRS",
-      "Company": "STRATUS PROPERTIES INC"
-    },
-    {
-      "Ticker": "SVC",
-      "Company": "Service Properties Trust"
-    },
-    {
-      "Ticker": "TCI",
-      "Company": "TRANSCONTINENTAL REALTY INVESTORS INC"
-    },
-    {
-      "Ticker": "TRNO",
-      "Company": "Terreno Realty Corp"
-    },
-    {
-      "Ticker": "TRTX",
-      "Company": "TPG RE Finance Trust, Inc."
-    },
-    {
-      "Ticker": "TWO",
-      "Company": "TWO HARBORS INVESTMENT CORP."
-    },
-    {
-      "Ticker": "UE",
-      "Company": "Urban Edge Properties"
-    },
-    {
-      "Ticker": "UHT",
-      "Company": "UNIVERSAL HEALTH REALTY INCOME TRUST"
-    },
-    {
-      "Ticker": "UMH",
-      "Company": "UMH PROPERTIES, INC."
-    },
-    {
-      "Ticker": "UNIT",
-      "Company": "Uniti Group Inc."
-    },
-    {
-      "Ticker": "WSR",
-      "Company": "Whitestone REIT"
-    },
-    {
-      "Ticker": "XHR",
-      "Company": "Xenia Hotels & Resorts, Inc."
     }
   ],
   "Utilities": [
@@ -7415,118 +953,1084 @@
     {
       "Ticker": "XEL",
       "Company": "Xcel Energy"
+    }
+  ],
+  "Financials": [
+    {
+      "Ticker": "AFL",
+      "Company": "Aflac"
     },
     {
-      "Ticker": "ALE",
-      "Company": "ALLETE INC"
+      "Ticker": "ALL",
+      "Company": "Allstate"
     },
     {
-      "Ticker": "AVA",
-      "Company": "AVISTA CORP"
+      "Ticker": "AXP",
+      "Company": "American Express"
     },
     {
-      "Ticker": "AWR",
-      "Company": "AMERICAN STATES WATER CO"
+      "Ticker": "AIG",
+      "Company": "American International Group"
     },
     {
-      "Ticker": "BKH",
-      "Company": "BLACK HILLS CORP /SD/"
+      "Ticker": "AMP",
+      "Company": "Ameriprise Financial"
     },
     {
-      "Ticker": "CDZI",
-      "Company": "CADIZ INC"
+      "Ticker": "AON",
+      "Company": "Aon plc"
     },
     {
-      "Ticker": "CPK",
-      "Company": "CHESAPEAKE UTILITIES CORP"
+      "Ticker": "APO",
+      "Company": "Apollo Global Management"
     },
     {
-      "Ticker": "CWCO",
-      "Company": "Consolidated Water Co. Ltd."
+      "Ticker": "ACGL",
+      "Company": "Arch Capital Group"
     },
     {
-      "Ticker": "CWT",
-      "Company": "CALIFORNIA WATER SERVICE GROUP"
+      "Ticker": "AJG",
+      "Company": "Arthur J. Gallagher & Co."
     },
     {
-      "Ticker": "EE",
-      "Company": "Excelerate Energy, Inc."
+      "Ticker": "AIZ",
+      "Company": "Assurant"
     },
     {
-      "Ticker": "GNE",
-      "Company": "Genie Energy Ltd."
+      "Ticker": "BAC",
+      "Company": "Bank of America"
     },
     {
-      "Ticker": "GWRS",
-      "Company": "Global Water Resources, Inc."
+      "Ticker": "BRK.B",
+      "Company": "Berkshire Hathaway"
     },
     {
-      "Ticker": "HE",
-      "Company": "HAWAIIAN ELECTRIC INDUSTRIES INC"
+      "Ticker": "BLK",
+      "Company": "BlackRock"
     },
     {
-      "Ticker": "MGEE",
-      "Company": "MGE ENERGY INC"
+      "Ticker": "BX",
+      "Company": "Blackstone Inc."
     },
     {
-      "Ticker": "MSEX",
-      "Company": "MIDDLESEX WATER CO"
+      "Ticker": "BK",
+      "Company": "BNY Mellon"
     },
     {
-      "Ticker": "NJR",
-      "Company": "NEW JERSEY RESOURCES CORP"
+      "Ticker": "BRO",
+      "Company": "Brown & Brown"
     },
     {
-      "Ticker": "NWE",
-      "Company": "NorthWestern Energy Group, Inc."
+      "Ticker": "COF",
+      "Company": "Capital One"
     },
     {
-      "Ticker": "NWN",
-      "Company": "NORTHWEST NATURAL GAS CO"
+      "Ticker": "CBOE",
+      "Company": "Cboe Global Markets"
     },
     {
-      "Ticker": "OGS",
-      "Company": "ONE Gas, Inc."
+      "Ticker": "SCHW",
+      "Company": "Charles Schwab Corporation"
     },
     {
-      "Ticker": "ORA",
-      "Company": "ORMAT TECHNOLOGIES, INC."
+      "Ticker": "CB",
+      "Company": "Chubb Limited"
     },
     {
-      "Ticker": "OTTR",
-      "Company": "Otter Tail Corp"
+      "Ticker": "CINF",
+      "Company": "Cincinnati Financial"
     },
     {
-      "Ticker": "PCYO",
-      "Company": "PURE CYCLE CORP"
+      "Ticker": "C",
+      "Company": "Citigroup"
     },
     {
-      "Ticker": "POR",
-      "Company": "PORTLAND GENERAL ELECTRIC CO /OR/"
+      "Ticker": "CFG",
+      "Company": "Citizens Financial Group"
     },
     {
-      "Ticker": "RGCO",
-      "Company": "RGC RESOURCES INC"
+      "Ticker": "CME",
+      "Company": "CME Group"
     },
     {
-      "Ticker": "SJW",
-      "Company": NaN
+      "Ticker": "COIN",
+      "Company": "Coinbase"
     },
     {
-      "Ticker": "SR",
-      "Company": "SPIRE MISSOURI INC"
+      "Ticker": "CPAY",
+      "Company": "Corpay"
     },
     {
-      "Ticker": "SWX",
-      "Company": "Southwest Gas Holdings, Inc."
+      "Ticker": "ERIE",
+      "Company": "Erie Indemnity"
     },
     {
-      "Ticker": "UTL",
-      "Company": "UNITIL CORP"
+      "Ticker": "EG",
+      "Company": "Everest Group"
     },
     {
-      "Ticker": "YORW",
-      "Company": "YORK WATER CO"
+      "Ticker": "FDS",
+      "Company": "FactSet"
+    },
+    {
+      "Ticker": "FIS",
+      "Company": "Fidelity National Information Services"
+    },
+    {
+      "Ticker": "FITB",
+      "Company": "Fifth Third Bancorp"
+    },
+    {
+      "Ticker": "FI",
+      "Company": "Fiserv"
+    },
+    {
+      "Ticker": "BEN",
+      "Company": "Franklin Resources"
+    },
+    {
+      "Ticker": "GPN",
+      "Company": "Global Payments"
+    },
+    {
+      "Ticker": "GL",
+      "Company": "Globe Life"
+    },
+    {
+      "Ticker": "GS",
+      "Company": "Goldman Sachs"
+    },
+    {
+      "Ticker": "HIG",
+      "Company": "Hartford (The)"
+    },
+    {
+      "Ticker": "HBAN",
+      "Company": "Huntington Bancshares"
+    },
+    {
+      "Ticker": "ICE",
+      "Company": "Intercontinental Exchange"
+    },
+    {
+      "Ticker": "IVZ",
+      "Company": "Invesco"
+    },
+    {
+      "Ticker": "JKHY",
+      "Company": "Jack Henry & Associates"
+    },
+    {
+      "Ticker": "JPM",
+      "Company": "JPMorgan Chase"
+    },
+    {
+      "Ticker": "KEY",
+      "Company": "KeyCorp"
+    },
+    {
+      "Ticker": "KKR",
+      "Company": "KKR & Co."
+    },
+    {
+      "Ticker": "L",
+      "Company": "Loews Corporation"
+    },
+    {
+      "Ticker": "MTB",
+      "Company": "M&T Bank"
+    },
+    {
+      "Ticker": "MKTX",
+      "Company": "MarketAxess"
+    },
+    {
+      "Ticker": "MMC",
+      "Company": "Marsh McLennan"
+    },
+    {
+      "Ticker": "MA",
+      "Company": "Mastercard"
+    },
+    {
+      "Ticker": "MET",
+      "Company": "MetLife"
+    },
+    {
+      "Ticker": "MCO",
+      "Company": "Moody's Corporation"
+    },
+    {
+      "Ticker": "MS",
+      "Company": "Morgan Stanley"
+    },
+    {
+      "Ticker": "MSCI",
+      "Company": "MSCI Inc."
+    },
+    {
+      "Ticker": "NDAQ",
+      "Company": "Nasdaq, Inc."
+    },
+    {
+      "Ticker": "NTRS",
+      "Company": "Northern Trust"
+    },
+    {
+      "Ticker": "PYPL",
+      "Company": "PayPal"
+    },
+    {
+      "Ticker": "PNC",
+      "Company": "PNC Financial Services"
+    },
+    {
+      "Ticker": "PFG",
+      "Company": "Principal Financial Group"
+    },
+    {
+      "Ticker": "PGR",
+      "Company": "Progressive Corporation"
+    },
+    {
+      "Ticker": "PRU",
+      "Company": "Prudential Financial"
+    },
+    {
+      "Ticker": "RJF",
+      "Company": "Raymond James Financial"
+    },
+    {
+      "Ticker": "RF",
+      "Company": "Regions Financial Corporation"
+    },
+    {
+      "Ticker": "SPGI",
+      "Company": "S&P Global"
+    },
+    {
+      "Ticker": "STT",
+      "Company": "State Street Corporation"
+    },
+    {
+      "Ticker": "SYF",
+      "Company": "Synchrony Financial"
+    },
+    {
+      "Ticker": "TROW",
+      "Company": "T. Rowe Price"
+    },
+    {
+      "Ticker": "TRV",
+      "Company": "Travelers Companies (The)"
+    },
+    {
+      "Ticker": "TFC",
+      "Company": "Truist Financial"
+    },
+    {
+      "Ticker": "USB",
+      "Company": "U.S. Bancorp"
+    },
+    {
+      "Ticker": "V",
+      "Company": "Visa Inc."
+    },
+    {
+      "Ticker": "WRB",
+      "Company": "W. R. Berkley Corporation"
+    },
+    {
+      "Ticker": "WFC",
+      "Company": "Wells Fargo"
+    },
+    {
+      "Ticker": "WTW",
+      "Company": "Willis Towers Watson"
+    }
+  ],
+  "Materials": [
+    {
+      "Ticker": "APD",
+      "Company": "Air Products"
+    },
+    {
+      "Ticker": "ALB",
+      "Company": "Albemarle Corporation"
+    },
+    {
+      "Ticker": "AMCR",
+      "Company": "Amcor"
+    },
+    {
+      "Ticker": "AVY",
+      "Company": "Avery Dennison"
+    },
+    {
+      "Ticker": "BALL",
+      "Company": "Ball Corporation"
+    },
+    {
+      "Ticker": "CF",
+      "Company": "CF Industries"
+    },
+    {
+      "Ticker": "CTVA",
+      "Company": "Corteva"
+    },
+    {
+      "Ticker": "DOW",
+      "Company": "Dow Inc."
+    },
+    {
+      "Ticker": "DD",
+      "Company": "DuPont"
+    },
+    {
+      "Ticker": "EMN",
+      "Company": "Eastman Chemical Company"
+    },
+    {
+      "Ticker": "ECL",
+      "Company": "Ecolab"
+    },
+    {
+      "Ticker": "FCX",
+      "Company": "Freeport-McMoRan"
+    },
+    {
+      "Ticker": "IFF",
+      "Company": "International Flavors & Fragrances"
+    },
+    {
+      "Ticker": "IP",
+      "Company": "International Paper"
+    },
+    {
+      "Ticker": "LIN",
+      "Company": "Linde plc"
+    },
+    {
+      "Ticker": "LYB",
+      "Company": "LyondellBasell"
+    },
+    {
+      "Ticker": "MLM",
+      "Company": "Martin Marietta Materials"
+    },
+    {
+      "Ticker": "MOS",
+      "Company": "Mosaic Company (The)"
+    },
+    {
+      "Ticker": "NEM",
+      "Company": "Newmont"
+    },
+    {
+      "Ticker": "NUE",
+      "Company": "Nucor"
+    },
+    {
+      "Ticker": "PKG",
+      "Company": "Packaging Corporation of America"
+    },
+    {
+      "Ticker": "PPG",
+      "Company": "PPG Industries"
+    },
+    {
+      "Ticker": "SHW",
+      "Company": "Sherwin-Williams"
+    },
+    {
+      "Ticker": "SW",
+      "Company": "Smurfit Westrock"
+    },
+    {
+      "Ticker": "STLD",
+      "Company": "Steel Dynamics"
+    },
+    {
+      "Ticker": "VMC",
+      "Company": "Vulcan Materials Company"
+    }
+  ],
+  "Consumer Discretionary": [
+    {
+      "Ticker": "ABNB",
+      "Company": "Airbnb"
+    },
+    {
+      "Ticker": "AMZN",
+      "Company": "Amazon"
+    },
+    {
+      "Ticker": "APTV",
+      "Company": "Aptiv"
+    },
+    {
+      "Ticker": "AZO",
+      "Company": "AutoZone"
+    },
+    {
+      "Ticker": "BBY",
+      "Company": "Best Buy"
+    },
+    {
+      "Ticker": "BKNG",
+      "Company": "Booking Holdings"
+    },
+    {
+      "Ticker": "CZR",
+      "Company": "Caesars Entertainment"
+    },
+    {
+      "Ticker": "KMX",
+      "Company": "CarMax"
+    },
+    {
+      "Ticker": "CCL",
+      "Company": "Carnival"
+    },
+    {
+      "Ticker": "CMG",
+      "Company": "Chipotle Mexican Grill"
+    },
+    {
+      "Ticker": "DRI",
+      "Company": "Darden Restaurants"
+    },
+    {
+      "Ticker": "DECK",
+      "Company": "Deckers Brands"
+    },
+    {
+      "Ticker": "DPZ",
+      "Company": "Domino's"
+    },
+    {
+      "Ticker": "DASH",
+      "Company": "DoorDash"
+    },
+    {
+      "Ticker": "DHI",
+      "Company": "D. R. Horton"
+    },
+    {
+      "Ticker": "EBAY",
+      "Company": "eBay Inc."
+    },
+    {
+      "Ticker": "EXPE",
+      "Company": "Expedia Group"
+    },
+    {
+      "Ticker": "F",
+      "Company": "Ford Motor Company"
+    },
+    {
+      "Ticker": "GRMN",
+      "Company": "Garmin"
+    },
+    {
+      "Ticker": "GM",
+      "Company": "General Motors"
+    },
+    {
+      "Ticker": "GPC",
+      "Company": "Genuine Parts Company"
+    },
+    {
+      "Ticker": "HAS",
+      "Company": "Hasbro"
+    },
+    {
+      "Ticker": "HLT",
+      "Company": "Hilton Worldwide"
+    },
+    {
+      "Ticker": "HD",
+      "Company": "Home Depot (The)"
+    },
+    {
+      "Ticker": "LVS",
+      "Company": "Las Vegas Sands"
+    },
+    {
+      "Ticker": "LEN",
+      "Company": "Lennar"
+    },
+    {
+      "Ticker": "LKQ",
+      "Company": "LKQ Corporation"
+    },
+    {
+      "Ticker": "LOW",
+      "Company": "Lowe's"
+    },
+    {
+      "Ticker": "LULU",
+      "Company": "Lululemon Athletica"
+    },
+    {
+      "Ticker": "MAR",
+      "Company": "Marriott International"
+    },
+    {
+      "Ticker": "MCD",
+      "Company": "McDonald's"
+    },
+    {
+      "Ticker": "MGM",
+      "Company": "MGM Resorts"
+    },
+    {
+      "Ticker": "MHK",
+      "Company": "Mohawk Industries"
+    },
+    {
+      "Ticker": "NKE",
+      "Company": "Nike, Inc."
+    },
+    {
+      "Ticker": "NCLH",
+      "Company": "Norwegian Cruise Line Holdings"
+    },
+    {
+      "Ticker": "NVR",
+      "Company": "NVR, Inc."
+    },
+    {
+      "Ticker": "ORLY",
+      "Company": "O’Reilly Automotive"
+    },
+    {
+      "Ticker": "POOL",
+      "Company": "Pool Corporation"
+    },
+    {
+      "Ticker": "PHM",
+      "Company": "PulteGroup"
+    },
+    {
+      "Ticker": "RL",
+      "Company": "Ralph Lauren Corporation"
+    },
+    {
+      "Ticker": "ROST",
+      "Company": "Ross Stores"
+    },
+    {
+      "Ticker": "RCL",
+      "Company": "Royal Caribbean Group"
+    },
+    {
+      "Ticker": "SBUX",
+      "Company": "Starbucks"
+    },
+    {
+      "Ticker": "TPR",
+      "Company": "Tapestry, Inc."
+    },
+    {
+      "Ticker": "TSLA",
+      "Company": "Tesla, Inc."
+    },
+    {
+      "Ticker": "TJX",
+      "Company": "TJX Companies"
+    },
+    {
+      "Ticker": "TSCO",
+      "Company": "Tractor Supply"
+    },
+    {
+      "Ticker": "ULTA",
+      "Company": "Ulta Beauty"
+    },
+    {
+      "Ticker": "WSM",
+      "Company": "Williams-Sonoma, Inc."
+    },
+    {
+      "Ticker": "WYNN",
+      "Company": "Wynn Resorts"
+    },
+    {
+      "Ticker": "YUM",
+      "Company": "Yum! Brands"
+    }
+  ],
+  "Real Estate": [
+    {
+      "Ticker": "ARE",
+      "Company": "Alexandria Real Estate Equities"
+    },
+    {
+      "Ticker": "AMT",
+      "Company": "American Tower"
+    },
+    {
+      "Ticker": "AVB",
+      "Company": "AvalonBay Communities"
+    },
+    {
+      "Ticker": "BXP",
+      "Company": "BXP, Inc."
+    },
+    {
+      "Ticker": "CPT",
+      "Company": "Camden Property Trust"
+    },
+    {
+      "Ticker": "CBRE",
+      "Company": "CBRE Group"
+    },
+    {
+      "Ticker": "CSGP",
+      "Company": "CoStar Group"
+    },
+    {
+      "Ticker": "CCI",
+      "Company": "Crown Castle"
+    },
+    {
+      "Ticker": "DLR",
+      "Company": "Digital Realty"
+    },
+    {
+      "Ticker": "EQIX",
+      "Company": "Equinix"
+    },
+    {
+      "Ticker": "EQR",
+      "Company": "Equity Residential"
+    },
+    {
+      "Ticker": "ESS",
+      "Company": "Essex Property Trust"
+    },
+    {
+      "Ticker": "EXR",
+      "Company": "Extra Space Storage"
+    },
+    {
+      "Ticker": "FRT",
+      "Company": "Federal Realty Investment Trust"
+    },
+    {
+      "Ticker": "DOC",
+      "Company": "Healthpeak Properties"
+    },
+    {
+      "Ticker": "HST",
+      "Company": "Host Hotels & Resorts"
+    },
+    {
+      "Ticker": "INVH",
+      "Company": "Invitation Homes"
+    },
+    {
+      "Ticker": "IRM",
+      "Company": "Iron Mountain"
+    },
+    {
+      "Ticker": "KIM",
+      "Company": "Kimco Realty"
+    },
+    {
+      "Ticker": "MAA",
+      "Company": "Mid-America Apartment Communities"
+    },
+    {
+      "Ticker": "PLD",
+      "Company": "Prologis"
+    },
+    {
+      "Ticker": "PSA",
+      "Company": "Public Storage"
+    },
+    {
+      "Ticker": "O",
+      "Company": "Realty Income"
+    },
+    {
+      "Ticker": "REG",
+      "Company": "Regency Centers"
+    },
+    {
+      "Ticker": "SBAC",
+      "Company": "SBA Communications"
+    },
+    {
+      "Ticker": "SPG",
+      "Company": "Simon Property Group"
+    },
+    {
+      "Ticker": "UDR",
+      "Company": "UDR, Inc."
+    },
+    {
+      "Ticker": "VTR",
+      "Company": "Ventas"
+    },
+    {
+      "Ticker": "VICI",
+      "Company": "Vici Properties"
+    },
+    {
+      "Ticker": "WELL",
+      "Company": "Welltower"
+    },
+    {
+      "Ticker": "WY",
+      "Company": "Weyerhaeuser"
+    }
+  ],
+  "Communication Services": [
+    {
+      "Ticker": "GOOGL",
+      "Company": "Alphabet Inc. (Class A)"
+    },
+    {
+      "Ticker": "GOOG",
+      "Company": "Alphabet Inc. (Class C)"
+    },
+    {
+      "Ticker": "T",
+      "Company": "AT&T"
+    },
+    {
+      "Ticker": "CHTR",
+      "Company": "Charter Communications"
+    },
+    {
+      "Ticker": "CMCSA",
+      "Company": "Comcast"
+    },
+    {
+      "Ticker": "EA",
+      "Company": "Electronic Arts"
+    },
+    {
+      "Ticker": "FOXA",
+      "Company": "Fox Corporation (Class A)"
+    },
+    {
+      "Ticker": "FOX",
+      "Company": "Fox Corporation (Class B)"
+    },
+    {
+      "Ticker": "IPG",
+      "Company": "Interpublic Group of Companies (The)"
+    },
+    {
+      "Ticker": "LYV",
+      "Company": "Live Nation Entertainment"
+    },
+    {
+      "Ticker": "MTCH",
+      "Company": "Match Group"
+    },
+    {
+      "Ticker": "META",
+      "Company": "Meta Platforms"
+    },
+    {
+      "Ticker": "NFLX",
+      "Company": "Netflix"
+    },
+    {
+      "Ticker": "NWSA",
+      "Company": "News Corp (Class A)"
+    },
+    {
+      "Ticker": "NWS",
+      "Company": "News Corp (Class B)"
+    },
+    {
+      "Ticker": "OMC",
+      "Company": "Omnicom Group"
+    },
+    {
+      "Ticker": "PARA",
+      "Company": "Paramount Global"
+    },
+    {
+      "Ticker": "TMUS",
+      "Company": "T-Mobile US"
+    },
+    {
+      "Ticker": "TTWO",
+      "Company": "Take-Two Interactive"
+    },
+    {
+      "Ticker": "TKO",
+      "Company": "TKO Group Holdings"
+    },
+    {
+      "Ticker": "TTD",
+      "Company": "Trade Desk (The)"
+    },
+    {
+      "Ticker": "VZ",
+      "Company": "Verizon"
+    },
+    {
+      "Ticker": "DIS",
+      "Company": "Walt Disney Company (The)"
+    },
+    {
+      "Ticker": "WBD",
+      "Company": "Warner Bros. Discovery"
+    }
+  ],
+  "Consumer Staples": [
+    {
+      "Ticker": "MO",
+      "Company": "Altria"
+    },
+    {
+      "Ticker": "ADM",
+      "Company": "Archer Daniels Midland"
+    },
+    {
+      "Ticker": "BF.B",
+      "Company": "Brown–Forman"
+    },
+    {
+      "Ticker": "BG",
+      "Company": "Bunge Global"
+    },
+    {
+      "Ticker": "CPB",
+      "Company": "Campbell's Company (The)"
+    },
+    {
+      "Ticker": "CHD",
+      "Company": "Church & Dwight"
+    },
+    {
+      "Ticker": "CLX",
+      "Company": "Clorox"
+    },
+    {
+      "Ticker": "KO",
+      "Company": "Coca-Cola Company (The)"
+    },
+    {
+      "Ticker": "CL",
+      "Company": "Colgate-Palmolive"
+    },
+    {
+      "Ticker": "CAG",
+      "Company": "Conagra Brands"
+    },
+    {
+      "Ticker": "STZ",
+      "Company": "Constellation Brands"
+    },
+    {
+      "Ticker": "COST",
+      "Company": "Costco"
+    },
+    {
+      "Ticker": "DG",
+      "Company": "Dollar General"
+    },
+    {
+      "Ticker": "DLTR",
+      "Company": "Dollar Tree"
+    },
+    {
+      "Ticker": "EL",
+      "Company": "Estée Lauder Companies (The)"
+    },
+    {
+      "Ticker": "GIS",
+      "Company": "General Mills"
+    },
+    {
+      "Ticker": "HSY",
+      "Company": "Hershey Company (The)"
+    },
+    {
+      "Ticker": "HRL",
+      "Company": "Hormel Foods"
+    },
+    {
+      "Ticker": "K",
+      "Company": "Kellanova"
+    },
+    {
+      "Ticker": "KVUE",
+      "Company": "Kenvue"
+    },
+    {
+      "Ticker": "KDP",
+      "Company": "Keurig Dr Pepper"
+    },
+    {
+      "Ticker": "KMB",
+      "Company": "Kimberly-Clark"
+    },
+    {
+      "Ticker": "KHC",
+      "Company": "Kraft Heinz"
+    },
+    {
+      "Ticker": "KR",
+      "Company": "Kroger"
+    },
+    {
+      "Ticker": "LW",
+      "Company": "Lamb Weston"
+    },
+    {
+      "Ticker": "MKC",
+      "Company": "McCormick & Company"
+    },
+    {
+      "Ticker": "TAP",
+      "Company": "Molson Coors Beverage Company"
+    },
+    {
+      "Ticker": "MDLZ",
+      "Company": "Mondelez International"
+    },
+    {
+      "Ticker": "MNST",
+      "Company": "Monster Beverage"
+    },
+    {
+      "Ticker": "PEP",
+      "Company": "PepsiCo"
+    },
+    {
+      "Ticker": "PM",
+      "Company": "Philip Morris International"
+    },
+    {
+      "Ticker": "PG",
+      "Company": "Procter & Gamble"
+    },
+    {
+      "Ticker": "SJM",
+      "Company": "J.M. Smucker Company (The)"
+    },
+    {
+      "Ticker": "SYY",
+      "Company": "Sysco"
+    },
+    {
+      "Ticker": "TGT",
+      "Company": "Target Corporation"
+    },
+    {
+      "Ticker": "TSN",
+      "Company": "Tyson Foods"
+    },
+    {
+      "Ticker": "WBA",
+      "Company": "Walgreens Boots Alliance"
+    },
+    {
+      "Ticker": "WMT",
+      "Company": "Walmart"
+    }
+  ],
+  "Energy": [
+    {
+      "Ticker": "APA",
+      "Company": "APA Corporation"
+    },
+    {
+      "Ticker": "BKR",
+      "Company": "Baker Hughes"
+    },
+    {
+      "Ticker": "CVX",
+      "Company": "Chevron Corporation"
+    },
+    {
+      "Ticker": "COP",
+      "Company": "ConocoPhillips"
+    },
+    {
+      "Ticker": "CTRA",
+      "Company": "Coterra"
+    },
+    {
+      "Ticker": "DVN",
+      "Company": "Devon Energy"
+    },
+    {
+      "Ticker": "FANG",
+      "Company": "Diamondback Energy"
+    },
+    {
+      "Ticker": "EOG",
+      "Company": "EOG Resources"
+    },
+    {
+      "Ticker": "EQT",
+      "Company": "EQT Corporation"
+    },
+    {
+      "Ticker": "EXE",
+      "Company": "Expand Energy"
+    },
+    {
+      "Ticker": "XOM",
+      "Company": "ExxonMobil"
+    },
+    {
+      "Ticker": "HAL",
+      "Company": "Halliburton"
+    },
+    {
+      "Ticker": "HES",
+      "Company": "Hess Corporation"
+    },
+    {
+      "Ticker": "KMI",
+      "Company": "Kinder Morgan"
+    },
+    {
+      "Ticker": "MPC",
+      "Company": "Marathon Petroleum"
+    },
+    {
+      "Ticker": "OXY",
+      "Company": "Occidental Petroleum"
+    },
+    {
+      "Ticker": "OKE",
+      "Company": "Oneok"
+    },
+    {
+      "Ticker": "PSX",
+      "Company": "Phillips 66"
+    },
+    {
+      "Ticker": "SLB",
+      "Company": "Schlumberger"
+    },
+    {
+      "Ticker": "TRGP",
+      "Company": "Targa Resources"
+    },
+    {
+      "Ticker": "TPL",
+      "Company": "Texas Pacific Land Corporation"
+    },
+    {
+      "Ticker": "VLO",
+      "Company": "Valero Energy"
+    },
+    {
+      "Ticker": "WMB",
+      "Company": "Williams Companies"
     }
   ]
 }
