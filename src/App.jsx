@@ -1,6 +1,6 @@
 // path: src/App.jsx
 // Trueprice.cash — Corporate UI + AR header flip + WebLLM robustness
-// Update: localized "Open" button; grouped fair value tiles under "Stock Fair Value".
+// Update: hide AI rationale text; show only AI fair value and comparison.
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { CreateMLCEngine } from '@mlc-ai/web-llm';
@@ -203,8 +203,7 @@ async function getValuationMetricsCached(symbolWithSuffix, currency) {
 
 /* ========================== i18n ========================== */
 function useLang() {
-  // Default is English; persists user choice.
-  const [lang, setLang] = useState(() => localStorage.getItem('lang') || 'en');
+  const [lang, setLang] = useState(() => localStorage.getItem('lang') || 'en'); // default EN
   useEffect(() => { localStorage.setItem('lang', lang); }, [lang]);
   const T = (ar, en) => (lang === 'ar' ? ar : en);
   return { lang, setLang, T };
@@ -440,7 +439,7 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
 
   const [aiBusy, setAiBusy] = useState(false);
   const [aiFV, setAiFV] = useState(null);
-  const [aiRationale, setAiRationale] = useState('');
+  const [aiRationale, setAiRationale] = useState(''); // kept for cache compatibility
   const [aiCached, setAiCached] = useState(false);
   const [aiError, setAiError] = useState('');
   const [longWait, setLongWait] = useState(false);
@@ -640,11 +639,7 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
                           {T('مقارنة مع تقدير التطبيق:', 'Comparison vs app estimate:')} <Pct n={diffPct} lang={lang} />
                         </div>
                       )}
-                      {aiRationale && (
-                        <div className="mt-2 text-xs text-gray-700 whitespace-pre-line">
-                          {aiRationale}
-                        </div>
-                      )}
+                      {/* Rationale intentionally hidden per request */}
                     </div>
                   )}
 
