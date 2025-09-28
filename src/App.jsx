@@ -1,6 +1,6 @@
 // path: src/App.jsx
 // Trueprice.cash — Corporate UI + AR header flip + WebLLM robustness
-// Update: hide AI rationale text; show only AI fair value and comparison.
+// Update: AI output strictly {value + comparison} OR one generic localized error.
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { CreateMLCEngine } from '@mlc-ai/web-llm';
@@ -37,9 +37,7 @@ const Card = ({ title, subtitle, actions, children, className = '' }) => (
 /* Header swaps brand/actions when lang === 'ar' */
 const ShellLayout = ({ lang, onLogoClick, headerActions, sidebar, children }) => (
   <div className="min-h-screen bg-gray-50 text-gray-900">
-    <style>{`
-      @keyframes trueprice-progress { 0% { transform: translateX(-100%); } 50% { transform: translateX(-20%); } 100% { transform: translateX(100%); } }
-    `}</style>
+    <style>{`@keyframes trueprice-progress{0%{transform:translateX(-100%)}50%{transform:translateX(-20%)}100%{transform:translateX(100%)}}`}</style>
     <header className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b">
       <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
         {lang === 'ar' ? (
@@ -74,8 +72,8 @@ const ShellLayout = ({ lang, onLogoClick, headerActions, sidebar, children }) =>
 /* ========================== Cache ========================== */
 const cacheRead = (k, f) => { try { const s = localStorage.getItem(k); return s ? JSON.parse(s) : f; } catch { return f; } };
 const cacheWrite = (k, v) => localStorage.setItem(k, JSON.stringify(v));
-const PRICE_CACHE_KEY = (mkt) => `mkt_price_cache_v1_${mkt}`; // 10 min
-const METRICS_CACHE_KEY = 'metrics_cache_v1'; // 30 min
+const PRICE_CACHE_KEY = (mkt) => `mkt_price_cache_v1_${mkt}`;
+const METRICS_CACHE_KEY = 'metrics_cache_v1';
 
 /* ========================== Utils + valuation ========================== */
 const fmt = (n) => Number(n).toLocaleString(undefined, { maximumFractionDigits: 2 });
@@ -242,7 +240,7 @@ function extractJSON(text) {
 }
 function readLLMContent(resp) { return resp?.choices?.[0]?.message?.content ?? resp?.output_text ?? ''; }
 
-// Arabic currency label
+/* Arabic currency label */
 function ccyName(ccy, lang) {
   if (lang === 'ar') {
     if (ccy === 'SAR') return 'ريال سعودي';
@@ -439,7 +437,6 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
 
   const [aiBusy, setAiBusy] = useState(false);
   const [aiFV, setAiFV] = useState(null);
-  const [aiRationale, setAiRationale] = useState(''); // kept for cache compatibility
   const [aiCached, setAiCached] = useState(false);
   const [aiError, setAiError] = useState('');
   const [longWait, setLongWait] = useState(false);
@@ -487,17 +484,16 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
     const key = AI_CACHE_KEY(symbolWithSuffix, sig);
     const cached = cacheRead(key, null);
     if (cached && Date.now() - cached.at < AI_TTL_MS && Number.isFinite(cached.fv)) {
-      setAiFV(cached.fv); setAiRationale(cached.rationale || ''); setAiCached(true);
+      setAiFV(cached.fv); setAiCached(true);
       return;
     }
 
-    setAiBusy(true); setAiFV(null); setAiRationale(''); setAiCached(false);
+    setAiBusy(true); setAiFV(null); setAiCached(false);
     try {
       const eng = await getEngine();
-      const sys = 'You are a careful equity analyst. Output strict JSON only with keys: fv (number), rationale (string). Do not add any text outside JSON. Never give investment advice.';
+      const sys = 'You are a careful equity analyst. Output strict JSON only with keys: fv (number). Do not add any text outside JSON.';
       const user = [
-        `Compute a fair value per share using: FV = 0.5*EV + 0.25*PE + 0.25*PS.`,
-        `Note if BookValue is above/below result in the rationale; numeric fv stays formula-based.`,
+        `Compute FV per share using: FV = 0.5*EV + 0.25*PE + 0.25*PS.`,
         `Currency: ${currency}`,
         `Inputs:`,
         `EV_per_share=${m.fairEV.toFixed(2)}`,
@@ -505,29 +501,24 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
         `PS_per_share=${m.fairPS.toFixed(2)}`,
         `BookValue_per_share=${m.bookValue.toFixed(2)}`,
         `Current_Price=${m.price.toFixed(2)}`,
-        `Return JSON like: {"fv": 123.45, "rationale": "..."}`
+        `Return JSON like: {"fv": 123.45}`
       ].join('\n');
 
       const resp = await eng.chat.completions.create({
         messages: [ { role: 'system', content: sys }, { role: 'user', content: user } ],
-        temperature: 0.2, max_tokens: 180,
+        temperature: 0.2, max_tokens: 60,
       });
       const content = readLLMContent(resp);
       const j = extractJSON(content);
-      if (j && typeof j.fv === 'number') {
+      if (j && typeof j.fv === 'number' && isFinite(j.fv)) {
         const fvNum = Number(j.fv);
         setAiFV(fvNum);
-        setAiRationale(typeof j.rationale === 'string' ? j.rationale : '');
-        cacheWrite(key, { at: Date.now(), fv: fvNum, rationale: typeof j.rationale === 'string' ? j.rationale : '' });
+        cacheWrite(key, { at: Date.now(), fv: fvNum });
       } else {
-        setAiError((lang === 'ar'
-          ? 'تعذر قراءة استجابة الذكاء الاصطناعي.'
-          : 'Could not parse AI response.') + (content ? ` [raw: ${content.slice(0, 160)}…]` : ''));
+        setAiError(T('حدث خطأ ما. حاول مرة أخرى لاحقًا.', 'Something went wrong. Try again later.'));
       }
-    } catch (e) {
-      setAiError((lang === 'ar'
-        ? 'حدث خطأ أثناء تشغيل الذكاء الاصطناعي: '
-        : 'AI runtime error: ') + String(e?.message || e));
+    } catch {
+      setAiError(T('حدث خطأ ما. حاول مرة أخرى لاحقًا.', 'Something went wrong. Try again later.'));
     } finally { setAiBusy(false); }
   }
 
@@ -626,20 +617,21 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
                     )}
                   </div>
 
-                  {aiError && <div className="text-sm text-red-600" role="alert">{aiError}</div>}
-
+                  {/* AI result OR one generic error */}
                   {aiFV != null && (
                     <div className="rounded-lg border bg-gray-50 p-3">
                       <div className="text-sm">
                         <strong>{T('القيمة العادلة حسب الذكاء الاصطناعي:', 'AI fair value:')}</strong> {aiFV.toFixed(2)} {ccyLabel}
                         {aiCached && <span className="ml-2 text-gray-500 text-xs">{T('(من الذاكرة المؤقتة)', '(from cache)')}</span>}
                       </div>
-                      {showComparison && (
-                        <div className={`mt-2 text-sm font-semibold ${compColor}`}>
-                          {T('مقارنة مع تقدير التطبيق:', 'Comparison vs app estimate:')} <Pct n={diffPct} lang={lang} />
-                        </div>
-                      )}
-                      {/* Rationale intentionally hidden per request */}
+                      <div className={`mt-2 text-sm font-semibold ${compColor}`}>
+                        {T('مقارنة مع تقدير التطبيق:', 'Comparison vs app estimate:')} <Pct n={diffPct} lang={lang} />
+                      </div>
+                    </div>
+                  )}
+                  {aiFV == null && aiError && (
+                    <div className="mt-2 text-sm text-red-600" role="alert">
+                      {aiError}
                     </div>
                   )}
 
@@ -685,9 +677,7 @@ export default function App() {
   const [route, setRoute] = useState({});
   const langApi = useLang();
 
-  useEffect(() => {
-    if (typeof navigator !== 'undefined' && 'gpu' in navigator) { getEngine().catch(() => {}); }
-  }, []);
+  useEffect(() => { if (typeof navigator !== 'undefined' && 'gpu' in navigator) { getEngine().catch(() => {}); } }, []);
 
   const onLogoClick = () => { setView('home'); setRoute({}); };
 
