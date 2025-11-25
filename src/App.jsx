@@ -1,6 +1,7 @@
 // path: src/App.jsx
-// Trueprice.cash — Corporate UI + AR header flip + WebLLM robustness
-// Update: AI output strictly {value + comparison} OR one generic localized error.
+// Trueprice.cash — Corporate UI + AR header flip + WebLLM/Web API fallback
+// Update: Ask AI supports (1) WebGPU (WebLLM), (2) OpenAI API, (3) local formula fallback.
+// Output is strictly value + comparison or a single localized error.
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { CreateMLCEngine } from '@mlc-ai/web-llm';
@@ -207,7 +208,7 @@ function useLang() {
   return { lang, setLang, T };
 }
 
-/* ========================== WebLLM robustness ========================== */
+/* ========================== AI backends ========================== */
 const MODEL_CANDIDATES = [
   'Phi-3-mini-4k-instruct-q4f16_1-MLC',
   'Llama-3.2-1B-Instruct-q4f16_1-MLC',
@@ -239,6 +240,11 @@ function extractJSON(text) {
   return null;
 }
 function readLLMContent(resp) { return resp?.choices?.[0]?.message?.content ?? resp?.output_text ?? ''; }
+
+/* Cloud API (optional) */
+const OPENAI_KEY = import.meta.env.VITE_OPENAI_API_KEY || '';
+const OPENAI_BASE = import.meta.env.VITE_OPENAI_API_BASE || 'https://api.openai.com/v1';
+const OPENAI_MODEL = import.meta.env.VITE_OPENAI_MODEL || 'gpt-4o-mini';
 
 /* Arabic currency label */
 function ccyName(ccy, lang) {
@@ -284,7 +290,7 @@ function buildXShare({ ticker, company, lang, url, m, aiFV }) {
 const AI_TTL_MS = 24 * 60 * 60 * 1000;
 const round2 = (n) => Number.isFinite(n) ? Number(n.toFixed(2)) : 0;
 const aiInputsSig = (m) => `${round2(m.fairEV)}|${round2(m.fairPE)}|${round2(m.fairPS)}|${round2(m.bookValue)}|${round2(m.price)}`;
-const AI_CACHE_KEY = (symbolWithSuffix, sig) => `ai_fv_cache_v1_${__modelId || 'unknown'}_${symbolWithSuffix}_${sig}`;
+const AI_CACHE_KEY = (symbolWithSuffix, sig) => `ai_fv_cache_v1_${__modelId || 'cloud_or_local'}_${symbolWithSuffix}_${sig}`;
 
 /* ========================== Components ========================== */
 function MarketToggle({ value, onChange }) {
@@ -490,32 +496,75 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
 
     setAiBusy(true); setAiFV(null); setAiCached(false);
     try {
-      const eng = await getEngine();
-      const sys = 'You are a careful equity analyst. Output strict JSON only with keys: fv (number). Do not add any text outside JSON.';
-      const user = [
-        `Compute FV per share using: FV = 0.5*EV + 0.25*PE + 0.25*PS.`,
-        `Currency: ${currency}`,
-        `Inputs:`,
-        `EV_per_share=${m.fairEV.toFixed(2)}`,
-        `PE_per_share=${m.fairPE.toFixed(2)}`,
-        `PS_per_share=${m.fairPS.toFixed(2)}`,
-        `BookValue_per_share=${m.bookValue.toFixed(2)}`,
-        `Current_Price=${m.price.toFixed(2)}`,
-        `Return JSON like: {"fv": 123.45}`
-      ].join('\n');
+      if (hasWebGPU) {
+        // Path 1: On-device WebLLM (WebGPU)
+        const eng = await getEngine();
+        const sys = 'You are a careful equity analyst. Output strict JSON only with key: fv (number). Do not add any text outside JSON.';
+        const user = [
+          `Compute FV per share using: FV = 0.5*EV + 0.25*PE + 0.25*PS.`,
+          `Currency: ${currency}`,
+          `Inputs:`,
+          `EV_per_share=${m.fairEV.toFixed(2)}`,
+          `PE_per_share=${m.fairPE.toFixed(2)}`,
+          `PS_per_share=${m.fairPS.toFixed(2)}`,
+          `BookValue_per_share=${m.bookValue.toFixed(2)}`,
+          `Current_Price=${m.price.toFixed(2)}`,
+          `Return JSON like: {"fv": 123.45}`
+        ].join('\n');
 
-      const resp = await eng.chat.completions.create({
-        messages: [ { role: 'system', content: sys }, { role: 'user', content: user } ],
-        temperature: 0.2, max_tokens: 60,
-      });
-      const content = readLLMContent(resp);
-      const j = extractJSON(content);
-      if (j && typeof j.fv === 'number' && isFinite(j.fv)) {
-        const fvNum = Number(j.fv);
-        setAiFV(fvNum);
-        cacheWrite(key, { at: Date.now(), fv: fvNum });
+        const resp = await eng.chat.completions.create({
+          messages: [ { role: 'system', content: sys }, { role: 'user', content: user } ],
+          temperature: 0.2, max_tokens: 60,
+        });
+        const content = readLLMContent(resp);
+        const j = extractJSON(content);
+        if (j && typeof j.fv === 'number' && isFinite(j.fv)) {
+          const fvNum = Number(j.fv);
+          setAiFV(fvNum); cacheWrite(key, { at: Date.now(), fv: fvNum });
+        } else {
+          throw new Error('parse_error');
+        }
+      } else if (OPENAI_KEY) {
+        // Path 2: Cloud API (OpenAI-compatible)
+        const body = {
+          model: OPENAI_MODEL,
+          messages: [
+            { role: 'system', content: 'Output strict JSON with only {"fv": number}. No prose.' },
+            { role: 'user', content:
+              `Compute FV = 0.5*EV + 0.25*PE + 0.25*PS. Return {"fv": number}.\n` +
+              `EV=${m.fairEV.toFixed(2)}, PE=${m.fairPE.toFixed(2)}, PS=${m.fairPS.toFixed(2)}, ` +
+              `Book=${m.bookValue.toFixed(2)}, Price=${m.price.toFixed(2)}, Currency=${currency}`
+            }
+          ],
+          temperature: 0.2,
+          max_tokens: 20
+        };
+        const r = await fetch(`${OPENAI_BASE}/chat/completions`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${OPENAI_KEY}`,
+          },
+          body: JSON.stringify(body),
+        });
+        if (!r.ok) throw new Error('api_error');
+        const data = await r.json();
+        const content = data?.choices?.[0]?.message?.content ?? '';
+        const j = extractJSON(content);
+        if (j && typeof j.fv === 'number' && isFinite(j.fv)) {
+          const fvNum = Number(j.fv);
+          setAiFV(fvNum); cacheWrite(key, { at: Date.now(), fv: fvNum });
+        } else {
+          throw new Error('parse_error');
+        }
       } else {
-        setAiError(T('حدث خطأ ما. حاول مرة أخرى لاحقًا.', 'Something went wrong. Try again later.'));
+        // Path 3: Local deterministic fallback (same formula)
+        const fvNum = m.fairEV * 0.5 + m.fairPE * 0.25 + m.fairPS * 0.25;
+        if (isFinite(fvNum)) {
+          setAiFV(Number(fvNum.toFixed(2)));
+        } else {
+          throw new Error('fallback_error');
+        }
       }
     } catch {
       setAiError(T('حدث خطأ ما. حاول مرة أخرى لاحقًا.', 'Something went wrong. Try again later.'));
@@ -604,10 +653,10 @@ function MarketStock({ params, onBack, langApi, onLogoClick }) {
                   </Card>
 
                   <div className="flex items-center gap-2">
-                    <Button onClick={askAI} disabled={aiBusy || !hasWebGPU}>{T('اسأل الذكاء الاصطناعي', 'Ask AI')}</Button>
-                    {!hasWebGPU && (
+                    <Button onClick={askAI} disabled={aiBusy && true /* avoid rapid taps */}>{T('اسأل الذكاء الاصطناعي', 'Ask AI')}</Button>
+                    {!hasWebGPU && !OPENAI_KEY && (
                       <span className="text-xs text-amber-700">
-                        {T('يحتاج متصفحاً يدعم WebGPU (Chrome 121+).', 'Requires a WebGPU browser (e.g., Chrome 121+).')}
+                        {T('يُستخدم حساب تقريبي محلي لعدم توفر WebGPU أو واجهة سحابية.', 'Using local approximation since WebGPU/API not available.')}
                       </span>
                     )}
                     {longWait && aiBusy && (
@@ -677,7 +726,10 @@ export default function App() {
   const [route, setRoute] = useState({});
   const langApi = useLang();
 
-  useEffect(() => { if (typeof navigator !== 'undefined' && 'gpu' in navigator) { getEngine().catch(() => {}); } }, []);
+  useEffect(() => {
+    // Warm up WebLLM only if WebGPU exists
+    if (typeof navigator !== 'undefined' && 'gpu' in navigator) { getEngine().catch(() => {}); }
+  }, []);
 
   const onLogoClick = () => { setView('home'); setRoute({}); };
 
